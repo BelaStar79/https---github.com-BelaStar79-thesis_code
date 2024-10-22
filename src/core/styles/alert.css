@@ -1,0 +1,78 @@
+.alert {
+    color: var(--black);   
+    max-width: 25%;
+    background-color: var(--lightGrey);
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px;
+    z-index: 100;
+}
+.doneAlert {
+    border-left: 7px solid var(--pastelGreen);
+    background-color: var(--lightGreen);
+}
+.errorAlert {
+    border-left: 7px solid var(--pastelRed);
+    background-color: var(--red);
+}
+.infoAlert {
+    border-left: 7px solid var(--pastelBlue);
+    background-color: var(--blue);
+}
+.warningAlert {
+    border-left: 7px solid var(--pastelOrange);
+    background-color: var(--orange);
+} 
+
+.alert_container {
+    display: flex;
+    flex-direction: row;
+    gap: 6px;
+    align-items: center;
+}
+.alert_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.alert_info {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+.alert_info strong {
+    font-size: 1rem;
+    color: var(--black);
+}
+.alert_info span {
+    font-size: 0.9rem;
+    color: var(--darkGrey);
+}
+
+.alert_close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+}
+.alert_close button {
+    background-color: transparent;
+    color: var(--grey);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.doneAlert button:hover{
+    color: var(--pastelGreen);
+}
+.errorAlert button:hover{
+    color: var(--pastelRed);
+}
+.infoAlert button:hover{
+    color: var(--pastelBlue);
+}
+.warningAlert button:hover{
+    color: var(--pastelOrange);
+} 

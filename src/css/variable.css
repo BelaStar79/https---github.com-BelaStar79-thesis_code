@@ -1,0 +1,26 @@
+:root {
+
+    /* Colors */
+    --wineRed: #9a0f13;
+    --red: #ffc1be;
+    --pastelRed: #ff6961;
+
+    --blue: #cce1fa;
+    --pastelBlue: #84b6f4;
+
+    --pastelGreen: #77dd77;
+    --lightGreen: #c7f1c7;
+
+    --pastelYellow: #fdfd96;
+
+    --orange: #ffe0b3;
+    --pastelOrange: #FFB347;
+
+    --darckGrey: #484441;
+    --grey: #94918f;
+    --lightGrey: #ecebeb;
+
+    --white: #fff;
+    --black: #000;
+
+}
