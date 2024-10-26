@@ -5,7 +5,7 @@ import { CiCircleChevLeft, CiCircleChevRight, CiRead, CiEdit, CiShare2, CiTrash 
 
 const VISIBLE_PAGES_COUNT = 3; 
 
-export default function TableComponent ({ rowsPerPage, columnNames, data }){
+export default function TableComponent ({ rowsPerPage, columnNames, data, columns }){
     
     const [currentPage, setCurrentPage] = React.useState(1);
     const [totalPages, setTotalPages] = useState(0);
@@ -91,7 +91,7 @@ export default function TableComponent ({ rowsPerPage, columnNames, data }){
                 <>
                     <table className="tableComponent_table">
                         <thead className="tableComponent_thead">
-                            <tr className="tableComponent_tr">
+                            <tr className="tableComponent_tr tableComponent_tr-header">
                             <th className="tableComponent_th tableComponent_th-number">No.</th>
                             {columnNames.map((columnName, index) => (
                                 <th className="tableComponent_th" key={index}>{columnName}</th>
@@ -103,8 +103,8 @@ export default function TableComponent ({ rowsPerPage, columnNames, data }){
                             {filteredData.map((row, rowIndex) => (
                                 <tr className="tableComponent_tr" key={rowIndex}>
                                     <td className="tableComponent_td">{count + rowIndex}</td>
-                                    {columnNames.map((columnName, columnIndex) => (
-                                        <td className="tableComponent_td" key={columnIndex}>{row[columnName]}</td>
+                                    {columns.map((column, columnIndex) => (
+                                        <td className="tableComponent_td" key={columnIndex}>{row[column]}</td>
                                     ))}
                                     <td className="tableComponent_td">
                                         <div className="tableComponent_tdOptions">

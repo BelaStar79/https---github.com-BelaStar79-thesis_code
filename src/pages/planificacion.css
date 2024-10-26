@@ -1,0 +1,15 @@
+@import url('../css/variable.css');
+
+.tableComponent_table tr td:nth-child(3),
+.tableComponent_table tr th:nth-child(3) {
+    width: 20%;
+}
+
+.tableComponent_table tr td:nth-child(4),
+.tableComponent_table tr th:nth-child(4),
+.tableComponent_table tr td:nth-child(5),
+.tableComponent_table tr th:nth-child(5) {
+    width: 10%;
+    text-align: center;
+}
+

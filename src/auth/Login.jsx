@@ -1,14 +1,21 @@
 import { LoginForm } from './components/LoginForm'
 import { LoginFooter } from './components/LoginFooter'
 import './login.css'
+import React, { useEffect, useState } from 'react';
 
 function Login() {
+
+  const [pageTitle, setPageTitle] = useState(false);
+
+  useEffect(() => {
+    document.title = pageTitle ? "GOE" : "GOE | Iniciar Sesión";
+  }, [pageTitle]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
     navigate('/planification');
     
-};
+  };
 
   return (
     <>
