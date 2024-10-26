@@ -1,166 +1,309 @@
-import { CiCalendar, CiMemoPad, CiSettings, CiViewList, CiBarcode } from "react-icons/ci";
-import {Accordion, AccordionItem} from "@nextui-org/react";
+import {Accordion, AccordionItem, link} from "@nextui-org/react";
 import './sideMenu.css'
+import { BsCalendar2Check, BsClipboard2Check, BsFileEarmarkText, BsQrCodeScan, BsGear, BsShieldCheck } from "react-icons/bs";
+import LiComponent from "./liComponent";
 
 export function SideMenu() {
+
+    const options = {
+        planning: {
+            key: "1",
+            icon: <BsCalendar2Check className="sideMenu_icon" />,
+            title: "Planificación",
+            suboptions: [
+                {name: "Planificación", link: ""},
+                {name: "Zonas de Guardia", link: ""},
+                {name: "Postas", link: ""},
+                {name: "Grupos de guardia", link: ""},
+                {name: "Potencial", link: ""},
+            ]
+        },
+        control: {
+            key: "2",
+            icon: <BsClipboard2Check className="sideMenu_icon" />,
+            title: "Control",
+            suboptions: [
+                {name: "Asistencia", link: ""},
+                {name: "Incidencia", link: ""},
+                {name: "Oficial de guardia superior", link: ""},
+            ]
+        },
+        report: {
+            key: "3",
+            icon: <BsFileEarmarkText className="sideMenu_icon" />,
+            title: "Reportes",
+            suboptions: [
+                {name: "Guardia", link: ""},
+                {name: "Incidencia", link: ""},
+                {name: "Potencial", link: ""},
+                {name: "Potencial cuantitativo", link: ""},
+                {name: "Periodicidad", link: ""},
+                {name: "Asistencia", link: ""},
+            ]
+        },
+        scanner: {
+            key: "4",
+            icon: <BsQrCodeScan className="sideMenu_icon" />,
+            title: "Lectura de solapin",
+            suboptions: [
+                {name: "Lorem", link: ""},
+            ]
+        },
+        configuration: {
+            key: "5",
+            icon: <BsGear className="sideMenu_icon" />,
+            title: "Configuración",
+            suboptions: [
+                {name: "Tipos de incidencia", link: ""},
+                {name: "Configuraciones de variables", link: ""},
+                {name: "Variables", link: ""},
+                {name: "Horarios", link: ""},
+                {name: "Turnos", link: ""},
+                {name: "Patrones", link: ""},
+            ] 
+        },
+        security: {
+            key: "6",
+            icon: <BsShieldCheck className="sideMenu_icon" />,
+            title: "Seguridad",
+            suboptions: [
+                {name: "Sistemas", link: ""},
+                {name: "Módulos", link: ""},
+                {name: "Agrupación funcional", link: ""},
+                {name: "Funcionalidades", link: ""},
+                {name: "Roles", link: ""},
+                {name: "Grupos de roles", link: ""},
+                {name: "Usuarios", link: ""},
+            ]
+        }
+    }
 
   return (
     <Accordion className='sideMenu'>
       <AccordionItem 
-        key="1" 
+        key={options.planning.key}
         className='sideMenu_accordionItem sideMenu_accordionItem-active' 
-        aria-label="Planificación" 
+        aria-label={options.planning.title}
         title={
             <div className='sideMenu_customHeader'> 
-                <CiCalendar className='sideMenu_icon' />
-                <span>Planificación</span>
+                {options.planning.icon}
+                <span>{options.planning.title}</span>
             </div>
         }
       >
         <ul className="sideMenu_list">
-            <li className="sideMenu_listItem sideMenu_listItem-active">
-                <button className="sideMenu_buttonLink">
-                    <a className="sideMenu_link" href="#">Planificación</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">Zonas de guardia</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">Postas</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">Grupos de guardias</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">Potencial</a>
-                </button>
-            </li>
+            <LiComponent 
+                name={options.planning.suboptions[0].name} 
+                link={options.planning.suboptions[0].link}
+                class_name="sideMenu_listItem-active"
+            />
+            <LiComponent 
+                name={options.planning.suboptions[1].name} 
+                link={options.planning.suboptions[1].link}
+                class_name=""
+            />
+            <LiComponent 
+                name={options.planning.suboptions[2].name} 
+                link={options.planning.suboptions[2].link}
+                class_name=""
+            />
+            <LiComponent 
+                name={options.planning.suboptions[3].name} 
+                link={options.planning.suboptions[3].link}
+                class_name=""
+            />
+            <LiComponent 
+                name={options.planning.suboptions[4].name} 
+                link={options.planning.suboptions[4].link}
+                class_name=""
+            />
         </ul>
       </AccordionItem>
       <AccordionItem 
-        key="2" 
+        key={options.control.key}
         className='sideMenu_accordionItem' 
-        aria-label="Control" 
+        aria-label={options.control.title}
         title={
             <div className='sideMenu_customHeader'> 
-                <CiViewList className='sideMenu_icon' />
-                <span>Control</span>
+                {options.control.icon}
+                <span>{options.control.title}</span>
             </div>
         }
       >
         <ul className="sideMenu_list">
-            <li className="sideMenu_listItem sideMenu_listItem-active">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion1</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion2</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion3</a>
-                </button>
-            </li>
+            <LiComponent
+                name={options.control.suboptions[0].name}
+                link={options.control.suboptions[0].link}
+                class_name="sideMenu_listItem-active"
+            />
+            <LiComponent
+                name={options.control.suboptions[1].name}
+                link={options.control.suboptions[1].link}
+                class_name=""                
+            />
+            <LiComponent
+                name={options.control.suboptions[2].name}
+                link={options.control.suboptions[2].link}
+                class_name=""
+            />
         </ul>
       </AccordionItem>
       <AccordionItem 
-        key="3" 
+        key={options.report.key}
         className='sideMenu_accordionItem' 
-        aria-label="Reportes" 
+        aria-label={options.report.title}
         title={
             <div className='sideMenu_customHeader'> 
-                <CiMemoPad className='sideMenu_icon' />
-                <span>Reportes</span>
+                {options.report.icon}
+                <span>{options.report.title}</span>
             </div>
         }
       >
         <ul className="sideMenu_list">
-            <li className="sideMenu_listItem sideMenu_listItem-active">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion1</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion2</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion3</a>
-                </button>
-            </li>
+            <LiComponent
+                name={options.report.suboptions[0].name}
+                link={options.report.suboptions[0].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.report.suboptions[1].name}
+                link={options.report.suboptions[1].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.report.suboptions[2].name}
+                link={options.report.suboptions[2].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.report.suboptions[3].name}
+                link={options.report.suboptions[3].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.report.suboptions[4].name}
+                link={options.report.suboptions[4].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.report.suboptions[5].name}
+                link={options.report.suboptions[5].link}
+                class_name=""
+            />
         </ul>
       </AccordionItem>
       <AccordionItem 
-        key="4" 
+        key={options.scanner.key}
         className='sideMenu_accordionItem' 
-        aria-label="Lectura de solapin" 
+        aria-label={options.scanner.title}
         title={
             <div className='sideMenu_customHeader'>
-                <CiBarcode className='sideMenu_icon' /> 
-                <span>Lectura de solapin</span>
+                {options.scanner.icon}
+                <span>{options.scanner.title}</span>
             </div>
         }
       >
         <ul className="sideMenu_list">
-            <li className="sideMenu_listItem sideMenu_listItem-active">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion1</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion2</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion3</a>
-                </button>
-            </li>
+            <LiComponent 
+                name={options.scanner.suboptions[0].name}
+                link={options.scanner.suboptions[0].link}
+                class_name=""
+            />
         </ul>
       </AccordionItem>
       <AccordionItem 
-        key="5" 
+        key={options.configuration.key}
         className='sideMenu_accordionItem' 
-        aria-label="Configuración" 
+        aria-label={options.configuration.title}
         title={
             <div className='sideMenu_customHeader'> 
-                <CiSettings className='sideMenu_icon' />
-                <span>Configuración</span>
+                {options.configuration.icon}
+                <span>{options.configuration.title}</span>
             </div>
         }
       >
         <ul className="sideMenu_list">
-            <li className="sideMenu_listItem sideMenu_listItem-active">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion1</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion2</a>
-                </button>
-            </li>
-            <li className="sideMenu_listItem">
-                <button className='sideMenu_buttonLink'>
-                    <a className="sideMenu_link" href="#">SubOpcion3</a>
-                </button>
-            </li>
+            <LiComponent
+                name={options.configuration.suboptions[0].name}
+                link={options.configuration.suboptions[0].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.configuration.suboptions[1].name}
+                link={options.configuration.suboptions[1].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.configuration.suboptions[2].name}
+                link={options.configuration.suboptions[2].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.configuration.suboptions[3].name}
+                link={options.configuration.suboptions[3].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.configuration.suboptions[4].name}
+                link={options.configuration.suboptions[4].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.configuration.suboptions[5].name}
+                link={options.configuration.suboptions[5].link}
+                class_name=""
+            />
         </ul>
       </AccordionItem>
+      <AccordionItem
+        key={options.security.key}
+        className='sideMenu_accordionItem' 
+        aria-label={options.security.title}
+        title={
+            <div className='sideMenu_customHeader'> 
+                {options.security.icon}
+                <span>{options.security.title}</span>
+            </div>
+        }
+      >
+        <ul className="sideMenu_list">
+            <LiComponent
+                name={options.security.suboptions[0].name}
+                link={options.security.suboptions[0].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.security.suboptions[1].name}
+                link={options.security.suboptions[1].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.security.suboptions[2].name}
+                link={options.security.suboptions[2].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.security.suboptions[3].name}
+                link={options.security.suboptions[3].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.security.suboptions[4].name}
+                link={options.security.suboptions[4].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.security.suboptions[5].name}
+                link={options.security.suboptions[5].link}
+                class_name=""
+            />
+            <LiComponent
+                name={options.security.suboptions[6].name}
+                link={options.security.suboptions[6].link}
+                class_name=""
+            />
+        </ul>
+    </AccordionItem>
     </Accordion>
   );
 }

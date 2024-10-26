@@ -2,9 +2,10 @@ import React, { useEffect, useState } from "react";
 import SideMenu from "./components/sideMenu/SideMenu.jsx";
 import TableComponent from "./components/tableComponent/TableComponent.jsx";
 import { planificaciones } from "./components/tableComponent/tablaComponent.js";
-import './planificacion.css'
+import './planning.css'
+import Alert from "./components/alert/Alert.jsx";
 
-export function Planification() {
+export function Planning() {
 
     const [pageTitle, setPageTitle] = useState(false);
 
@@ -15,7 +16,7 @@ export function Planification() {
     return (
         
         <div>
-            {/* <SideMenu /> */}
+            <SideMenu />
             <TableComponent
                 rowsPerPage={15}
                 columnNames={["Nombre", "Zona de guardia", "Fecha inicio", "Fecha fin"]}
@@ -27,4 +28,4 @@ export function Planification() {
     );
 }
 
-export default Planification;
+export default Planning;

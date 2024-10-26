@@ -13,7 +13,7 @@ function Login() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate('/planification');
+    navigate('/planning');
     
   };
 

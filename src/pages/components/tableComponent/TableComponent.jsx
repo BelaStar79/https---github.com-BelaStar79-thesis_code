@@ -15,29 +15,35 @@ export default function TableComponent ({ rowsPerPage, columnNames, data, column
     const [count, setCount] = useState(1);
 
     useEffect(() => { 
-        const fetchData = async () => {
-            try {
-                await calculateTotalPages(); 
-                await updateVisiblePages(); 
-                setIsLoading(false); 
-                setHasData(true); 
-            } catch (error) {
-                console.error("Error al cargar datos:", error); 
-                setIsLoading(false); 
-                setHasData(true); 
-            }
-        };
-
+        
         fetchData();
+        // console.warn(totalPages)
+        updateVisiblePages()
+
     }, []); 
+
+    const fetchData = () => {
+        try {
+            calculateTotalPages(); 
+            updateVisiblePages(); 
+            setIsLoading(false); 
+            setHasData(true); 
+        } catch (error) {
+            console.error("Error al cargar datos:", error); 
+            setIsLoading(false); 
+            setHasData(true); 
+        }
+    };
 
     const calculateTotalPages = () => { 
         const totalRows = data?.length || 0;
-        const totalPages = Math.ceil(totalRows / rowsPerPage);
-        setTotalPages(totalPages);
+        const total_Pages = Math.ceil(totalRows / rowsPerPage);
+        // console.warn(total_Pages)    
+        setTotalPages(total_Pages);
+        console.warn(totalPages)
     };
 
-    const updateVisiblePages = () => {  
+    const updateVisiblePages = () => {
         if (!totalPages || totalPages <= VISIBLE_PAGES_COUNT) {
           setVisiblePages(Array.from({ length: totalPages }, (_, i) => i + 1));
         } else {
@@ -84,7 +90,7 @@ export default function TableComponent ({ rowsPerPage, columnNames, data, column
     if (!hasData) { 
         return <div>No hay datos disponibles</div>;
     }
-    
+
     return (
         <div className="tableContainer">
             {filteredData.length > 0 ? (

@@ -18,6 +18,9 @@
     svg:not(.sideMenu_icon) {
         color: transparent;
     }
+    .sideMenu_customHeader span {
+        font-size: 1.1rem;
+    }
 }
 
 .sideMenu_accordionItem-active {
@@ -26,7 +29,7 @@
         color: var(--white);
     }
     .sideMenu_listItem-active .sideMenu_link {
-        color: var(--black);
+        color: var(--wineRed);
     }
 }
 
@@ -43,7 +46,7 @@
 
 .sideMenu_icon {
     margin-right: 5px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .sideMenu hr {
