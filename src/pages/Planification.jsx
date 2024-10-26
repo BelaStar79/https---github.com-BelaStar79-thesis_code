@@ -1,14 +1,20 @@
 import React from "react";
-import './styles/planification.css'
-import { SideMenu } from "./components/SideMenu";
+import SideMenu from "./components/sideMenu/SideMenu.jsx";
+import TableComponent from "./components/tableComponent/TableComponent.jsx";
+import { users } from "./components/tableComponent/tablaComponent.js";
 
 export function Planification() {
     return (
-        <>
-        <SideMenu/>
-        <h1>MONGA</h1>
-        </>
-    )
+        
+        <div>
+            <TableComponent
+                rowsPerPage={5}
+                columnNames={["name", "role", "status"]}
+                data={users}
+            />
+        </div>
+        
+    );
 }
 
-export default Planification
+export default Planification;

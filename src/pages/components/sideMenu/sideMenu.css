@@ -1,0 +1,72 @@
+@import url('../../../css/variable.css');
+
+* {
+    background-color: var(--withe);
+}
+
+.sideMenu_accordionItem button {
+    border: none;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    outline: none;
+    color: var(--wineRed);
+
+    svg:not(.sideMenu_icon) {
+        color: transparent;
+    }
+}
+
+.sideMenu_accordionItem-active {
+    button {
+        background-color: var(--wineRed);
+        color: var(--white);
+    }
+    .sideMenu_listItem-active .sideMenu_link {
+        color: var(--black);
+    }
+}
+
+.sideMenu_customHeader {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.sideMenu_icon {
+    margin-left: auto;
+}
+
+.sideMenu_icon {
+    margin-right: 5px;
+    font-size: 25px;
+}
+
+.sideMenu hr {
+    width: 96%;
+    margin: auto;
+}
+
+.sideMenu_list {
+    margin-left: 30px;
+    list-style: none;
+}
+
+.sideMenu_list .sideMenu_buttonLink {
+    background-color: transparent;
+}
+
+.sideMenu_list .sideMenu_buttonLink:hover {
+    .sideMenu_link {
+        color: var(--black);
+    }
+}
+
+.sideMenu_link {
+    text-decoration: none;
+    color: var(--darckGrey);
+}
