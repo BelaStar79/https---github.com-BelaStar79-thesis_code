@@ -1,8 +1,5 @@
 @import url('../../../css/variable.css');
 
-/* thead, tr, th, td, tbody {
-    border: 1px solid var(--pastelRed);
-} */
 button {
     cursor: pointer;
 }
@@ -16,7 +13,7 @@ button {
 }
 
 .tableComponent_table {
-    width: 90%;
+    width: 100%;
     border-collapse: collapse;
     border: 1px solid var(--lightGrey3);
 }
@@ -39,8 +36,12 @@ button {
     width: 30px;
 }
 
-.tableComponent_table .tableComponent_th-options {
-    width: 100px;
+.tableComponent_th-options {
+    text-align: center;
+}
+
+.tableComponent_tdOptions {
+    display: flex;
 }
 
 .tableContainer_pagination {
@@ -48,7 +49,6 @@ button {
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .tableComponent_button,
@@ -65,7 +65,7 @@ button .tableComponent_buttonIcon:hover {
 }
 
 .tableContainer_pagination .tableComponent_buttonIcon {
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .tableComponent_buttonNumber {

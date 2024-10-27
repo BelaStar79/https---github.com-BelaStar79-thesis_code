@@ -1,4 +1,4 @@
-@import url('../css/variable.css');
+@import url('../../css/variable.css');
 
 .tableComponent_table tr td:nth-child(3),
 .tableComponent_table tr th:nth-child(3) {
