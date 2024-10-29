@@ -1,0 +1,11 @@
+@import url('../../../css/variable.css');
+
+.footerComponent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    z-index: 1000;
+    color: var(--white);
+    background-color: var(--wineRed);
+}

@@ -10,6 +10,7 @@ import CompanyBelt from "../components/companyBelt/CompanyBelt.jsx";
 import TitleBar from "../components/titleBar/TitleBar.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
+import FooterComponent from "../components/footerComponent/FooterComponent.jsx";
 
 export function Planning() {
   const [pageTitle, setPageTitle] = useState(false);
@@ -46,6 +47,9 @@ export function Planning() {
             buttons={<TableButtons />}
           />
         </div>
+      </div>
+      <div className="planning__footer">
+        <FooterComponent />
       </div>
     </div>
   );
