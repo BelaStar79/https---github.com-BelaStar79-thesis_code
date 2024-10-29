@@ -28,13 +28,13 @@ export function Planning() {
       </div>
       <div className="planning__bigContainer">
         <div className="planning__sideMenu">
-          <SideMenu />
+          <SideMenu activeSection="planning" activeOption="Planificación" />
         </div>
         <div className="planning__container">
           <TitleBar title="Planificación" buttons={<TitleBarButtons />} />
           <FormComponent search={<SearchFields />} labels={<FormFields />} />
           <TableComponent
-            rowsPerPage={5}
+            tableName="Planificaciones"
             columnNames={[
               "Nombre",
               "Zona de guardia",

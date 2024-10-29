@@ -11,30 +11,27 @@ import {
 
 export function ButtonCreate() {
   return (
-    <div className="tableComponent_tdOptions">
-      <button className="tableComponent_button" title="Ver detalles">
-        <BsEye className="tableComponent_buttonIcon" />
+    <div className="tdOptions">
+      <button className="tdOptions__button" title="Ver detalles">
+        <BsEye className="tdOptions__buttonIcon" />
       </button>
-      <button className="tableComponent_button" title="Editar">
-        <BsPencil className="tableComponent_buttonIcon" />
+      <button className="tdOptions__button" title="Editar">
+        <BsPencil className="tdOptions__buttonIcon" />
       </button>
-      <button
-        className="tableComponent_button"
-        title="Planificación automática"
-      >
-        <BsCalendar4Week className="tableComponent_buttonIcon" />
+      <button className="tdOptions__button" title="Planificación automática">
+        <BsCalendar4Week className="tdOptions__buttonIcon" />
       </button>
-      <button className="tableComponent_button" title="Planificación manual">
-        <BsCalendar4 className="tableComponent_buttonIcon" />
+      <button className="tdOptions__button" title="Planificación manual">
+        <BsCalendar4 className="tdOptions__buttonIcon" />
       </button>
-      <button className="tableComponent_button" title="Publicar">
-        <BsEnvelope className="tableComponent_buttonIcon" />
+      <button className="tdOptions__button" title="Publicar">
+        <BsEnvelope className="tdOptions__buttonIcon" />
       </button>
-      <button className="tableComponent_button" title="Exportar">
-        <BsFileEarmarkPdf className="tableComponent_buttonIcon" />
+      <button className="tdOptions__button" title="Exportar">
+        <BsFileEarmarkPdf className="tdOptions__buttonIcon" />
       </button>
-      <button className="tableComponent_button" title="Borrar">
-        <BsTrash3 className="tableComponent_buttonIcon" />
+      <button className="tdOptions__button" title="Borrar">
+        <BsTrash3 className="tdOptions__buttonIcon" />
       </button>
     </div>
   );

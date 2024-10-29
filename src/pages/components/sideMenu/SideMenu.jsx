@@ -1,4 +1,4 @@
-import { Accordion, AccordionItem, link } from "@nextui-org/react";
+import { Accordion, AccordionItem } from "@nextui-org/react";
 import "./sideMenu.css";
 import {
   BsCalendar2Check,
@@ -10,7 +10,7 @@ import {
 } from "react-icons/bs";
 import LiComponent from "./liComponent";
 
-export function SideMenu() {
+export function SideMenu({ activeSection, activeOption }) {
   const options = {
     planning: {
       key: "1",
@@ -124,260 +124,47 @@ export function SideMenu() {
     },
   };
 
+  // Verificación de errores
+  if (!options[activeSection]) {
+    console.error(`Invalid active section: ${activeSection}`);
+    return null;
+  }
+
+  const renderAccordionItem = (sectionKey) => (
+    <AccordionItem
+      key={options[sectionKey].key}
+      className={`sideMenu_accordionItem ${
+        activeSection === options[sectionKey].key
+          ? "sideMenu_accordionItem-active"
+          : ""
+      }`}
+      aria-label={options[sectionKey].title}
+      title={
+        <div className="sideMenu_customHeader">
+          {options[sectionKey].icon}
+          <span>{options[sectionKey].title}</span>
+        </div>
+      }
+    >
+      <ul className="sideMenu_list">
+        {options[sectionKey].suboptions.map((option) => (
+          <LiComponent
+            key={option.name}
+            name={option.name}
+            titleCursor={option.titleCursor}
+            link={option.link}
+            class_name={`${
+              activeOption === option.name ? "sideMenu_listItem-active" : ""
+            }`}
+          />
+        ))}
+      </ul>
+    </AccordionItem>
+  );
+
   return (
     <Accordion className="sideMenu">
-      <AccordionItem
-        key={options.planning.key}
-        className="sideMenu_accordionItem sideMenu_accordionItem-active"
-        aria-label={options.planning.title}
-        title={
-          <div className="sideMenu_customHeader">
-            {options.planning.icon}
-            <span>{options.planning.title}</span>
-          </div>
-        }
-      >
-        <ul className="sideMenu_list">
-          <LiComponent
-            name={options.planning.suboptions[0].name}
-            titleCursor={options.planning.suboptions[0].titleCursor}
-            link={options.planning.suboptions[0].link}
-            class_name="sideMenu_listItem-active"
-          />
-          <LiComponent
-            name={options.planning.suboptions[1].name}
-            link={options.planning.suboptions[1].link}
-            titleCursor={options.planning.suboptions[1].titleCursor}
-            class_name=""
-          />
-          <LiComponent
-            name={options.planning.suboptions[2].name}
-            link={options.planning.suboptions[2].link}
-            titleCursor={options.planning.suboptions[2].titleCursor}
-            class_name=""
-          />
-          <LiComponent
-            name={options.planning.suboptions[3].name}
-            link={options.planning.suboptions[3].link}
-            titleCursor={options.planning.suboptions[3].titleCursor}
-            class_name=""
-          />
-          <LiComponent
-            name={options.planning.suboptions[4].name}
-            link={options.planning.suboptions[4].link}
-            titleCursor={options.planning.suboptions[4].titleCursor}
-            class_name=""
-          />
-        </ul>
-      </AccordionItem>
-      <AccordionItem
-        key={options.control.key}
-        className="sideMenu_accordionItem"
-        aria-label={options.control.title}
-        title={
-          <div className="sideMenu_customHeader">
-            {options.control.icon}
-            <span>{options.control.title}</span>
-          </div>
-        }
-      >
-        <ul className="sideMenu_list">
-          <LiComponent
-            name={options.control.suboptions[0].name}
-            titleCursor={options.control.suboptions[0].titleCursor}
-            link={options.control.suboptions[0].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.control.suboptions[1].name}
-            titleCursor={options.control.suboptions[1].titleCursor}
-            link={options.control.suboptions[1].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.control.suboptions[2].name}
-            titleCursor={options.control.suboptions[2].titleCursor}
-            link={options.control.suboptions[2].link}
-            class_name=""
-          />
-        </ul>
-      </AccordionItem>
-      <AccordionItem
-        key={options.report.key}
-        className="sideMenu_accordionItem"
-        aria-label={options.report.title}
-        title={
-          <div className="sideMenu_customHeader">
-            {options.report.icon}
-            <span>{options.report.title}</span>
-          </div>
-        }
-      >
-        <ul className="sideMenu_list">
-          <LiComponent
-            name={options.report.suboptions[0].name}
-            titleCursor={options.report.suboptions[0].titleCursor}
-            link={options.report.suboptions[0].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.report.suboptions[1].name}
-            titleCursor={options.report.suboptions[1].titleCursor}
-            link={options.report.suboptions[1].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.report.suboptions[2].name}
-            titleCursor={options.report.suboptions[2].titleCursor}
-            link={options.report.suboptions[2].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.report.suboptions[3].name}
-            titleCursor={options.report.suboptions[3].titleCursor}
-            link={options.report.suboptions[3].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.report.suboptions[4].name}
-            titleCursor={options.report.suboptions[4].titleCursor}
-            link={options.report.suboptions[4].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.report.suboptions[5].name}
-            titleCursor={options.report.suboptions[5].titleCursor}
-            link={options.report.suboptions[5].link}
-            class_name=""
-          />
-        </ul>
-      </AccordionItem>
-      <AccordionItem
-        key={options.scanner.key}
-        className="sideMenu_accordionItem"
-        aria-label={options.scanner.title}
-        title={
-          <div className="sideMenu_customHeader">
-            {options.scanner.icon}
-            <span>{options.scanner.title}</span>
-          </div>
-        }
-      >
-        <ul className="sideMenu_list">
-          <LiComponent
-            name={options.scanner.suboptions[0].name}
-            titleCursor={options.scanner.suboptions[0].titleCursor}
-            link={options.scanner.suboptions[0].link}
-            class_name=""
-          />
-        </ul>
-      </AccordionItem>
-      <AccordionItem
-        key={options.configuration.key}
-        className="sideMenu_accordionItem"
-        aria-label={options.configuration.title}
-        title={
-          <div className="sideMenu_customHeader">
-            {options.configuration.icon}
-            <span>{options.configuration.title}</span>
-          </div>
-        }
-      >
-        <ul className="sideMenu_list">
-          <LiComponent
-            name={options.configuration.suboptions[0].name}
-            titleCursor={options.configuration.suboptions[0].titleCursor}
-            link={options.configuration.suboptions[0].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.configuration.suboptions[1].name}
-            titleCursor={options.configuration.suboptions[1].titleCursor}
-            link={options.configuration.suboptions[1].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.configuration.suboptions[2].name}
-            titleCursor={options.configuration.suboptions[2].titleCursor}
-            link={options.configuration.suboptions[2].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.configuration.suboptions[3].name}
-            titleCursor={options.configuration.suboptions[3].titleCursor}
-            link={options.configuration.suboptions[3].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.configuration.suboptions[4].name}
-            titleCursor={options.configuration.suboptions[4].titleCursor}
-            link={options.configuration.suboptions[4].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.configuration.suboptions[5].name}
-            titleCursor={options.configuration.suboptions[5].titleCursor}
-            link={options.configuration.suboptions[5].link}
-            class_name=""
-          />
-        </ul>
-      </AccordionItem>
-      <AccordionItem
-        key={options.security.key}
-        className="sideMenu_accordionItem"
-        aria-label={options.security.title}
-        title={
-          <div className="sideMenu_customHeader">
-            {options.security.icon}
-            <span>{options.security.title}</span>
-          </div>
-        }
-      >
-        <ul className="sideMenu_list">
-          <LiComponent
-            name={options.security.suboptions[0].name}
-            titleCursor={options.security.suboptions[0].titleCursor}
-            link={options.security.suboptions[0].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.security.suboptions[1].name}
-            titleCursor={options.security.suboptions[1].titleCursor}
-            link={options.security.suboptions[1].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.security.suboptions[2].name}
-            titleCursor={options.security.suboptions[2].titleCursor}
-            link={options.security.suboptions[2].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.security.suboptions[3].name}
-            titleCursor={options.security.suboptions[3].titleCursor}
-            link={options.security.suboptions[3].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.security.suboptions[4].name}
-            titleCursor={options.security.suboptions[4].titleCursor}
-            link={options.security.suboptions[4].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.security.suboptions[5].name}
-            titleCursor={options.security.suboptions[5].titleCursor}
-            link={options.security.suboptions[5].link}
-            class_name=""
-          />
-          <LiComponent
-            name={options.security.suboptions[6].name}
-            titleCursor={options.security.suboptions[6].titleCursor}
-            link={options.security.suboptions[6].link}
-            class_name=""
-          />
-        </ul>
-      </AccordionItem>
+      {Object.keys(options).map(renderAccordionItem)}
     </Accordion>
   );
 }

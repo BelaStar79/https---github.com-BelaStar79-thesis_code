@@ -24,14 +24,13 @@
     }
 }
 
-.sideMenu_accordionItem-active {
-    button {
-        background-color: var(--wineRed);
-        color: var(--white);
-    }
-    .sideMenu_listItem-active .sideMenu_link {
-        color: var(--wineRed);
-    }
+.sideMenu_accordionItem-active button {
+    color: var(--white);
+    background-color: var(--wineRed);
+}
+
+.sideMenu_listItem-active .sideMenu_link {
+    color: var(--wineRed);
 }
 
 .sideMenu_customHeader {
@@ -74,3 +73,4 @@
     text-decoration: none;
     color: var(--darckGrey);
 }
+

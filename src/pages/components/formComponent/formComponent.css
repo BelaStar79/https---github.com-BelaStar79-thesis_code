@@ -8,9 +8,11 @@
 
 .formComponent__container {
     padding: 10px;
+    padding-bottom: 0px;
     margin: auto;
     margin-bottom: 5px;
     background-color: var(--white);
+    border-radius: 10px;
 }
 
 .formComponent__search {
@@ -30,6 +32,7 @@
             padding: 5px;
             border : 1px solid var(--wineRed);
             color: var(--wineRed);
+            border-radius: 5px;
             
             .formComponent__searchIcon {
                 font-size: 15px;
@@ -47,6 +50,7 @@
 .formComponent__title {
     display : flex;
     align-items: center;
+    padding-bottom: 10px;
   
     .formComponent__button {
         border: none;
@@ -77,7 +81,6 @@
 }
 
 .formComponent__hr {
-    margin-top: 10px;
     margin-bottom: 10px;
     width: 100%;
     color: var(--lightGrey);
@@ -109,6 +112,7 @@
     box-sizing: border-box;
     background-color: var(--lightGrey);
     border: none;
+    border-radius: 5px;
 }
 
 .formComponent__input:focus {

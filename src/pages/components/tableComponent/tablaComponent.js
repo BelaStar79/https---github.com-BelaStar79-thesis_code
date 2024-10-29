@@ -1,4 +1,4 @@
-const planificaciones = [{"nombre":"Morbi vel lectus in quam fringilla rhoncus.","zona":"Valejas","inicio":"12/11/2007","fin":"02/26/2004"},
+const planificaciones = [{"nombre":"PLanificacion 1.","zona":"Valejas","inicio":"12/11/2007","fin":"02/26/2004"},
   {"nombre":"Nulla suscipit ligula in lacus.","zona":"Ambato","inicio":"08/14/2015","fin":"09/22/2002"},
   {"nombre":"Vivamus in felis eu sapien cursus vestibulum.","zona":"Longford","inicio":"11/19/2022","fin":"10/29/2012"},
   {"nombre":"Morbi non lectus.","zona":"Lukou","inicio":"12/02/2017","fin":"10/29/2018"},
@@ -997,5 +997,5 @@ const planificaciones = [{"nombre":"Morbi vel lectus in quam fringilla rhoncus."
   {"nombre":"Nullam sit amet turpis elementum ligula vehicula consequat.","zona":"Ozatlán","inicio":"02/28/2013","fin":"03/04/2011"},
   {"nombre":"Vestibulum quam sapien, varius ut, blandit non, interdum in, ante.","zona":"Ila Orangun","inicio":"04/04/2018","fin":"06/03/2016"},
   {"nombre":"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.","zona":"Kota Bharu","inicio":"03/27/2020","fin":"04/23/2017"},
-  {"nombre":"Donec posuere metus vitae ipsum.","zona":"Bor Ondor","inicio":"05/10/2004","fin":"07/18/2016"}];
+  {"nombre":"Planificacion 1000.","zona":"Bor Ondor","inicio":"05/10/2004","fin":"07/18/2016"}];
   export { planificaciones };

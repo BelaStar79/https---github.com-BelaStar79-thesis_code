@@ -1,84 +1,117 @@
 @import url('../../../css/variable.css');
 
-button {
-    cursor: pointer;
-}
 
-.tableContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.tableComponenet__container {
     padding: 10px;
+    margin-top: -20px;
 }
 
-.tableComponent_table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--lightGrey3);
-}
-
-.tableComponent_thead {
-    background-color: var(--lightGrey3);
-    text-align: left;
-}
-
-.tableComponent_table td,
-.tableComponent_table th {
-    padding: 5px;
-}
-
-.tableComponent_table tr:nth-child(even) {
-    background-color: var(--lightGrey2);
-}
-
-.tableComponent_table .tableComponent_th-number {
-    width: 30px;
-}
-
-.tableComponent_th-options {
-    text-align: center;
-}
-
-.tableComponent_tdOptions {
-    display: flex;
-}
-
-.tableContainer_pagination {
-    margin-top: 10px;
-    display: flex;
-    justify-content: center;
+.tableComponent__headerContainer {
+    display : flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 10px;
+
+    label {
+        font-size: .97rem;
+        margin-left: 10px;
+
+        button {
+            border: none;
+
+            .tableComponent__paginationControls__buttonIcon {
+                margin-bottom: -3px;
+            }
+
+            &:hover {
+                color: var(--pastelRed);
+            }
+        }
+
+        input {
+            width: 30px;
+            text-align: center;
+            margin-left: 5px;
+            margin-right: 5px;
+            padding: 2px;
+            border: 1px solid var(--lightGrey3);
+            font-size: .97rem;
+            border-radius: 5px;
+
+            &::placeholder {
+                color: var(--black);
+                font-size: .97rem;
+            }
+        }
+    }
 }
 
-.tableComponent_button,
-.tableComponent_buttonNumber {
-    border: none;
-    margin-right: 5px;
+.tableComponent__table {
+    padding: 10px;
+    margin-top: -15px;
+
+    .tableComponent__tableContainer {
+        border: 1px solid var(--lightGrey3);
+        width: 100%;
+        border-collapse: collapse;
+
+        .tableComponent__tableContainer__thead {
+            background-color: var(--lightGrey3);
+            text-align: left;
+        }
+
+        .tableComponent__tableContainer__tr {
+            
+            .tableComponent__tableContainer__thNumber {
+                width: 30px;
+                max-width: 30px;
+            }
+
+            .tableComponent__tableContainer__thOptions {
+                text-align: center;
+            }
+
+            .tableComponent__tableContainer__th, 
+            .tableComponent__tableContainer__td {
+                padding: 2px;
+            }
+
+            .tableComponent__tableContainer__tdOptions {
+                display: flex;
+                justify-content: center;
+
+                .tdOptions__button {
+                    border: none;
+                    margin-right: 5px;
+                    cursor: pointer;
+
+                    &:last-child {
+                        margin-right: 0px;
+                    }
+
+                    &:hover {
+                        color: var(--pastelRed);
+                    }
+                }
+            }
+
+            &:nth-child(even) {
+                background-color: var(--lightGrey2);
+            }
+        }
+    }
+
+    .tableComponent__message {
+        width: 100%;
+        text-align: center;
+        font-weight: bold;
+        color: var(--wineRed);
+        margin-top: 50px;
+    }
 }
 
-button .tableComponent_buttonIcon {
-    color: var(--darckGrey);
-}
-button .tableComponent_buttonIcon:hover {
-    color: var(--pastelRed);
-}
 
-.tableContainer_pagination .tableComponent_buttonIcon {
-    font-size: 20px;
-}
 
-.tableComponent_buttonNumber {
-    font-size: 1.2rem;
-    color : var(--darckGrey);
-}
 
-.tableComponent_buttonNumber:hover {
-    border-bottom: 1px solid var(--pastelRed);
-    color: var(--pastelRed);
-}
 
-.tableComponent-pageActive {
-    color: var(--wineRed);
-}
 
