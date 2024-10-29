@@ -7,6 +7,7 @@ import ButtonCreate from "./TableButtons.jsx";
 import FormComponent from "../components/formComponent/FormComponent.jsx";
 import Alert from "../components/alert/Alert.jsx";
 import FormFields from "./FormFields.jsx";
+import CompanyBelt from "../components/companyBelt/CompanyBelt.jsx";
 
 export function Planning() {
   const [pageTitle, setPageTitle] = useState(false);
@@ -25,7 +26,8 @@ export function Planning() {
         data={planificaciones}
         buttons={<TableButtons />}
       /> */}
-      <FormComponent labels={<FormFields />} />
+      {/* <FormComponent labels={<FormFields />} /> */}
+      {/* <CompanyBelt user="user" profilePhoto="../../../public/images/user.png" /> */}
     </div>
   );
 }

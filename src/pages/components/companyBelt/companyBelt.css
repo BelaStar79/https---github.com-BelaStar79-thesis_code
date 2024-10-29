@@ -1,0 +1,88 @@
+@import url('../../../css/variable.css');
+
+.companyBelt {
+    height: 60px;
+
+    img {
+        max-width: 50px;
+        margin-right: 5px;
+    }
+
+    background-color: var(--white);
+}
+
+.companyBelt__container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+  
+.companyBelt__leftContainer,
+.companyBelt__rightContainer {
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    max-width: 40%;
+}
+
+.companyBelt__leftContainer {
+    margin-left: 10px;
+}
+
+.companyBelt__rightContainer {
+    margin-right: 10px;
+}
+  
+.companyBelt__info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.companyBelt__companyName {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    span {
+        font-size: 0.9rem;
+        margin-bottom: -9px;
+    }
+    strong {
+        margin-top: 0;
+        font-size: 2rem;
+        color: var(--wineRed);
+    }
+
+    padding-right: 5px;
+    border-right: 2px solid var(--wineRed);
+}
+
+.companyBelt__systemName {
+    margin-left: -5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.companyBelt__accountButton {
+    min-width: 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: none;
+
+    span {
+        font-size: 1.2rem;
+    }
+    .companyBelt__acountIcon {
+        color: var(--black);
+    }
+    .companyBelt__acountIcon:hover {
+        color: var(--pastelRed);
+    }
+}
+

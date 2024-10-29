@@ -24,22 +24,26 @@
     margin-right: 10px;
 }
 
-
-
 .formComponent__icon {
     transition: transform 0.3s ease-in-out;
+    color: var(--wineRed);
 }
+
+.formComponent__icon:hover {
+    color: var(--pastelRed);
+}
+
 .rotated {
     transform: rotate(90deg);
 }  
+
 .hidden {
     display: none;
 }
+
 .visible {
     display: block;
 }
-
-
 
 .formComponent__hr {
     margin-top: 10px;
@@ -63,6 +67,10 @@
     margin-right: 0px;
 }
 
+.formComponent__label {
+    font-weight: bold;
+}
+
 .formComponent__input {
     width: 100%;
     padding: 5px;
@@ -73,5 +81,9 @@
 
 .formComponent__input:focus {
     outline: none;
+}
+
+.formComponent__input::placeholder {
+    color: var(--black);
 }
 

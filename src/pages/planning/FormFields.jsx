@@ -13,11 +13,19 @@ export function FormFields() {
       </label>
       <label htmlFor="" className="formComponent__label">
         Zona de guardia
-        <input type="text" className="formComponent__input" />
+        <input
+          type="text"
+          className="formComponent__input"
+          placeholder="Introduzca la zona"
+        />
       </label>
       <label htmlFor="" className="formComponent__label">
         Estados de planificación
-        <input type="text" className="formComponent__input" />
+        <input
+          type="text"
+          className="formComponent__input"
+          placeholder="Introduzca los estados"
+        />
       </label>
     </>
   );
