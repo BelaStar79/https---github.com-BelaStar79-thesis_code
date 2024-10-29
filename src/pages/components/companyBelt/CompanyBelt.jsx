@@ -1,5 +1,5 @@
 import React from "react";
-import { BsChevronDown } from "react-icons/bs";
+import { BsBoxArrowRight } from "react-icons/bs";
 import "./companyBelt.css";
 
 export default function CompanyBelt({ user, profilePhoto }) {
@@ -34,9 +34,13 @@ export default function CompanyBelt({ user, profilePhoto }) {
             <img src={profilePhoto} alt={`Foto de prefil de ` + user} />
           </div>
           <div className="companyBelt__account">
-            <button className="companyBelt__accountButton">
-              <span>{user}</span>
-              <BsChevronDown className="companyBelt__acountIcon" />
+            <span>{user}</span>
+            <button
+              className="companyBelt__accountButton"
+              title="Cerrar sesión"
+              onClick={() => (window.location.href = "/")}
+            >
+              <BsBoxArrowRight className="companyBelt__acountIcon" />
             </button>
           </div>
         </div>

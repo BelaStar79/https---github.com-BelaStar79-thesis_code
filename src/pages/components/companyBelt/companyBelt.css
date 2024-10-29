@@ -69,21 +69,33 @@
     justify-content: center;
 }
 
-.companyBelt__accountButton {
+.companyBelt__account {
     min-width: 120px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: none;
 
     span {
         font-size: 1.2rem;
     }
-    .companyBelt__acountIcon {
-        color: var(--black);
-    }
-    .companyBelt__acountIcon:hover {
-        color: var(--pastelRed);
+
+    .companyBelt__accountButton {
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: none;
+    
+        .companyBelt__acountIcon {
+            color: var(--black);
+            font-size: 1.25rem;
+    
+            &:hover {
+                color: var(--pastelRed);
+            }
+        }
     }
 }
+
+
 
