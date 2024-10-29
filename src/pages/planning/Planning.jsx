@@ -3,8 +3,10 @@ import SideMenu from "../components/sideMenu/SideMenu.jsx";
 import TableComponent from "../components/tableComponent/TableComponent.jsx";
 import { planificaciones } from "../components/tableComponent/tablaComponent.js";
 import "./planning.css";
-import { ButtonCreate } from "./ButtonCreate.jsx";
+import ButtonCreate from "./TableButtons.jsx";
+import FormComponent from "../components/formComponent/FormComponent.jsx";
 import Alert from "../components/alert/Alert.jsx";
+import FormFields from "./FormFields.jsx";
 
 export function Planning() {
   const [pageTitle, setPageTitle] = useState(false);
@@ -16,13 +18,14 @@ export function Planning() {
   return (
     <div>
       {/* <SideMenu /> */}
-      <TableComponent
+      {/* <TableComponent
         rowsPerPage={15}
         columnNames={["Nombre", "Zona de guardia", "Fecha inicio", "Fecha fin"]}
         columns={["nombre", "zona", "inicio", "fin"]}
         data={planificaciones}
-        buttons={<ButtonCreate />}
-      />
+        buttons={<TableButtons />}
+      /> */}
+      <FormComponent labels={<FormFields />} />
     </div>
   );
 }
