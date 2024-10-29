@@ -3,11 +3,12 @@ import SideMenu from "../components/sideMenu/SideMenu.jsx";
 import TableComponent from "../components/tableComponent/TableComponent.jsx";
 import { planificaciones } from "../components/tableComponent/tablaComponent.js";
 import "./planning.css";
-import ButtonCreate from "./TableButtons.jsx";
+import TableButtons from "./TableButtons.jsx";
 import FormComponent from "../components/formComponent/FormComponent.jsx";
-import Alert from "../components/alert/Alert.jsx";
 import FormFields from "./FormFields.jsx";
 import CompanyBelt from "../components/companyBelt/CompanyBelt.jsx";
+import TitleBar from "../components/titleBar/TitleBar.jsx";
+import TitleBarButtons from "./TitleBarButtons.jsx";
 
 export function Planning() {
   const [pageTitle, setPageTitle] = useState(false);
@@ -17,17 +18,34 @@ export function Planning() {
   }, [pageTitle]);
 
   return (
-    <div>
-      {/* <SideMenu /> */}
-      {/* <TableComponent
-        rowsPerPage={15}
-        columnNames={["Nombre", "Zona de guardia", "Fecha inicio", "Fecha fin"]}
-        columns={["nombre", "zona", "inicio", "fin"]}
-        data={planificaciones}
-        buttons={<TableButtons />}
-      /> */}
-      {/* <FormComponent labels={<FormFields />} /> */}
-      {/* <CompanyBelt user="user" profilePhoto="../../../public/images/user.png" /> */}
+    <div className="planning">
+      <div className="planning__companyBelt">
+        <CompanyBelt
+          user="user"
+          profilePhoto="../../../public/images/user.png"
+        />
+      </div>
+      <div className="planning__bigContainer">
+        <div className="planning__sideMenu">
+          <SideMenu />
+        </div>
+        <div className="planning__container">
+          <TitleBar title="Planificación" buttons={<TitleBarButtons />} />
+          <FormComponent labels={<FormFields />} />
+          <TableComponent
+            rowsPerPage={5}
+            columnNames={[
+              "Nombre",
+              "Zona de guardia",
+              "Fecha inicio",
+              "Fecha fin",
+            ]}
+            columns={["nombre", "zona", "inicio", "fin"]}
+            data={planificaciones}
+            buttons={<TableButtons />}
+          />
+        </div>
+      </div>
     </div>
   );
 }

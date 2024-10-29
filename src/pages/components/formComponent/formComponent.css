@@ -3,8 +3,10 @@
 .formComponent__container {
     padding: 10px;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
 
-    width: 60%;
+    width: 800px;
     background-color: var(--white);
 }
 

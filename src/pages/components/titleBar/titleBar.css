@@ -1,0 +1,53 @@
+@import url('../../../css/variable.css');
+
+.titleBar {
+    height: 40px;
+    padding: 5px;
+    
+    .titleBar__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        background-color: var(--lightGrey);
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-left: 10px;
+        }
+    
+        .titleBar__buttonsContainer {
+            margin-right: 10px;
+        
+            .titleBar__button {
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+                border: none;
+            
+                .titleBar__icon {
+                    font-size: 1.5rem;
+                    color: var(--black);
+                }
+            }
+        
+            .titleBar__button:hover {
+                .titleBar__icon {
+                    color: var(--pastelRed);
+                }
+            }
+        }
+    }
+
+    .titleBar__hrContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .titleBar__hr {
+            width: 97%;
+            border: 1px solid var(--lightGrey3);
+        }
+    }
+}
+

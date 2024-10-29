@@ -13,3 +13,27 @@
     text-align: center;
 }
 
+.planning__bigContainer {
+    display: flex;
+    flex-grow: 1;
+
+    .planning__sideMenu {
+        min-width: 300px;
+    }
+}
+
+.planning__companyBelt {
+    border-bottom: 1px solid var(--lightGrey3);
+}
+
+.planning__sideMenu {
+    border-right: 1px solid var(--lightGrey3);
+}
+
+.planning__container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+
