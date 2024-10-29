@@ -8,9 +8,6 @@ export default function TitleBar({ title, buttons }) {
         <h2>{title}</h2>
         <div className="titleBar__buttonsContainer">{buttons}</div>
       </div>
-      <div className="titleBar__hrContainer">
-        <hr className="titleBar__hr" />
-      </div>
     </section>
   );
 }

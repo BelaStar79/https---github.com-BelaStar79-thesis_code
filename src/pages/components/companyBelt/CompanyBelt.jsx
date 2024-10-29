@@ -6,7 +6,10 @@ export default function CompanyBelt({ user, profilePhoto }) {
   return (
     <section className="companyBelt">
       <div className="companyBelt__container">
-        <div className="companyBelt__leftContainer">
+        <div
+          className="companyBelt__leftContainer"
+          title="Cintillo de la empresa"
+        >
           <div className="companyBelt__logo">
             <img
               src="../../../../public/images/logo_GSG.png"

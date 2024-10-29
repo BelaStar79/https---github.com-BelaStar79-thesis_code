@@ -3,6 +3,7 @@
 .titleBar {
     height: 40px;
     padding: 5px;
+    margin: 0;
     
     .titleBar__container {
         display: flex;
@@ -36,17 +37,6 @@
                     color: var(--pastelRed);
                 }
             }
-        }
-    }
-
-    .titleBar__hrContainer {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        .titleBar__hr {
-            width: 97%;
-            border: 1px solid var(--lightGrey3);
         }
     }
 }

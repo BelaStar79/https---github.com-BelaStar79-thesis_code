@@ -25,4 +25,6 @@
     --white: #fff;
     --black: #000;
 
+    /* Shadows */
+    --shadowMenu: 0 -0.4rem 1rem var(--lightGrey3);
 }

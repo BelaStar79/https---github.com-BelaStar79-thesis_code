@@ -9,6 +9,7 @@ import FormFields from "./FormFields.jsx";
 import CompanyBelt from "../components/companyBelt/CompanyBelt.jsx";
 import TitleBar from "../components/titleBar/TitleBar.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
+import SearchFields from "./SearchFields.jsx";
 
 export function Planning() {
   const [pageTitle, setPageTitle] = useState(false);
@@ -31,7 +32,7 @@ export function Planning() {
         </div>
         <div className="planning__container">
           <TitleBar title="Planificación" buttons={<TitleBarButtons />} />
-          <FormComponent labels={<FormFields />} />
+          <FormComponent search={<SearchFields />} labels={<FormFields />} />
           <TableComponent
             rowsPerPage={5}
             columnNames={[

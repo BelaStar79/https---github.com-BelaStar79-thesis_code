@@ -9,6 +9,7 @@
     }
 
     background-color: var(--lightGrey);
+    box-shadow: var(--shadowMenu);
 }
 
 .companyBelt__container {

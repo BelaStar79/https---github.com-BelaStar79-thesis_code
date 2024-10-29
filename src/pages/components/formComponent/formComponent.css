@@ -1,38 +1,67 @@
 @import url('../../../css/variable.css');
 
+.formComponent__bigContainer {
+    padding: 10px;
+    padding-top: 0px;
+    margin: 0;
+}
+
 .formComponent__container {
     padding: 10px;
     margin: auto;
-    margin-top: 10px;
-    margin-bottom: 10px;
-
-    width: 800px;
+    margin-bottom: 5px;
     background-color: var(--white);
+}
+
+.formComponent__search {
+    margin-bottom: 10px;
+    
+    .formComponent__searchFormContainer {
+        display: flex;
+        gap: 10px;
+
+        .formComponent__searchInput {
+            min-width: 250px;
+            max-width: 31.9%;
+        }
+
+        .formComponent__searchButton {
+            display: flex;
+            padding: 5px;
+            border : 1px solid var(--wineRed);
+            color: var(--wineRed);
+            
+            .formComponent__searchIcon {
+                font-size: 15px;
+                margin-right: 5px;
+            }
+        }
+
+        .formComponent__searchButton:hover {
+            background-color: var(--wineRed);
+            color: var(--white);
+        }
+    }
 }
 
 .formComponent__title {
     display : flex;
     align-items: center;
-}
+  
+    .formComponent__button {
+        border: none;
+        padding: 0;
+        margin-right: 3px;
 
-.formComponent__title p {
-    margin-left: 5px;
-}
+        .formComponent__icon {
+            transition: transform 0.3s ease-in-out;
+            color: var(--wineRed);
+        }
 
-.formComponent__title .formComponent__button {
-    border: none;
-
-    padding: 0;
-    margin-right: 10px;
-}
-
-.formComponent__icon {
-    transition: transform 0.3s ease-in-out;
-    color: var(--wineRed);
-}
-
-.formComponent__icon:hover {
-    color: var(--pastelRed);
+        .formComponent__icon:hover {
+            color: var(--pastelRed);
+        }
+    }
 }
 
 .rotated {
@@ -60,7 +89,8 @@
 }
 
 .formComponent__label {
-    width: 250px;
+    min-width: 250px;
+    width: 31.9%;
     margin-right: 20px;
     margin-bottom: 10px;
 }
