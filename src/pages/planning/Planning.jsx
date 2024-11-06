@@ -1,57 +1,27 @@
-import React, { useEffect, useState } from "react";
-import SideMenu from "../components/sideMenu/SideMenu.jsx";
-import TableComponent from "../components/tableComponent/TableComponent.jsx";
-import { planificaciones } from "../components/tableComponent/tablaComponent.js";
-import "./planning.css";
+import React from "react";
+import MainStructure from "../components/mainStructure/MainStructure.jsx";
 import TableButtons from "./TableButtons.jsx";
-import FormComponent from "../components/formComponent/FormComponent.jsx";
 import FormFields from "./FormFields.jsx";
-import CompanyBelt from "../components/companyBelt/CompanyBelt.jsx";
-import TitleBar from "../components/titleBar/TitleBar.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
-import FooterComponent from "../components/footerComponent/FooterComponent.jsx";
+import { planificaciones } from "../components/tableComponent/tablaComponent.js";
 
 export function Planning() {
-  const [pageTitle, setPageTitle] = useState(false);
-
-  useEffect(() => {
-    document.title = pageTitle ? "GOE" : "GOE | Planificación";
-  }, [pageTitle]);
-
   return (
-    <div className="planning">
-      <div className="planning__companyBelt">
-        <CompanyBelt
-          user="user"
-          profilePhoto="../../../public/images/user.png"
-        />
-      </div>
-      <div className="planning__bigContainer">
-        <div className="planning__sideMenu">
-          <SideMenu activeSection="planning" activeOption="Planificación" />
-        </div>
-        <div className="planning__container">
-          <TitleBar title="Planificación" buttons={<TitleBarButtons />} />
-          <FormComponent search={<SearchFields />} labels={<FormFields />} />
-          <TableComponent
-            tableName="Planificaciones"
-            columnNames={[
-              "Nombre",
-              "Zona de guardia",
-              "Fecha inicio",
-              "Fecha fin",
-            ]}
-            columns={["nombre", "zona", "inicio", "fin"]}
-            data={planificaciones}
-            buttons={<TableButtons />}
-          />
-        </div>
-      </div>
-      <div className="planning__footer">
-        <FooterComponent />
-      </div>
-    </div>
+    <MainStructure
+      namePage="Planificación"
+      user="user"
+      activeSection="planning"
+      activeOption="Planificación"
+      titleBarButtons={<TitleBarButtons />}
+      search={<SearchFields />}
+      labels={<FormFields />}
+      tableName="Planificaciones"
+      columnNames={["Nombre", "Zona de guardia", "Fecha inicio", "Fecha fin"]}
+      columns={["nombre", "zona", "inicio", "fin"]}
+      data={planificaciones}
+      tableComponentButtons={<TableButtons />}
+    />
   );
 }
 

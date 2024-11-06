@@ -13,7 +13,7 @@ export default function TableComponent({
   columnNames,
   data,
   columns,
-  buttons,
+  tableComponentButtons,
 }) {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [actualPage, setActualPage] = useState(1);
@@ -207,7 +207,7 @@ export default function TableComponent({
                       </td>
                     ))}
                     <td className="tableComponent__tableContainer__td tableComponent__tableContainer__tdOptions">
-                      {buttons}
+                      {tableComponentButtons}
                     </td>
                   </tr>
                 ))}
@@ -216,7 +216,9 @@ export default function TableComponent({
           </>
         ) : (
           <div className="tableComponent__message">
-            <p className="tableComponent__messageP">No hay datos disponibles</p>
+            <p className="tableComponent__messageP">
+              No existen registros en el sistema
+            </p>
           </div>
         )}
       </div>

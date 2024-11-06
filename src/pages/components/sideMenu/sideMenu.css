@@ -29,8 +29,8 @@
     background-color: var(--wineRed);
 }
 
-.sideMenu_listItem-active .sideMenu_link {
-    color: var(--wineRed);
+.sideMenu_listItem-active span{
+    color: var(--wineRed) !important;
 }
 
 .sideMenu_customHeader {
@@ -61,16 +61,14 @@
 
 .sideMenu_list .sideMenu_buttonLink {
     background-color: transparent;
-}
+    cursor: pointer;
 
-.sideMenu_list .sideMenu_buttonLink:hover {
-    .sideMenu_link {
-        color: var(--black);
+    span {
+        color: var(--darckGrey);
     }
 }
 
-.sideMenu_link {
-    text-decoration: none;
-    color: var(--darckGrey);
+.sideMenu_list .sideMenu_buttonLink:hover span {
+    color: var(--black);
 }
 

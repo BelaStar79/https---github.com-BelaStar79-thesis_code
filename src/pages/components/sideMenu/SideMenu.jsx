@@ -8,7 +8,7 @@ import {
   BsGear,
   BsShieldCheck,
 } from "react-icons/bs";
-import LiComponent from "./liComponent";
+import LiComponent from "./liComponent.jsx";
 
 export function SideMenu({ activeSection, activeOption }) {
   const options = {
@@ -18,19 +18,27 @@ export function SideMenu({ activeSection, activeOption }) {
       title: "Planificación",
       titleCursor: "Ver opciones de Planificación",
       suboptions: [
-        { name: "Planificación", titleCursor: "Ir a Planificación", link: "" },
         {
-          name: "Zonas de Guardia",
-          titleCursor: "Ir a Zonas de Guardia",
-          link: "",
+          name: "Planificación",
+          titleCursor: "Ir a Planificación",
+          link: "/planning",
         },
-        { name: "Postas", titleCursor: "Ir a Postas", link: "" },
+        {
+          name: "Zonas de guardia",
+          titleCursor: "Ir a Zonas de guardia",
+          link: "/guard-area",
+        },
+        { name: "Postas", titleCursor: "Ir a Postas", link: "/posts" },
         {
           name: "Grupos de guardia",
           titleCursor: "Ir a Grupos de guardia",
-          link: "",
+          link: "/guard-groups",
         },
-        { name: "Potencial", titleCursor: "Ir a Potencial", link: "" },
+        {
+          name: "Potencial",
+          titleCursor: "Ir a Potencial",
+          link: "/potential",
+        },
       ],
     },
     control: {
@@ -39,12 +47,20 @@ export function SideMenu({ activeSection, activeOption }) {
       title: "Control",
       titleCursor: "Ver opciones de Control",
       suboptions: [
-        { name: "Asistencia", titleCursor: "Ir a Asistencia", link: "" },
-        { name: "Incidencia", titleCursor: "Ir a Incidencia", link: "" },
+        {
+          name: "Asistencia",
+          titleCursor: "Ir a Asistencia",
+          link: "/assistance",
+        },
+        {
+          name: "Incidencia",
+          titleCursor: "Ir a Incidencia",
+          link: "/incident",
+        },
         {
           name: "Oficial de guardia superior",
           titleCursor: "Ir a Oficial de guardia superior",
-          link: "",
+          link: "/duty-officer",
         },
       ],
     },
@@ -55,15 +71,27 @@ export function SideMenu({ activeSection, activeOption }) {
       titleCursor: "Ver opciones de Reportes",
       suboptions: [
         { name: "Guardia", titleCursor: "Ir a Guardia", link: "" },
-        { name: "Incidencia", titleCursor: "Ir a Incidencia", link: "" },
-        { name: "Potencial", titleCursor: "Ir a Potencial", link: "" },
+        {
+          name: "Incidencia",
+          titleCursor: "Ir a Incidencia",
+          link: "/incident",
+        },
+        {
+          name: "Potencial",
+          titleCursor: "Ir a Potencial",
+          link: "/potential",
+        },
         {
           name: "Potencial cuantitativo",
           titleCursor: "Ir a Potencial cuantitativo",
           link: "",
         },
         { name: "Periodicidad", titleCursor: "Ir a Periodicidad", link: "" },
-        { name: "Asistencia", titleCursor: "Ir a Asistencia", link: "" },
+        {
+          name: "Asistencia",
+          titleCursor: "Ir a Asistencia",
+          link: "/assistance",
+        },
       ],
     },
     scanner: {
@@ -151,11 +179,10 @@ export function SideMenu({ activeSection, activeOption }) {
           <LiComponent
             key={option.name}
             name={option.name}
-            titleCursor={option.titleCursor}
-            link={option.link}
             class_name={`${
               activeOption === option.name ? "sideMenu_listItem-active" : ""
             }`}
+            link={option.link}
           />
         ))}
       </ul>

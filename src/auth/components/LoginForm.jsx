@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../login.css";
 import { BsPerson, BsLock, BsEye, BsEyeSlash } from "react-icons/bs";
-import Alert from "../../core/components/Alert";
 
 export function LoginForm() {
   const navigate = useNavigate();

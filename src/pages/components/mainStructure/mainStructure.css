@@ -1,0 +1,28 @@
+@import url('../../../css/variable.css');
+
+body {
+    min-height: 100vh;
+
+    .pageStructure {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+
+        .pageStructure__bigContainer {
+            display: flex;
+            flex-grow: 1;
+        
+            .pageStructure__sideMenu {
+                min-width: 300px;
+                border-right: 1px solid var(--lightGrey3);
+            }
+
+            .pageStructure__container {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+        }
+    }
+}
+

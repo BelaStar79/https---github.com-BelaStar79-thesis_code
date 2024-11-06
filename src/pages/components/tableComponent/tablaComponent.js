@@ -999,3 +999,57 @@ const planificaciones = [{"nombre":"PLanificacion 1.","zona":"Valejas","inicio":
   {"nombre":"Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.","zona":"Kota Bharu","inicio":"03/27/2020","fin":"04/23/2017"},
   {"nombre":"Planificacion 1000.","zona":"Bor Ondor","inicio":"05/10/2004","fin":"07/18/2016"}];
   export { planificaciones };
+
+  const guard_area = [
+    {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
+    {nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
+    {nombre: 'John Wesley Shipp', ci: '12345678903', solapin: 'E345612', cargo: 'Estuduante', estructura: 'IDF3'},
+    {nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
+    {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
+    {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
+  ];
+  export { guard_area };
+
+const posts = [
+  {posta: 'Direccion de extensión universitaria', zona: "Centro cultural", cantidad: 2, activo: "Sí"},
+  {posta: 'Choferes de guardia', zona: "Choferes de guardia", cantidad: 2, activo: "Sí"},
+  {posta: 'Complejo 1 - C3', zona: "Complejo Cmedor 1", cantidad: 1, activo: "Sí"},
+  {posta: 'Complejo 1 - CC', zona: "Complejo Cmedor 1", cantidad: 1, activo: "Sí"},
+  {posta: 'Complejo 1 - C1', zona: "Complejo Cmedor 1", cantidad: 1, activo: "Sí"},
+];
+export {posts};
+
+const guard_groups = [
+  {grupo: "Centro de Gobierno Electrónico", zona: "Casona", personasAsociadas:0},
+  {grupo: "Centro de Indentificación y Seguridad Digital", zona: "Casona", personasAsociadas:0},
+  {grupo: "Centro de Información de Entidades", zona: "Casona", personasAsociadas:0},
+  {grupo: "Centro de Información de la Gestión Documental", zona: "Casona", personasAsociadas:0},
+  {grupo: "Centro de Innovación y Calidad en la Educación", zona: "Casona", personasAsociadas:0},
+];
+export {guard_groups};
+
+const potential = [
+  {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
+    {nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
+    {nombre: 'John Wesley Shipp', ci: '12345678903', solapin: 'E345612', cargo: 'Estuduante', estructura: 'IDF3'},
+    {nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
+    {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
+    {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
+];
+export {potential};
+
+const assistance = [
+  {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nombre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
+  {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nomre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
+  {turno:'31/05/2022', posta:'Docente 1 Viejo', nomre:'1er noche Docente 1 Viejo', zona: 'Gastex-DIRCOM-Producción', cantidad: '1'},
+];
+export {assistance};
+
+const incident = [];
+export {incident};
+
+const duty_officer = [
+  {fecha:'01/12/2021', oficialGuardia:'Alvaro Alejandro Acosta Ruiz', cantidad:'', cantidadReal:''}
+];
+export {duty_officer};
+
