@@ -4,25 +4,30 @@ import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { potential } from "../../components/tableComponent/tablaComponent.js";
+import { quantitative_potential } from "../../components/tableComponent/tablaComponent.js";
 
-export function Potential() {
+export function QuantitativePotential() {
   return (
     <MainStructure
-      namePage="Potencial"
+      namePage="Potencial cuantitativo"
       user="user"
-      activeSection="planning"
-      activeOption="Potencial"
+      activeSection="report"
+      activeOption="Potencial cuantitativo"
       titleBarButtons={<TitleBarButtons />}
       search={<SearchFields />}
       labels={<FormFields />}
       tableName="Potencial"
-      columnNames={["Nombre", "CI", "Solapin", "Cargo", "Estructura"]}
-      columns={["nombre", "ci", "solapin", "cargo", "estructura"]}
-      data={potential}
+      columnNames={[
+        "Estructura",
+        "Recursos humanos",
+        "Potencial",
+        "Pendientes",
+      ]}
+      columns={["estructura", "recursosHumanos", "potencial", "pendientes"]}
+      data={quantitative_potential}
       tableComponentButtons={<TableButtons />}
     />
   );
 }
 
-export default Potential;
+export default QuantitativePotential;

@@ -74,23 +74,27 @@ export function SideMenu({ activeSection, activeOption }) {
         {
           name: "Incidencia",
           titleCursor: "Ir a Incidencia",
-          link: "",
+          link: "/report/incident",
         },
         {
           name: "Potencial",
           titleCursor: "Ir a Potencial",
-          link: "",
+          link: "/report/potential",
         },
         {
           name: "Potencial cuantitativo",
           titleCursor: "Ir a Potencial cuantitativo",
-          link: "",
+          link: "/report/quantitative-potential",
         },
-        { name: "Periodicidad", titleCursor: "Ir a Periodicidad", link: "" },
+        {
+          name: "Periodicidad",
+          titleCursor: "Ir a Periodicidad",
+          link: "/report/frequency",
+        },
         {
           name: "Asistencia",
           titleCursor: "Ir a Asistencia",
-          link: "",
+          link: "/report/assistance",
         },
       ],
     },

@@ -14,6 +14,11 @@ import Incident from "./pages/controlPages/incident/Incident.jsx";
 import DutyOfficer from "./pages/controlPages/dutyOfficer/DutyOfficer.jsx";
 // Report
 import Guard from "./pages/reportPages/guard/Guard.jsx";
+import IncidentReport from "./pages/reportPages/incident/IncidentReport.jsx";
+import PotentialReport from "./pages/reportPages/potential/PotentialReport.jsx";
+import AssistanceReport from "./pages/reportPages/assistance/AssistanceReport.jsx";
+import QuantitativePotential from "./pages/reportPages/quantitativePotential/QuantitativePotential.jsx";
+import Frequency from "./pages/reportPages/frequency/Frequency.jsx";
 
 function App() {
   return (
@@ -35,6 +40,14 @@ function App() {
 
       {/* Routes for report */}
       <Route path="/report/guard" element={<Guard />} />
+      <Route path="/report/incident" element={<IncidentReport />} />
+      <Route path="/report/potential" element={<PotentialReport />} />
+      <Route
+        path="/report/quantitative-potential"
+        element={<QuantitativePotential />}
+      />
+      <Route path="/report/frequency" element={<Frequency />} />
+      <Route path="/report/assistance" element={<AssistanceReport />} />
     </Routes>
   );
 }

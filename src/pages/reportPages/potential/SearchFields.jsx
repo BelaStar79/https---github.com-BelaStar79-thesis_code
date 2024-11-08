@@ -7,25 +7,25 @@ export default function SearchFields() {
         type="text"
         className="formComponent__input formComponent__searchInput"
         placeholder="Nombre"
-        title="Introduzca el nombre"
+        title="Introduzca el nombre de la persona que desea buscar"
       />
       <input
         type="text"
         className="formComponent__input formComponent__searchInput"
-        placeholder="Carnet de identidad"
-        title="Introduzca el ci"
+        placeholder="CI"
+        title="Introduzca el CI de la persona que desea buscar"
       />
       <input
         type="text"
         className="formComponent__input formComponent__searchInput"
         placeholder="Solapin"
-        title="Introduzca el solapin"
+        title="Introduzca el solapin de la persona que desea buscar"
       />
       <input
         type="text"
         className="formComponent__input formComponent__searchInput"
         placeholder="Usuario"
-        title="Introduzca el usuario"
+        title="Introduzca el usuario de la persona que desea buscar"
       />
     </>
   );

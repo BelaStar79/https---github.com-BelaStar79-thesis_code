@@ -4,29 +4,32 @@ import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { guard_groups } from "../../components/tableComponent/tablaComponent.js";
+import { incident } from "../../components/tableComponent/tablaComponent.js";
 
-export function GuardGroups() {
+export function IncidentReport() {
   return (
     <MainStructure
-      namePage="Grupos de guardia"
+      namePage="Incidencias"
       user="user"
-      activeSection="planning"
-      activeOption="Grupos de guardia"
+      activeSection="control"
+      activeOption="Incidencia"
       titleBarButtons={<TitleBarButtons />}
       search={<SearchFields />}
       labels={<FormFields />}
-      tableName="Grupos de guardia"
+      tableName="Incidencias"
       columnNames={[
-        "Grupo de Guardia",
-        "Zona de guardia",
-        "No. de personas asociadas",
+        "Nombre",
+        "Fecha de registro",
+        "Tipo de incidencia",
+        "Posta",
+        "Turno",
+        "Activo",
       ]}
-      columns={["grupo", "zona", "personasAsociadas"]}
-      data={guard_groups}
+      columns={["nombre", "fecha", "tipo", "posta", "turno", "activo"]}
+      data={incident}
       tableComponentButtons={<TableButtons />}
     />
   );
 }
 
-export default GuardGroups;
+export default IncidentReport;

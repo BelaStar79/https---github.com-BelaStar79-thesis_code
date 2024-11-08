@@ -1,5 +1,5 @@
 import React from "react";
-import MainStructure from "../../components/mainStructure/MainStructure.jsx";
+import MainStructure from "../../components/structure/MainStructure.jsx";
 import TableButtons from "./TableButtons.jsx";
 import FormFields from "./FormFields.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";

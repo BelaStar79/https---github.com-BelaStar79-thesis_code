@@ -11,12 +11,12 @@ export default function TitleBarButtons() {
       <button className="titleBar__button" title="Añadir una nueva incidencia">
         <BsPlusCircle className="titleBar__icon" />
       </button>
-      {/* <button className="titleBar__button" title="Exportar a Excel">
+      <button className="titleBar__button" title="Exportar a Excel">
         <BsFileEarmarkExcel className="titleBar__icon" />
       </button>
       <button className="titleBar__button" title="Exportar a PDF">
         <BsFileEarmarkPdf className="titleBar__icon" />
-      </button> */}
+      </button>
     </>
   );
 }

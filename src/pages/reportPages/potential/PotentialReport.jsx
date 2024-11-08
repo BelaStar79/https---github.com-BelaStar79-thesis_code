@@ -6,7 +6,7 @@ import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
 import { potential } from "../../components/tableComponent/tablaComponent.js";
 
-export function Potential() {
+export function PotentialReport() {
   return (
     <MainStructure
       namePage="Potencial"
@@ -25,4 +25,4 @@ export function Potential() {
   );
 }
 
-export default Potential;
+export default PotentialReport;

@@ -4,27 +4,19 @@ export function FormFields() {
   return (
     <>
       <label htmlFor="" className="formComponent__label">
-        Fecha
-        <input
-          type="date"
-          className="formComponent__input"
-          placeholder="Introduzca la fecha"
-        />
-      </label>
-      <label htmlFor="" className="formComponent__label">
-        Sexo
+        Tipo de estructura
         <input
           type="text"
           className="formComponent__input"
-          placeholder="Introduzca el sexo"
+          placeholder="Introduzca el tipo de estructura"
         />
       </label>
       <label htmlFor="" className="formComponent__label">
-        Estructura
+        Estructura consejo
         <input
           type="text"
           className="formComponent__input"
-          placeholder="Introduzca la estructura"
+          placeholder="Introduzca la estructura consejo"
         />
       </label>
     </>

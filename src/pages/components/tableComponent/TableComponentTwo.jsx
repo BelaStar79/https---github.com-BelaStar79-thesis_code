@@ -13,7 +13,6 @@ export default function TableComponent({
   columnNames,
   data,
   columns,
-  tableComponentButtons,
 }) {
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [actualPage, setActualPage] = useState(1);
@@ -184,9 +183,6 @@ export default function TableComponent({
                       {columnName}
                     </th>
                   ))}
-                  <th className="tableComponent__tableContainer__th tableComponent__tableContainer__thOptions">
-                    Opciones
-                  </th>
                 </tr>
               </thead>
               <tbody className="tableComponent__tableContainer__tbody">
@@ -206,9 +202,6 @@ export default function TableComponent({
                         {row[column]}
                       </td>
                     ))}
-                    <td className="tableComponent__tableContainer__td tableComponent__tableContainer__tdOptions">
-                      {tableComponentButtons}
-                    </td>
                   </tr>
                 ))}
               </tbody>
