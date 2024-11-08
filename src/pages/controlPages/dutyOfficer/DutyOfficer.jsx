@@ -1,32 +1,30 @@
 import React from "react";
-import MainStructure from "../components/mainStructure/MainStructure.jsx";
+import MainStructure from "../../components/mainStructure/MainStructure.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { incident } from "../components/tableComponent/tablaComponent.js";
+import { duty_officer } from "../../components/tableComponent/tablaComponent.js";
 
 export function Incident() {
   return (
     <MainStructure
-      namePage="Incidencias"
+      namePage="Oficial de guardia superior"
       user="user"
       activeSection="control"
-      activeOption="Incidencia"
+      activeOption="Oficial de guardia superior"
       titleBarButtons={<TitleBarButtons />}
       search={<SearchFields />}
       labels={<FormFields />}
       tableName="Incidencias"
       columnNames={[
-        "Nombre",
-        "Fecha de registro",
-        "Tipo de incidencia",
-        "Posta",
-        "Turno",
-        "Activo",
+        "Fecha",
+        "Oficial de guardia",
+        "Cantidad de personas",
+        "Cantidad real de personas",
       ]}
-      columns={["nombre", "fecha", "tipo", "posta", "turno", "activo"]}
-      data={incident}
+      columns={["fecha", "oficialGuardia", "cantidad", "cantidadReal"]}
+      data={duty_officer}
       tableComponentButtons={<TableButtons />}
     />
   );

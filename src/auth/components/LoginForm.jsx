@@ -22,7 +22,7 @@ export function LoginForm() {
       return;
     }
     if (user === "admin" && password === "admin") {
-      navigate("/planning");
+      navigate("/planning/planning");
     } else {
       alert("Usuario o contraseña incorrectos");
     }

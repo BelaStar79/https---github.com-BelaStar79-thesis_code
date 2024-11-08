@@ -1,33 +1,34 @@
 import React from "react";
-import MainStructure from "../components/mainStructure/MainStructure.jsx";
+import MainStructure from "../../components/mainStructure/MainStructure.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { posts } from "../components/tableComponent/tablaComponent.js";
+import { assistance } from "../../components/tableComponent/tablaComponent.js";
 
-export function Posts() {
+export function Guard() {
   return (
     <MainStructure
-      namePage="Postas"
+      namePage="Guardia"
       user="user"
-      activeSection="planning"
-      activeOption="Postas"
+      activeSection="report"
+      activeOption="Guardia"
       titleBarButtons={<TitleBarButtons />}
       search={<SearchFields />}
       labels={<FormFields />}
-      tableName="Postas"
+      tableName="Asistencia"
       columnNames={[
-        "Postas",
+        "Turno",
+        "Posta",
+        "Nombre",
         "Zonas de guaria",
         "Cantidad de personas",
-        "Activo",
       ]}
-      columns={["posta", "zona", "cantidad", "activo"]}
-      data={posts}
+      columns={["turno", "posta", "nombre", "zona", "cantidad"]}
+      data={assistance}
       tableComponentButtons={<TableButtons />}
     />
   );
 }
 
-export default Posts;
+export default Guard;

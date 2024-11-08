@@ -1,10 +1,10 @@
 import React from "react";
-import MainStructure from "../components/mainStructure/MainStructure.jsx";
+import MainStructure from "../../components/mainStructure/MainStructure.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { guard_groups } from "../components/tableComponent/tablaComponent.js";
+import { guard_groups } from "../../components/tableComponent/tablaComponent.js";
 
 export function GuardGroups() {
   return (

@@ -21,23 +21,23 @@ export function SideMenu({ activeSection, activeOption }) {
         {
           name: "Planificación",
           titleCursor: "Ir a Planificación",
-          link: "/planning",
+          link: "/planning/planning",
         },
         {
           name: "Zonas de guardia",
           titleCursor: "Ir a Zonas de guardia",
-          link: "/guard-area",
+          link: "/planning/guard-area",
         },
-        { name: "Postas", titleCursor: "Ir a Postas", link: "/posts" },
+        { name: "Postas", titleCursor: "Ir a Postas", link: "/planning/posts" },
         {
           name: "Grupos de guardia",
           titleCursor: "Ir a Grupos de guardia",
-          link: "/guard-groups",
+          link: "/planning/guard-groups",
         },
         {
           name: "Potencial",
           titleCursor: "Ir a Potencial",
-          link: "/potential",
+          link: "/planning/potential",
         },
       ],
     },
@@ -50,17 +50,17 @@ export function SideMenu({ activeSection, activeOption }) {
         {
           name: "Asistencia",
           titleCursor: "Ir a Asistencia",
-          link: "/assistance",
+          link: "/control/assistance",
         },
         {
           name: "Incidencia",
           titleCursor: "Ir a Incidencia",
-          link: "/incident",
+          link: "/control/incident",
         },
         {
           name: "Oficial de guardia superior",
           titleCursor: "Ir a Oficial de guardia superior",
-          link: "/duty-officer",
+          link: "/control/duty-officer",
         },
       ],
     },
@@ -70,16 +70,16 @@ export function SideMenu({ activeSection, activeOption }) {
       title: "Reportes",
       titleCursor: "Ver opciones de Reportes",
       suboptions: [
-        { name: "Guardia", titleCursor: "Ir a Guardia", link: "" },
+        { name: "Guardia", titleCursor: "Ir a Guardia", link: "/report/guard" },
         {
           name: "Incidencia",
           titleCursor: "Ir a Incidencia",
-          link: "/incident",
+          link: "",
         },
         {
           name: "Potencial",
           titleCursor: "Ir a Potencial",
-          link: "/potential",
+          link: "",
         },
         {
           name: "Potencial cuantitativo",
@@ -90,7 +90,7 @@ export function SideMenu({ activeSection, activeOption }) {
         {
           name: "Asistencia",
           titleCursor: "Ir a Asistencia",
-          link: "/assistance",
+          link: "",
         },
       ],
     },

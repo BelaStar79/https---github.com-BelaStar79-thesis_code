@@ -1,34 +1,33 @@
 import React from "react";
-import MainStructure from "../components/mainStructure/MainStructure.jsx";
+import MainStructure from "../../components/mainStructure/MainStructure.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { assistance } from "../components/tableComponent/tablaComponent.js";
+import { posts } from "../../components/tableComponent/tablaComponent.js";
 
-export function Assistance() {
+export function Posts() {
   return (
     <MainStructure
-      namePage="Asistencia"
+      namePage="Postas"
       user="user"
-      activeSection="control"
-      activeOption="Asistencia"
+      activeSection="planning"
+      activeOption="Postas"
       titleBarButtons={<TitleBarButtons />}
       search={<SearchFields />}
       labels={<FormFields />}
-      tableName="Asistencia"
+      tableName="Postas"
       columnNames={[
-        "Turno",
-        "Posta",
-        "Nombre",
+        "Postas",
         "Zonas de guaria",
         "Cantidad de personas",
+        "Activo",
       ]}
-      columns={["turno", "posta", "nombre", "zona", "cantidad"]}
-      data={assistance}
+      columns={["posta", "zona", "cantidad", "activo"]}
+      data={posts}
       tableComponentButtons={<TableButtons />}
     />
   );
 }
 
-export default Assistance;
+export default Posts;

@@ -1,28 +1,28 @@
 import React from "react";
-import MainStructure from "../components/mainStructure/MainStructure.jsx";
+import MainStructure from "../../components/mainStructure/MainStructure.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { guard_area } from "../components/tableComponent/tablaComponent.js";
+import { potential } from "../../components/tableComponent/tablaComponent.js";
 
-export function GuardArea() {
+export function Potential() {
   return (
     <MainStructure
-      namePage="Zonas de guardia"
+      namePage="Potencial"
       user="user"
       activeSection="planning"
-      activeOption="Zonas de guardia"
+      activeOption="Potencial"
       titleBarButtons={<TitleBarButtons />}
       search={<SearchFields />}
       labels={<FormFields />}
-      tableName="Responsables por zona"
+      tableName="Potencial"
       columnNames={["Nombre", "CI", "Solapin", "Cargo", "Estructura"]}
       columns={["nombre", "ci", "solapin", "cargo", "estructura"]}
-      data={guard_area}
+      data={potential}
       tableComponentButtons={<TableButtons />}
     />
   );
 }
 
-export default GuardArea;
+export default Potential;
