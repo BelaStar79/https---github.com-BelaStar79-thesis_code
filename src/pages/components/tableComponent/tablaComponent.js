@@ -1,8 +1,8 @@
 const planificaciones = [
   {nombre:"noviembre 2021 Gastex-DIRCOM-Producción",zona:"Gastex-DIRCOM-Producción",inicio:"01/11/2021",fin:"31/11/2021"},
   {nombre:"GOE DOcente 6 noviembre",zona:"Docente 6",inicio:"11/11/2021", fin:"31/11/2021"},
-  {nombre:"noviembre Rectorado Transporte", zona:"Restorado-Transporte", inicio:"11/11/2021", fin:"31/11/2021"},
-  {nombre:"noviembre_2021_Rectorado_Trans", zona:"Restorado-Transporte", inicio:"11/11/2021", fin:"31/11/2021"},
+  {nombre:"noviembre Rectorado Transporte", zona:"Rectorado-Transporte", inicio:"11/11/2021", fin:"31/11/2021"},
+  {nombre:"noviembre_2021_Rectorado_Trans", zona:"Rectorado-Transporte", inicio:"11/11/2021", fin:"31/11/2021"},
   {nombre:"mayo 2018 Bohio", zona:"Gastex", inicio:"01/05/2018", fin:"31/05/2018"},
 ];
 export { planificaciones };

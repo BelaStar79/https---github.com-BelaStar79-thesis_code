@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../login.css";
 import { BsPerson, BsLock, BsEye, BsEyeSlash } from "react-icons/bs";
+import Alert from "../../pages/components/alert/Alert.jsx";
 
 export function LoginForm() {
   const navigate = useNavigate();
@@ -14,17 +15,23 @@ export function LoginForm() {
     setShowCloseEye(!showCloseEye);
   };
 
-  // validacion de datos
+  // data validation
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (user === "" || password === "") {
-      alert("Por favor, complete su formulario");
+    if (user === "" && password === "admin") {
+      alert("Por favor, complete el campo de usuario");
+      return;
+    }
+    if (user === "admin" && password === "") {
+      alert("Por favor, complete el campo de contraseña");
+      return;
+    }
+    if (user === "" && password === "") {
+      alert("Por favor, complete los campos de usuario y contraseña");
       return;
     }
     if (user === "admin" && password === "admin") {
       navigate("/planning/planning");
-    } else {
-      alert("Usuario o contraseña incorrectos");
     }
   };
 
