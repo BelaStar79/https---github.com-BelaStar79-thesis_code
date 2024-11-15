@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./alert.css";
 import {
   CiCircleRemove,
@@ -10,22 +10,23 @@ import {
 export function Alert({ type, message, className }) {
   const variants = {
     success: {
-      icon: <CiCircleCheck className="alertContainer-iconSuccess" />,
+      icon: <CiCircleCheck className="alertContainer-icon" />,
       class_name: "alertContainer-success",
       title: "Éxito",
     },
     error: {
-      icon: <CiCircleRemove className="alertContainer-iconError" />,
+      icon: <CiCircleRemove className="alertContainer-icon" />,
+      icon_class: "alertContainer-iconError",
       class_name: "alertContainer-error",
       title: "Error",
     },
     warning: {
-      icon: <CiCircleAlert className="alertContainer-iconWarning" />,
+      icon: <CiCircleAlert className="alertContainer-icon" />,
       class_name: "alertContainer-warning",
       title: "Advertencia",
     },
     info: {
-      icon: <CiCircleInfo className="alertContainer-iconInfo" />,
+      icon: <CiCircleInfo className="alertContainer-icon" />,
       class_name: "alertContainer-info",
       title: "Información",
     },
@@ -37,14 +38,16 @@ export function Alert({ type, message, className }) {
     <div
       className={"alertContainer" + " " + variant.class_name + " " + className}
     >
-      <div className="alertContainer_iconContainer">{variant.icon}</div>
+      <div className="alertContainer_iconContainer">
+        <div className="alertContainer_iconContent">{variant.icon}</div>
+      </div>
       <div className="alertContainer_info">
         <strong>{variant.title}</strong>
         <span>{message}</span>
       </div>
       <div className="alertContainer_buttonContainer">
-        <button>
-          <CiCircleRemove />
+        <button className="alertContainer_button" title="Cerrar">
+          X
         </button>
       </div>
     </div>

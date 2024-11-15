@@ -103,7 +103,13 @@ export function SideMenu({ activeSection, activeOption }) {
       icon: <BsUpcScan className="sideMenu_icon" />,
       title: "Lectura de solapin",
       titleCursor: "Ver opciones de Lectura de solapin",
-      suboptions: [{ name: "Lorem", titleCursor: "", link: "" }],
+      suboptions: [
+        {
+          name: "Lectura de solapin",
+          titleCursor: "Ir a Lectura de solapin",
+          link: "/scanner",
+        },
+      ],
     },
     configuration: {
       key: "5",

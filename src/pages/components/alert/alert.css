@@ -1,25 +1,97 @@
 .alertContainer {
-    padding: 10px;
-    width: 25%;
-    background-color: #b77cf2;
+    min-width: 250px;
+    min-height: 50px;
+    display: flex;
+    z-index: 1000;
+    border-radius: 10px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+
+    .alertContainer_iconContainer {
+        display: flex;
+        align-items: center;
+
+        .alertContainer-icon {
+            padding-top: 5px;
+            padding-left: 3px;
+            font-size: 50px;
+        }
+    }
+
+    .alertContainer_info {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+        padding: 10px;
+
+        strong {
+            padding-bottom: 3px;
+        }
+    }
+
+    .alertContainer_buttonContainer {
+        height: 100%;
+        padding: 3px;
+
+        .alertContainer_button {
+            cursor: pointer;
+            color: var(--pastelRed);
+            width: 25px;
+            height: 25px;
+            border-radius: 50px;
+            text-align: center;
+            padding-top: 2.5px;
+
+            &:hover {
+                background-color: var(--pastelRed);
+                color: var(--red);
+            }
+        }
+    }
 }
 
-.alertContainer-iconSuccess {
-    background-color: var(--green);
+.hidden {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+.alertContainer-success {
+    background-color: var(--lightGreen);
     border-left: 5px solid var(--pastelGreen);
+
+    .alertContainer-icon {
+        color: var(--pastelGreen);
+    }
 }
 
-.alertContainer-iconError {
+.alertContainer-error {
     background-color: var(--red);
     border-left: 5px solid var(--pastelRed);
+
+    .alertContainer-icon {
+        color: var(--pastelRed);
+    }
 }
 
-.alertContainer-iconWarning {
+.alertContainer-warning {
     background-color: var(--orange);
     border-left: 5px solid var(--pastelOrange);
+
+    .alertContainer-icon {
+        color: var(--pastelOrange);
+    }
 }
 
-.alertContainer-iconInfo {
+.alertContainer-info {
     background-color: var(--blue);
     border-left: 5px solid var(--pastelBlue);
+
+    .alertContainer-icon {
+        color: var(--pastelBlue);
+    }
 }
+

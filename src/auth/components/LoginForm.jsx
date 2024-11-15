@@ -7,31 +7,28 @@ import Alert from "../../pages/components/alert/Alert.jsx";
 export function LoginForm() {
   const navigate = useNavigate();
 
-  const [user, setUser] = useState("");
-  const [password, setPassword] = useState("");
+  const [user, setUser] = useState();
+  const [password, setPassword] = useState();
   const [showCloseEye, setShowCloseEye] = useState(false);
+  const [error, setError] = useState();
 
   const toggleEye = () => {
     setShowCloseEye(!showCloseEye);
   };
 
   // data validation
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    if (user === "" && password === "admin") {
-      alert("Por favor, complete el campo de usuario");
-      return;
-    }
-    if (user === "admin" && password === "") {
-      alert("Por favor, complete el campo de contraseña");
-      return;
-    }
-    if (user === "" && password === "") {
-      alert("Por favor, complete los campos de usuario y contraseña");
-      return;
-    }
-    if (user === "admin" && password === "admin") {
+    if (!user && !password) {
+      setError("Por favor, complete los campos de usuario y contraseña.");
+    } else if (!user) {
+      setError("Por favor, complete el campo de usuario.");
+    } else if (!password) {
+      setError("Por favor, complete el campo de contraseña.");
+    } else if (user === "admin" && password === "admin") {
       navigate("/planning/planning");
+    } else {
+      setError("Credenciales incorrectas.");
     }
   };
 
@@ -76,6 +73,7 @@ export function LoginForm() {
           Iniciar sesión
         </button>
       </form>
+      {error && <Alert type={"error"} message={error} className="" />}
     </article>
   );
 }

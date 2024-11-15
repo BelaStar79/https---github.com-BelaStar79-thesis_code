@@ -83,8 +83,9 @@
     color: var(--pastelRed);
     width: 50%;
     border: 1px solid var(--pastelRed);
-    border-radius: 10px;
+    border-radius: 25px;
     cursor: pointer;
+    padding: 5px;
 }
 .loginForm .loginButton:hover {
     background-color: var(--pastelRed);

@@ -7,6 +7,15 @@ import SearchFields from "./SearchFields.jsx";
 import { planificaciones } from "../../components/tableComponent/tablaComponent.js";
 
 export function Planning() {
+  // const fetchData = async () => {
+  //   const response = fetch("http://localhost/api/planificaciones", {
+  //     credentials: "include",
+  //   });
+
+  //   const data = await response.json();
+  //   return data;
+  // };
+
   return (
     <MainStructure
       namePage="Planificación"

@@ -19,6 +19,8 @@ import PotentialReport from "./pages/reportPages/potential/PotentialReport.jsx";
 import AssistanceReport from "./pages/reportPages/assistance/AssistanceReport.jsx";
 import QuantitativePotential from "./pages/reportPages/quantitativePotential/QuantitativePotential.jsx";
 import Frequency from "./pages/reportPages/frequency/Frequency.jsx";
+// Scanner
+import Scanner from "./pages/scanner/Scanner.jsx";
 
 function App() {
   return (
@@ -48,6 +50,8 @@ function App() {
       />
       <Route path="/report/frequency" element={<Frequency />} />
       <Route path="/report/assistance" element={<AssistanceReport />} />
+
+      <Route path="/scanner" element={<Scanner />} />
     </Routes>
   );
 }

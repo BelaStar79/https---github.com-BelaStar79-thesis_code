@@ -27,10 +27,10 @@ export function MainStructure({
     document.title = pageTitle ? "GOE" : "GOE | " + namePage;
   }, [pageTitle]);
 
-  console.log("Title: " + namePage);
+  // console.log("Title: " + namePage);
 
-  console.log("Active section: " + activeSection);
-  console.log("Active option: " + activeOption);
+  // console.log("Active section: " + activeSection);
+  // console.log("Active option: " + activeOption);
 
   return (
     <div className="pageStructure">
