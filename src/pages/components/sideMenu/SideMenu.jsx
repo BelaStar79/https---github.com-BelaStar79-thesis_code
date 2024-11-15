@@ -98,19 +98,19 @@ export function SideMenu({ activeSection, activeOption }) {
         },
       ],
     },
-    scanner: {
-      key: "4",
-      icon: <BsUpcScan className="sideMenu_icon" />,
-      title: "Lectura de solapin",
-      titleCursor: "Ver opciones de Lectura de solapin",
-      suboptions: [
-        {
-          name: "Lectura de solapin",
-          titleCursor: "Ir a Lectura de solapin",
-          link: "/scanner",
-        },
-      ],
-    },
+    // scanner: {
+    //   key: "4",
+    //   icon: <BsUpcScan className="sideMenu_icon" />,
+    //   title: "Lectura de solapin",
+    //   titleCursor: "Ver opciones de Lectura de solapin",
+    //   suboptions: [
+    //     {
+    //       name: "Lectura de solapin",
+    //       titleCursor: "Ir a Lectura de solapin",
+    //       link: "/scanner",
+    //     },
+    //   ],
+    // },
     configuration: {
       key: "5",
       icon: <BsGear className="sideMenu_icon" />,

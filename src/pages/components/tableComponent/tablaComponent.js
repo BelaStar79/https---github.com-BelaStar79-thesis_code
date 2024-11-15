@@ -1,11 +1,24 @@
+const usuarios = {
+    admin: {
+        id: 1,
+        user: "admin",
+        password: "admin"
+    },
+};
+export { usuarios };
+
+
+
 const planificaciones = [
-  {nombre:"noviembre 2021 Gastex-DIRCOM-Producción",zona:"Gastex-DIRCOM-Producción",inicio:"01/11/2021",fin:"31/11/2021"},
-  {nombre:"GOE DOcente 6 noviembre",zona:"Docente 6",inicio:"11/11/2021", fin:"31/11/2021"},
-  {nombre:"noviembre Rectorado Transporte", zona:"Rectorado-Transporte", inicio:"11/11/2021", fin:"31/11/2021"},
-  {nombre:"noviembre_2021_Rectorado_Trans", zona:"Rectorado-Transporte", inicio:"11/11/2021", fin:"31/11/2021"},
-  {nombre:"mayo 2018 Bohio", zona:"Gastex", inicio:"01/05/2018", fin:"31/05/2018"},
+  {nombre_planificacion:"noviembre 2021 Gastex-DIRCOM-Producción",nombre_region_guardia:"Gastex-DIRCOM-Producción",fecha_inicio:"01/11/2021",fecha_fin:"31/11/2021"},
+  {nombre_planificacion:"GOE Docente 6 noviembre",nombre_region_guardia:"Docente 6",fecha_inicio:"11/11/2021", fecha_fin:"31/11/2021"},
+  {nombre_planificacion:"noviembre Rectorado Transporte", nombre_region_guardia:"Rectorado-Transporte", fecha_inicio:"11/11/2021", fecha_fin:"31/11/2021"},
+  {nombre_planificacion:"noviembre_2021_Rectorado_Trans", nombre_region_guardia:"Rectorado-Transporte", fecha_inicio:"11/11/2021", fecha_fin:"31/11/2021"},
+  {nombre_planificacion:"mayo 2018 Bohio", nombre_region_guardia:"Gastex", fecha_inicio:"01/05/2018", fecha_fin:"31/05/2018"},
 ];
 export { planificaciones };
+
+
 
 const guard_area = [
     {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
@@ -17,6 +30,8 @@ const guard_area = [
 ];
 export { guard_area };
 
+
+
 const posts = [
   {posta: 'Direccion de extensión universitaria', zona: "Centro cultural", cantidad: 2, activo: "Sí"},
   {posta: 'Choferes de guardia', zona: "Choferes de guardia", cantidad: 2, activo: "Sí"},
@@ -26,6 +41,8 @@ const posts = [
 ];
 export {posts};
 
+
+
 const guard_groups = [
   {grupo: "Centro de Gobierno Electrónico", zona: "Casona", personasAsociadas:0},
   {grupo: "Centro de Indentificación y Seguridad Digital", zona: "Casona", personasAsociadas:0},
@@ -34,6 +51,8 @@ const guard_groups = [
   {grupo: "Centro de Innovación y Calidad en la Educación", zona: "Casona", personasAsociadas:0},
 ];
 export {guard_groups};
+
+
 
 const potential = [
   {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
@@ -45,6 +64,8 @@ const potential = [
 ];
 export {potential};
 
+
+
 const assistance = [
   {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nombre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
   {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nomre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
@@ -52,13 +73,19 @@ const assistance = [
 ];
 export {assistance};
 
+
+
 const incident = [];
 export {incident};
+
+
 
 const duty_officer = [
   {fecha:'01/12/2021', oficialGuardia:'Alvaro Alejandro Acosta Ruiz', cantidad:'', cantidadReal:''}
 ];
 export {duty_officer};
+
+
 
 const guard = [
   {zona: "Dirección de Extensión Universitaria", nombre: "Yosvaney Herrera Ricardo", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
@@ -67,6 +94,8 @@ const guard = [
   {zona: "Dirección de Extensión Universitaria", nombre: "Dayannis Garcés Rodríguez", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
 ];
 export {guard};
+
+
 
 const quantitative_potential = [
   {estructura: "Centro de Estudio de Matemática y Computación", recursosHumanos: 12, potencial: 8, pendientes: 4},
@@ -77,6 +106,8 @@ const quantitative_potential = [
 ];
 export {quantitative_potential};
 
+
+
 const frequency = [
   {zona: "Casona", cantidad: 122, horas: 0, turnos: 0, frecuencia: 122, personasHoras: 122},
   {zona: "Centro Cultural", cantidad: 125, horas: 0, turnos: 0, frecuencia: 125, personasHoras: 125},
@@ -85,6 +116,8 @@ const frequency = [
   {zona: "Complejo Cmedor 3", cantidad: 206, horas: 0, turnos: 0, frecuencia: 206, personasHoras: 206},
 ];
 export {frequency};
+
+
 
 const assistance_report = [
   {fecha:"07/12/2018 12:14", nombre: "Yarelys Seoane Alonso", ci: "00000000000", usuario: "yerelys", solapin: "T157931", estructura: "Facultad 4", presente: "Si"}

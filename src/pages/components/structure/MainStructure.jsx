@@ -27,11 +27,6 @@ export function MainStructure({
     document.title = pageTitle ? "GOE" : "GOE | " + namePage;
   }, [pageTitle]);
 
-  // console.log("Title: " + namePage);
-
-  // console.log("Active section: " + activeSection);
-  // console.log("Active option: " + activeOption);
-
   return (
     <div className="pageStructure">
       <div className="pageStructure__companyBelt">

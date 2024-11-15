@@ -12,7 +12,10 @@ export default function Scanner() {
     document.title = pageTitle ? "GOE" : "GOE | Lectura de solapin";
   }, [pageTitle]);
 
-  
+  const handleScan = (resultado) => {
+    console.log("Código de barras escaneado:", resultado);
+    // Puedes agregar lógica aquí para procesar el código de barras escaneado
+  };
 
   return (
     <div className="pageStructure">
@@ -28,8 +31,20 @@ export default function Scanner() {
         </div>
         <div className="pageStructure__container">
           <TitleBar title="Lectura de solapin" titleBarButtons="" />
-          <div className="scannerContainerr">
-            
+          <div className="scannerContainer">
+            <input
+              type="text"
+              id="barcodeInput"
+              placeholder="Escanea un código de barras..."
+            />
+            <button
+              className="scannerButton"
+              onClick={() =>
+                handleScan(document.getElementById("barcodeInput").value)
+              }
+            >
+              Escanear
+            </button>
           </div>
         </div>
       </div>

@@ -51,7 +51,7 @@ function App() {
       <Route path="/report/frequency" element={<Frequency />} />
       <Route path="/report/assistance" element={<AssistanceReport />} />
 
-      <Route path="/scanner" element={<Scanner />} />
+      {/* <Route path="/scanner" element={<Scanner />} /> */}
     </Routes>
   );
 }

@@ -27,7 +27,12 @@ export function Planning() {
       labels={<FormFields />}
       tableName="Planificaciones"
       columnNames={["Nombre", "Zona de guardia", "Fecha inicio", "Fecha fin"]}
-      columns={["nombre", "zona", "inicio", "fin"]}
+      columns={[
+        "nombre_planificacion",
+        "nombre_region_guardia",
+        "fecha_inicio",
+        "fecha_fin",
+      ]}
       data={planificaciones}
       tableComponentButtons={<TableButtons />}
     />
