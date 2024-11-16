@@ -61,6 +61,12 @@ export default function Planning() {
   const goToAddPlaning = () => {
     navigate("/planning/planning/add/");
   };
+  const goToDetailsPlanning = () => {
+    navigate("/planning/planning/details/");
+  };
+  const goToEditPlanning = () => {
+    navigate("/planning/planning/edit/");
+  };
 
   // title variable
   const [pageTitle, setPageTitle] = useState(false);
@@ -180,10 +186,16 @@ export default function Planning() {
                   >
                     <BsPlusCircle className="titleBar__icon" />
                   </button>
-                  <button className="titleBar__button" title="Exportar a Excel">
+                  <button
+                    className="titleBar__button not"
+                    title="Exportar a Excel"
+                  >
                     <BsFileEarmarkExcel className="titleBar__icon" />
                   </button>
-                  <button className="titleBar__button" title="Exportar a PDF">
+                  <button
+                    className="titleBar__button not"
+                    title="Exportar a PDF"
+                  >
                     <BsFileEarmarkPdf className="titleBar__icon" />
                   </button>
                 </>
@@ -205,7 +217,7 @@ export default function Planning() {
                         />
                       </div>
                       <button
-                        className="formComponent__searchButton"
+                        className="formComponent__searchButton not"
                         title="Realizar búsqueda"
                       >
                         <BsSearch className="formComponent__searchIcon" />
@@ -385,12 +397,14 @@ export default function Planning() {
                                 <button
                                   className="tdOptions__button"
                                   title="Ver detalles"
+                                  onClick={goToDetailsPlanning}
                                 >
                                   <BsEye className="tdOptions__buttonIcon" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Editar"
+                                  onClick={goToEditPlanning}
                                 >
                                   <BsPencil className="tdOptions__buttonIcon" />
                                 </button>
@@ -398,31 +412,31 @@ export default function Planning() {
                                   className="tdOptions__button"
                                   title="Planificación automática"
                                 >
-                                  <BsCalendar4Week className="tdOptions__buttonIcon" />
+                                  <BsCalendar4Week className="tdOptions__buttonIcon not" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Planificación manual"
                                 >
-                                  <BsCalendar4 className="tdOptions__buttonIcon" />
+                                  <BsCalendar4 className="tdOptions__buttonIcon not" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Publicar"
                                 >
-                                  <BsEnvelope className="tdOptions__buttonIcon" />
+                                  <BsEnvelope className="tdOptions__buttonIcon not" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Exportar"
                                 >
-                                  <BsFileEarmarkPdf className="tdOptions__buttonIcon" />
+                                  <BsFileEarmarkPdf className="tdOptions__buttonIcon not" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Borrar"
                                 >
-                                  <BsTrash3 className="tdOptions__buttonIcon" />
+                                  <BsTrash3 className="tdOptions__buttonIcon not" />
                                 </button>
                               </div>
                             </td>

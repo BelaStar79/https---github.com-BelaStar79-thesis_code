@@ -12,3 +12,7 @@ body{
     background-color: var(--lightGrey);
     color: var(--black);
 }
+
+.not {
+    cursor: not-allowed;
+}

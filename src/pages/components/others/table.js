@@ -200,3 +200,8 @@ export let assistance_report = [
   {fecha:"07/12/2018 12:14", nombre: "Yarelys Seoane Alonso", ci: "00000000000", usuario: "yerelys", solapin: "T157931", estructura: "Facultad 4", presente: "Si"}
 ];
 
+
+
+export let details = [];
+
+

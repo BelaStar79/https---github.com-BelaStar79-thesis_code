@@ -26,3 +26,22 @@ body {
     }
 }
 
+.detailsContent {
+    padding: 20px;
+
+    .detailsContent__hr {
+        margin: 10px 0;
+    }
+    
+    .detailsContent__info {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        .detailsContent__infoP {
+            min-width: 31.9%;
+        }
+    }
+
+    
+}

@@ -11,9 +11,9 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
 
-export default function AddPlanning() {
+export default function EditPlanning() {
   // editable variables
-  const namePage = "Añadir planificación";
+  const namePage = "Editar planificación";
   const activeSection = "planning";
   const activeOption = "Planificación";
 

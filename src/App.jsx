@@ -20,6 +20,8 @@ import PotentialReport from "./pages/reportPages/potential/PotentialReport.jsx";
 import AssistanceReport from "./pages/reportPages/assistance/AssistanceReport.jsx";
 import QuantitativePotential from "./pages/reportPages/quantitativePotential/QuantitativePotential.jsx";
 import Frequency from "./pages/reportPages/frequency/Frequency.jsx";
+import DetailsPlanning from "./pages/planningPages/planning/DetailsPlanning.jsx";
+import EditPlanning from "./pages/planningPages/planning/EditPlanning.jsx";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
 
       {/* Routes for planning/planning/ */}
       <Route path="/planning/planning/add/" element={<AddPlanning />} />
+      <Route path="/planning/planning/details/" element={<DetailsPlanning />} />
+      <Route path="/planning/planning/edit/" element={<EditPlanning />} />
 
       {/* Routes for control */}
       <Route path="/control/assistance" element={<Assistance />} />
