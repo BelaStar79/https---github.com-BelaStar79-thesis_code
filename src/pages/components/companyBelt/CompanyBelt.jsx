@@ -1,8 +1,14 @@
 import React from "react";
 import { BsBoxArrowRight } from "react-icons/bs";
 import "./companyBelt.css";
+import { loggedUser, clearLoggedUser } from "../others/login.js";
 
-export default function CompanyBelt({ user, profilePhoto }) {
+export default function CompanyBelt() {
+  const closeLogout = () => {
+    clearLoggedUser();
+    window.location.href = "/";
+  };
+
   return (
     <section className="companyBelt">
       <div className="companyBelt__container">
@@ -31,14 +37,17 @@ export default function CompanyBelt({ user, profilePhoto }) {
         </div>
         <div className="companyBelt__rightContainer">
           <div className="companyBelt__profilePhoto">
-            <img src={profilePhoto} alt={`Foto de prefil de ` + user} />
+            <img
+              src={`../../../../public/images/` + loggedUser + `.png`}
+              alt={`Foto de prefil de ` + loggedUser}
+            />
           </div>
           <div className="companyBelt__account">
-            <span>{user}</span>
+            <span>{loggedUser}</span>
             <button
               className="companyBelt__accountButton"
               title="Cerrar sesión"
-              onClick={() => (window.location.href = "/")}
+              onClick={closeLogout}
             >
               <BsBoxArrowRight className="companyBelt__acountIcon" />
             </button>

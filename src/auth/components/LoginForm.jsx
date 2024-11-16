@@ -2,13 +2,14 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../login.css";
 import { BsPerson, BsLock, BsEye, BsEyeSlash } from "react-icons/bs";
-import Alert from "../../pages/components/alert/Alert.jsx";
+import { setLoggedUser } from "../../pages/components/others/login.js";
+import { default as Alert } from "../../pages/components/alert/Alert.jsx";
 
 export function LoginForm() {
   const navigate = useNavigate();
 
-  const [user, setUser] = useState();
-  const [password, setPassword] = useState();
+  const [user, setUser] = useState("");
+  const [password, setPassword] = useState("");
   const [showCloseEye, setShowCloseEye] = useState(false);
   const [error, setError] = useState();
 
@@ -26,6 +27,7 @@ export function LoginForm() {
     } else if (!password) {
       setError("Por favor, complete el campo de contraseña.");
     } else if (user === "admin" && password === "admin") {
+      setLoggedUser(user);
       navigate("/planning/planning");
     } else {
       setError("Credenciales incorrectas.");

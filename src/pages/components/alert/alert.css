@@ -29,34 +29,6 @@
             padding-bottom: 3px;
         }
     }
-
-    .alertContainer_buttonContainer {
-        height: 100%;
-        padding: 3px;
-
-        .alertContainer_button {
-            cursor: pointer;
-            color: var(--pastelRed);
-            width: 25px;
-            height: 25px;
-            border-radius: 50px;
-            text-align: center;
-            padding-top: 2.5px;
-
-            &:hover {
-                background-color: var(--pastelRed);
-                color: var(--red);
-            }
-        }
-    }
-}
-
-.hidden {
-    display: none;
-}
-
-.visible {
-    display: block;
 }
 
 .alertContainer-success {

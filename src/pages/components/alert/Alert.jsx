@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./alert.css";
 import {
   CiCircleRemove,
@@ -7,7 +7,7 @@ import {
   CiCircleCheck,
 } from "react-icons/ci";
 
-export function Alert({ type, message, className }) {
+function Alert({ type, message, className }) {
   const variants = {
     success: {
       icon: <CiCircleCheck className="alertContainer-icon" />,
@@ -31,7 +31,6 @@ export function Alert({ type, message, className }) {
       title: "Información",
     },
   };
-
   const variant = variants[type];
 
   return (
@@ -44,11 +43,6 @@ export function Alert({ type, message, className }) {
       <div className="alertContainer_info">
         <strong>{variant.title}</strong>
         <span>{message}</span>
-      </div>
-      <div className="alertContainer_buttonContainer">
-        <button className="alertContainer_button" title="Cerrar">
-          X
-        </button>
       </div>
     </div>
   );

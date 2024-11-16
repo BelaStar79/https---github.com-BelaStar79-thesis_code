@@ -6,6 +6,7 @@ import FormComponent from "../formComponent/FormComponent.jsx";
 import CompanyBelt from "../companyBelt/CompanyBelt.jsx";
 import TitleBar from "../titleBar/TitleBar.jsx";
 import FooterComponent from "../footerComponent/FooterComponent.jsx";
+import { loggedUser } from "../others/login.js";
 
 export function MainStructure({
   namePage,
@@ -31,8 +32,8 @@ export function MainStructure({
     <div className="pageStructure">
       <div className="pageStructure__companyBelt">
         <CompanyBelt
-          user={user}
-          profilePhoto="../../../public/images/user.png"
+          user={loggedUser}
+          profilePhoto="../../../public/images/admin.png"
         />
       </div>
       <div className="pageStructure__bigContainer">
