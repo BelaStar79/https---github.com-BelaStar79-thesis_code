@@ -60,44 +60,65 @@ export default function AddPlanning() {
 
             <section className="formComponent__bigContainer">
               <div className="formComponent__container">
-                <div className="formComponent__search">
-                  <form action="" className="formComponent__searchForm">
-                    <div className="formComponent__searchFormContainer">
-                      <div className="formComponent__searchInputs">
-                        <input
-                          value={nombre}
-                          type="text"
-                          className="formComponent__input formComponent__searchInput"
-                          placeholder="Nombre"
-                          title="Introduzca el nombre de la planificación"
-                        />
-                        <input
-                          value={zona}
-                          type="text"
-                          className="formComponent__input formComponent__searchInput"
-                          placeholder="Zona"
-                          title="Introduzca la zona de la planificación"
-                        />
-                        <input
-                          value={inicio}
-                          type="date"
-                          className="formComponent__input formComponent__searchInput"
-                          title="Introduzca el nombre de la planificación que desea buscar"
-                        />
-                        <input
-                          value={fin}
-                          type="date"
-                          className="formComponent__input formComponent__searchInput"
-                          title="Introduzca el nombre de la planificación que desea buscar"
-                        />
+                <div className="formComponent__add">
+                  <form action="" className="formComponent__addForm">
+                    <div className="formComponent__addFormContainer">
+                      <div className="formComponent__addInput">
+                        <label htmlFor="" className="formComponent__addLabel">
+                          Nombre de la planificación
+                          <input
+                            value={nombre}
+                            type="text"
+                            className="formComponent__addInput"
+                            placeholder="Nombre"
+                            title="Introduzca el nombre de la planificación"
+                          />
+                        </label>
+                        <label htmlFor="" className="formComponent__addLabel">
+                          Nombre de la zona
+                          <input
+                            value={zona}
+                            type="text"
+                            className="formComponent__addInput"
+                            placeholder="Zona"
+                            title="Introduzca la zona de la planificación"
+                          />
+                        </label>
+                        <label htmlFor="" className="formComponent__addLabel">
+                          Fecha de inicio
+                          <input
+                            value={inicio}
+                            type="date"
+                            className="formComponent__addInput"
+                            title="Introduzca el nombre de la planificación que desea buscar"
+                          />
+                        </label>
+                        <label htmlFor="" className="formComponent__addLabel">
+                          Fecha de fin
+                          <input
+                            value={fin}
+                            type="date"
+                            className="formComponent__addInput"
+                            title="Introduzca el nombre de la planificación que desea buscar"
+                          />
+                        </label>
                       </div>
-                      <button
-                        className="formComponent__searchButton"
-                        title="Realizar búsqueda"
-                      >
-                        <BsSearch className="formComponent__searchIcon" />
-                        <p className="formComponent__searchP">Buscar</p>
-                      </button>
+
+                      <div className="formComponent__buttons">
+                        <button
+                          className="formComponent__button"
+                          title="Guardar planificación"
+                        >
+                          Aceptar
+                        </button>
+                        <button
+                          className="formComponent__button"
+                          title="Regresar sin guardar"
+                          onClick={goToPlanning}
+                        >
+                          Cancelar
+                        </button>
+                      </div>
                     </div>
                   </form>
                 </div>
