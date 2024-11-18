@@ -11,11 +11,13 @@ export function setIdRowTwo(id) {
 
 
 // variables random 
-let activo = "Sí";
-let fecha_inicio = "01/01/2024";
-let fecha_fin = "01/02/2024";
-let turno = "12 horas";
-let horario = "07:00 pm";
+const activo = "Sí";
+const fecha_inicio = "01/01/2024";
+const fecha_fin = "01/02/2024";
+const turno = "12 horas";
+const horario = "07:00 pm";
+const valor = 1;
+const nombreRecurso = "Llave local";
 export let personas = {
   0:{nombre: "Nombre Administrador",usuario: "admin",ci: "00000000000",solapin: "A000000",cargo: "Administrador"},
   1:{ci: "00000000001",solapin: "T000001",cargo: "Trabajador",nombre: "Nombre Usuario Uno",usuario: "nuuno"},
@@ -67,36 +69,36 @@ export let estructuras = [
   {id: 10, activo:activo, id_zona: zonas[2].id, nombre: "Rectorado"},
 ];
 export let posta = [
-  {id: 1, activo:activo, estructura: estructuras[0].nombre, cantidad: 1, nombre: "1er piso Docente 1"},
-  {id: 2, activo:activo, estructura: estructuras[0].nombre, cantidad: 1, nombre: "2do piso Docente 1"},
-  {id: 3, activo:activo, estructura: estructuras[0].nombre, cantidad: 1, nombre: "3er piso Docente 1"},
-  {id: 4, activo:activo, estructura: estructuras[1].nombre, cantidad: 1, nombre: "1er piso Docente 2"},
-  {id: 5, activo:activo, estructura: estructuras[1].nombre, cantidad: 1, nombre: "2do piso Docente 2"},
-  {id: 6, activo:activo, estructura: estructuras[1].nombre, cantidad: 1, nombre: "3er piso Docente 2"},
-  {id: 7, activo:activo, estructura: estructuras[2].nombre, cantidad: 1, nombre: "1er piso Docente 3"},
-  {id: 8, activo:activo, estructura: estructuras[2].nombre, cantidad: 1, nombre: "2do piso Docente 3"},
-  {id: 9, activo:activo, estructura: estructuras[2].nombre, cantidad: 1, nombre: "3er piso Docente 3"},
-  {id: 10, activo:activo, estructura: estructuras[3].nombre, cantidad: 1, nombre: "1er piso Docente 4"},
-  {id: 11, activo:activo, estructura: estructuras[3].nombre, cantidad: 1, nombre: "2do piso Docente 4"},
-  {id: 12, activo:activo, estructura: estructuras[3].nombre, cantidad: 1, nombre: "3er piso Docente 4"},
-  {id: 13, activo:activo, estructura: estructuras[4].nombre, cantidad: 1, nombre: "1er piso Docente FTE"},
-  {id: 14, activo:activo, estructura: estructuras[4].nombre, cantidad: 1, nombre: "2do piso Docente FTE"},
-  {id: 15, activo:activo, estructura: estructuras[4].nombre, cantidad: 1, nombre: "3er piso Docente FTE"},
-  {id: 16, activo:activo, estructura: estructuras[5].nombre, cantidad: 1, nombre: "1er piso Docente CITEC"},
-  {id: 17, activo:activo, estructura: estructuras[5].nombre, cantidad: 1, nombre: "2do piso Docente CITEC"},
-  {id: 18, activo:activo, estructura: estructuras[5].nombre, cantidad: 1, nombre: "3er piso Docente CITEC"},
-  {id: 19, activo:activo, estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 1"},
-  {id: 20, activo:activo, estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 1"},
-  {id: 21, activo:activo, estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 1"},
-  {id: 22, activo:activo, estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 2"}, 
-  {id: 23, activo:activo, estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 2"},
-  {id: 24, activo:activo, estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 2"},
-  {id: 25, activo:activo, estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 3"},
-  {id: 26, activo:activo, estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 3"},
-  {id: 27, activo:activo, estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 3"},
-  {id: 28, activo:activo, estructura: estructuras[9].nombre, cantidad: 1, nombre: "1er piso Rectorado"},
-  {id: 29, activo:activo, estructura: estructuras[9].nombre, cantidad: 1, nombre: "2do piso Rectorado"},
-  {id: 30, activo:activo, estructura: estructuras[9].nombre, cantidad: 1, nombre: "Parqueo Rectorado"},
+  {id: 1, activo:activo, id_estructura:estructuras[0].id, estructura: estructuras[0].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Docente 1"},
+  {id: 2, activo:activo, id_estructura:estructuras[0].id, estructura: estructuras[0].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Docente 1"},
+  {id: 3, activo:activo, id_estructura:estructuras[0].id, estructura: estructuras[0].nombre, cantidad: 1, descripcion:"", nombre: "3er piso Docente 1"},
+  {id: 4, activo:activo, id_estructura:estructuras[1].id, estructura: estructuras[1].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Docente 2"},
+  {id: 5, activo:activo, id_estructura:estructuras[1].id, estructura: estructuras[1].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Docente 2"},
+  {id: 6, activo:activo, id_estructura:estructuras[1].id, estructura: estructuras[1].nombre, cantidad: 1, descripcion:"", nombre: "3er piso Docente 2"},
+  {id: 7, activo:activo, id_estructura:estructuras[2].id, estructura: estructuras[2].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Docente 3"},
+  {id: 8, activo:activo, id_estructura:estructuras[2].id, estructura: estructuras[2].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Docente 3"},
+  {id: 9, activo:activo, id_estructura:estructuras[2].id, estructura: estructuras[2].nombre, cantidad: 1, descripcion:"", nombre: "3er piso Docente 3"},
+  {id: 10, activo:activo, id_estructura:estructuras[3].id, estructura: estructuras[3].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Docente 4"},
+  {id: 11, activo:activo, id_estructura:estructuras[3].id, estructura: estructuras[3].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Docente 4"},
+  {id: 12, activo:activo, id_estructura:estructuras[3].id, estructura: estructuras[3].nombre, cantidad: 1, descripcion:"", nombre: "3er piso Docente 4"},
+  {id: 13, activo:activo, id_estructura:estructuras[4].id, estructura: estructuras[4].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Docente FTE"},
+  {id: 14, activo:activo, id_estructura:estructuras[4].id, estructura: estructuras[4].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Docente FTE"},
+  {id: 15, activo:activo, id_estructura:estructuras[4].id, estructura: estructuras[4].nombre, cantidad: 1, descripcion:"", nombre: "3er piso Docente FTE"},
+  {id: 16, activo:activo, id_estructura:estructuras[5].id, estructura: estructuras[5].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Docente CITEC"},
+  {id: 17, activo:activo, id_estructura:estructuras[5].id, estructura: estructuras[5].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Docente CITEC"},
+  {id: 18, activo:activo, id_estructura:estructuras[5].id, estructura: estructuras[5].nombre, cantidad: 1, descripcion:"", nombre: "3er piso Docente CITEC"},
+  {id: 19, activo:activo, id_estructura:estructuras[6].id, estructura: estructuras[6].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 1 Complejo Comedor 1"},
+  {id: 20, activo:activo, id_estructura:estructuras[6].id, estructura: estructuras[6].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 2 Complejo Comedor 1"},
+  {id: 21, activo:activo, id_estructura:estructuras[6].id, estructura: estructuras[6].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 3 Complejo Comedor 1"},
+  {id: 22, activo:activo, id_estructura:estructuras[7].id, estructura: estructuras[7].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 1 Complejo Comedor 2"},
+  {id: 23, activo:activo, id_estructura:estructuras[7].id, estructura: estructuras[7].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 2 Complejo Comedor 2"},
+  {id: 24, activo:activo, id_estructura:estructuras[7].id, estructura: estructuras[7].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 3 Complejo Comedor 2"},
+  {id: 25, activo:activo, id_estructura:estructuras[8].id, estructura: estructuras[8].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 1 Complejo Comedor 3"},
+  {id: 26, activo:activo, id_estructura:estructuras[8].id, estructura: estructuras[8].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 2 Complejo Comedor 3"},
+  {id: 27, activo:activo, id_estructura:estructuras[8].id, estructura: estructuras[8].nombre, cantidad: 1, descripcion:"", nombre: "Comedor 3 Complejo Comedor 3"},
+  {id: 28, activo:activo, id_estructura:estructuras[9].id, estructura: estructuras[9].nombre, cantidad: 1, descripcion:"", nombre: "1er piso Rectorado"},
+  {id: 29, activo:activo, id_estructura:estructuras[9].id, estructura: estructuras[9].nombre, cantidad: 1, descripcion:"", nombre: "2do piso Rectorado"},
+  {id: 30, activo:activo, id_estructura:estructuras[9].id, estructura: estructuras[9].nombre, cantidad: 1, descripcion:"", nombre: "Parqueo Rectorado"},
 ];
 export let equipos = [
   {id: 1, nombre: "Equipo 1", responsable: personas[1].nombre, estructura: estructuras[0].nombre, activo:activo, ids_personas: [1,2,3]},
@@ -401,12 +403,9 @@ export let horario_turno = [
 ];
 
 
-export let posts = [
-  {posta: 'Direccion de extensión universitaria', zona: "Centro cultural", cantidad: 2, activo: "Sí"},
-  {posta: 'Choferes de guardia', zona: "Choferes de guardia", cantidad: 2, activo: "Sí"},
-  {posta: 'Complejo 1 - C3', zona: "Complejo Comedor 1", cantidad: 1, activo: "Sí"},
-  {posta: 'Complejo 1 - CC', zona: "Complejo Comedor 1", cantidad: 1, activo: "Sí"},
-  {posta: 'Complejo 1 - C1', zona: "Complejo Comedor 1", cantidad: 1, activo: "Sí"},
+
+export let recurso = [
+  {id: 1, nombre:nombreRecurso, valor:valor},
 ];
 
 

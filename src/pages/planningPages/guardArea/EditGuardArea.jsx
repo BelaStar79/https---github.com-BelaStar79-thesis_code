@@ -12,7 +12,7 @@ import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
 import { id_row, guard_area } from "../../components/others/table.js";
 
-export default function EditPlanning() {
+export default function EditGuardArea() {
   // editable variables
   const namePage = "Modificar zona de guardia";
   const activeSection = "planning";
