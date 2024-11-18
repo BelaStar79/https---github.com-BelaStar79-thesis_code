@@ -53,7 +53,7 @@ export default function DetailsGuardArea() {
                 <>
                   <button
                     className="titleBar__button"
-                    title="Regresar a Planificación"
+                    title={`Regresar a ` + activeOption}
                     onClick={goToGuardArea}
                   >
                     <BsBackspace className="titleBar__icon" />

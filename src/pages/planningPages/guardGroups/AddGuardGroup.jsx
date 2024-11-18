@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 // import css
 import "../../components/structure/mainStructure.css";
 import "../../components/formComponent/formComponent.css";
@@ -11,22 +11,22 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
 
-export default function AddGuardArea() {
+export default function AddGuardGroup() {
   // editable variables
-  const namePage = "Añadir zona de guardia";
+  const namePage = "Añadir grupo de guardia";
   const activeSection = "planning";
-  const activeOption = "Zonas de guardia";
+  const activeOption = "Grupos de guardia";
 
   // navigate metod
   const navigate = useNavigate();
-  const goToGuardArea = () => {
-    navigate("/planning/guard-area");
+  const goToGuardGroup = () => {
+    navigate("/planning/guard-groups");
   };
 
-  // save plannindg
-  const saveGuardArea = () => {
+  // save guard group
+  const saveGuardGroup = () => {
     console.log("Guardando datos...");
-    goToGuardArea();
+    goToGuardGroup();
   };
 
   return (
@@ -50,7 +50,7 @@ export default function AddGuardArea() {
                   <button
                     className="titleBar__button"
                     title={`Regresar a ` + activeOption}
-                    onClick={() => goToGuardArea()}
+                    onClick={() => goToGuardGroup()}
                   >
                     <BsBackspace className="titleBar__icon" />
                   </button>
@@ -64,6 +64,15 @@ export default function AddGuardArea() {
                   <form action="" className="formComponent__addForm">
                     <div className="formComponent__addFormContainer">
                       <div className="formComponent__addInput">
+                        <label htmlFor="" className="formComponent__addLabel">
+                          Nombre del requipo
+                          <input
+                            type="text"
+                            className="formComponent__addInput"
+                            placeholder="Nombre"
+                            title="Introduzca el nombre del equipo"
+                          />
+                        </label>
                         <label htmlFor="" className="formComponent__addLabel">
                           Nombre del responsable
                           <input
@@ -82,20 +91,29 @@ export default function AddGuardArea() {
                             title="Introduzca la estructura"
                           />
                         </label>
+                        <label htmlFor="" className="formComponent__addLabel">
+                          Cantdad de personas
+                          <input
+                            type="text"
+                            className="formComponent__addInput"
+                            placeholder="Estrructura"
+                            title="Introduzca la cantidad de personas"
+                          />
+                        </label>
                       </div>
 
                       <div className="formComponent__buttons">
                         <button
                           className="formComponent__button"
                           title="Guardar planificación"
-                          onClick={() => saveGuardArea()}
+                          onClick={() => saveGuardGroup()}
                         >
                           Aceptar
                         </button>
                         <button
                           className="formComponent__button"
                           title="Regresar sin guardar"
-                          onClick={() => goToGuardArea()}
+                          onClick={() => goToGuardGroup()}
                         >
                           Cancelar
                         </button>

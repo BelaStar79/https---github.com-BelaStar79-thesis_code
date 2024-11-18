@@ -53,7 +53,7 @@ export default function EditGuardArea() {
                 <>
                   <button
                     className="titleBar__button"
-                    title="Regresar a Planificación"
+                    title={`Regresar a ` + activeOption}
                     onClick={goToPGuardArea}
                   >
                     <BsBackspace className="titleBar__icon" />

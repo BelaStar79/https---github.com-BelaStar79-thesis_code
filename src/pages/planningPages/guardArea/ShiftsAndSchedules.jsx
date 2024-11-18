@@ -59,7 +59,7 @@ export default function ShiftsAndSchedules() {
                 <>
                   <button
                     className="titleBar__button"
-                    title="Regresar a Planificación"
+                    title={`Regresar a ` + activeOption}
                     onClick={goToGuardArea}
                   >
                     <BsBackspace className="titleBar__icon" />

@@ -19,6 +19,8 @@ import ShiftsAndSchedules from "./pages/planningPages/guardArea/ShiftsAndSchedul
 import AddPosts from "./pages/planningPages/posts/AddPosts.jsx";
 import DetailsPosts from "./pages/planningPages/posts/DetailsPosts.jsx";
 import EditPosts from "./pages/planningPages/posts/EditPosts.jsx";
+import AddGuardGroup from "./pages/planningPages/guardGroups/AddGuardGroup.jsx";
+import DetailsGuardGroup from "./pages/planningPages/guardGroups/DetailsGuardGroups.jsx";
 // Control
 import Assistance from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
@@ -63,6 +65,13 @@ function App() {
       <Route
         path="/planning/guard-area/shifts-schedules/"
         element={<ShiftsAndSchedules />}
+      />
+
+      {/* Routes for planning/guard-groups/ */}
+      <Route path="/planning/guard-groups/add/" element={<AddGuardGroup />} />
+      <Route
+        path="/planning/guard-groups/details/"
+        element={<DetailsGuardGroup />}
       />
 
       {/* Routes for planning/posts/ */}

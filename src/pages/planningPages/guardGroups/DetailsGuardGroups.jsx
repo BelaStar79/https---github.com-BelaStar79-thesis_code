@@ -10,33 +10,44 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 // others imports
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
-import {
-  id_row,
-  planificaciones,
-  detallesPlanificaciones,
-} from "../../components/others/table.js";
+import { id_row, equipos, personas } from "../../components/others/table.js";
 
-export default function DetailsPlanning() {
+export default function DetailsGuardGroup() {
   // editable variables
-  const namePage = "Detalles de planificación";
+  const namePage = "Detalles de grupo de guardia";
   const activeSection = "planning";
-  const activeOption = "Planificación";
-  const detailsName = "Datos de la planificación";
+  const activeOption = "Zonas de guardia";
+  const detailsName = "Datos de grupo de guardia";
 
-  // variable of details
-  const planificacion = planificaciones[id_row];
-  const namePlanning = planificacion.nombre_planificacion;
-  const zonaPlanning = planificacion.nombre_region_guardia;
-  const statePlanning = "Creada";
-  const dateStarPlanning = planificacion.fecha_inicio;
-  const dateEndPlanning = planificacion.fecha_fin;
-
-  const detalles = detallesPlanificaciones[id_row];
+  const equipo = equipos[id_row];
+  const miembros = [
+    {
+      nombre: personas[equipo.ids_personas[0]].nombre,
+      ci: personas[equipo.ids_personas[0]].ci,
+      solapin: personas[equipo.ids_personas[0]].solapin,
+      cargo: personas[equipo.ids_personas[0]].cargo,
+      estructura: equipo.estructura,
+    },
+    {
+      nombre: personas[equipo.ids_personas[1]].nombre,
+      ci: personas[equipo.ids_personas[1]].ci,
+      solapin: personas[equipo.ids_personas[1]].solapin,
+      cargo: personas[equipo.ids_personas[1]].cargo,
+      estructura: equipo.estructura,
+    },
+    {
+      nombre: personas[equipo.ids_personas[2]].nombre,
+      ci: personas[equipo.ids_personas[2]].ci,
+      solapin: personas[equipo.ids_personas[2]].solapin,
+      cargo: personas[equipo.ids_personas[2]].cargo,
+      estructura: equipo.estructura,
+    },
+  ];
 
   // navigate metod
   const navigate = useNavigate();
-  const goToPlanning = () => {
-    navigate("/planning/planning");
+  const goToGuardArea = () => {
+    navigate("/planning/guard-groups");
   };
 
   return (
@@ -60,7 +71,7 @@ export default function DetailsPlanning() {
                   <button
                     className="titleBar__button"
                     title={`Regresar a ` + activeOption}
-                    onClick={goToPlanning}
+                    onClick={() => goToGuardGroup()}
                   >
                     <BsBackspace className="titleBar__icon" />
                   </button>
@@ -70,34 +81,18 @@ export default function DetailsPlanning() {
 
             <div className="detailsContent">
               <strong>{detailsName}</strong>
-
               <hr className="detailsContent__hr" />
-
               <div className="detailsContent__info">
+                <p className="detailsContent__infoP">Nombre: {equipo.nombre}</p>
                 <p className="detailsContent__infoP">
-                  <strong>Nombre:</strong> {namePlanning}
-                </p>
-                <p className="detailsContent__infoP">
-                  <strong>Zona de guardia:</strong> {zonaPlanning}
-                </p>
-                <p className="detailsContent__infoP">
-                  <strong>Estado de planificación:</strong> {statePlanning}
-                </p>
-
-                <p className="detailsContent__infoP">
-                  <strong>Fecha de inicio:</strong> {dateStarPlanning}
-                </p>
-
-                <p className="detailsContent__infoP">
-                  <strong>Fecha de fin:</strong> {dateEndPlanning}
+                  Estructura: {equipo.estructura}
                 </p>
               </div>
-
               <TableComponentTwo
-                tableName={activeOption}
-                columnNames={["Nombre", "Posta", "Turnos", "Fecha"]}
-                columns={["nombre", "posta", "turnos", "fecha"]}
-                data={detalles}
+                tableName="Horarios y turnos asociados"
+                columnNames={["Nombre", "CI", "Solapin", "Cargo", "Estructura"]}
+                columns={["nombre", "ci", "solapin", "cargo", "estructura"]}
+                data={miembros}
               />
             </div>
           </div>

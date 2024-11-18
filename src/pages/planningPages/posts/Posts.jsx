@@ -23,7 +23,7 @@ import {
   BsChevronLeft,
   BsChevronBarRight,
 } from "react-icons/bs";
-import { setIdRow, setIdRowTwo, posta } from "../../components/others/table.js";
+import { setIdRow, posta } from "../../components/others/table.js";
 
 export default function Posts() {
   // editable variables

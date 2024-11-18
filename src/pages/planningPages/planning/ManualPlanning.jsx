@@ -70,7 +70,7 @@ export default function ManualPlanning() {
                 <>
                   <button
                     className="titleBar__button"
-                    title="Regresar a Planificación"
+                    title={`Regresar a ` + activeOption}
                     onClick={goToPlanning}
                   >
                     <BsBackspace className="titleBar__icon" />

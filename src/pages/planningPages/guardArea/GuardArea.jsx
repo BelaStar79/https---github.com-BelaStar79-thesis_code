@@ -28,8 +28,6 @@ import {
   setIdRow,
   setIdRowTwo,
   guard_area,
-  id_row,
-  id_rowTwo,
 } from "../../components/others/table.js";
 
 export default function GuardArea() {

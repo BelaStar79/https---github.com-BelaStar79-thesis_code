@@ -58,7 +58,7 @@ export default function EditPosts() {
                 <>
                   <button
                     className="titleBar__button"
-                    title="Regresar a Planificación"
+                    title={`Regresar a ` + activeOption}
                     onClick={goToPosts}
                   >
                     <BsBackspace className="titleBar__icon" />

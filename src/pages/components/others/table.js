@@ -101,16 +101,16 @@ export let posta = [
   {id: 30, activo:activo, id_estructura:estructuras[9].id, estructura: estructuras[9].nombre, cantidad: 1, descripcion:"", nombre: "Parqueo Rectorado"},
 ];
 export let equipos = [
-  {id: 1, nombre: "Equipo 1", responsable: personas[1].nombre, estructura: estructuras[0].nombre, activo:activo, ids_personas: [1,2,3]},
-  {id: 2, nombre: "Equipo 2", responsable: personas[4].nombre, estructura: estructuras[1].nombre, activo:activo, ids_personas: [4,5,6]},
-  {id: 3, nombre: "Equipo 3", responsable: personas[7].nombre, estructura: estructuras[2].nombre, activo:activo, ids_personas: [7,8,9]},
-  {id: 4, nombre: "Equipo 4", responsable: personas[10].nombre, estructura: estructuras[3].nombre, activo:activo, ids_personas: [10,11,12]},
-  {id: 5, nombre: "Equipo 5", responsable: personas[13].nombre, estructura: estructuras[4].nombre, activo:activo, ids_personas: [13,14,15]},
-  {id: 6, nombre: "Equipo 6", responsable: personas[16].nombre, estructura: estructuras[5].nombre, activo:activo, ids_personas: [16,17,18]},
-  {id: 7, nombre: "Equipo 7", responsable: personas[19].nombre, estructura: estructuras[6].nombre, activo:activo, ids_personas: [19,20,21]},
-  {id: 8, nombre: "Equipo 8", responsable: personas[22].nombre, estructura: estructuras[7].nombre, activo:activo, ids_personas: [22,23,24]},
-  {id: 9, nombre: "Equipo 9", responsable: personas[25].nombre, estructura: estructuras[8].nombre, activo:activo, ids_personas: [25,26,27]},
-  {id: 10, nombre: "Equipo 10", responsable: personas[28].nombre, estructura: estructuras[9].nombre, activo:activo, ids_personas: [28,29,30]},
+  {id: 1, nombre: "Equipo 1", responsable: personas[1].nombre, estructura: estructuras[0].nombre, activo:activo, cantidad:3, ids_personas: [1,2,3]},
+  {id: 2, nombre: "Equipo 2", responsable: personas[4].nombre, estructura: estructuras[1].nombre, activo:activo, cantidad:3, ids_personas: [4,5,6]},
+  {id: 3, nombre: "Equipo 3", responsable: personas[7].nombre, estructura: estructuras[2].nombre, activo:activo, cantidad:3, ids_personas: [7,8,9]},
+  {id: 4, nombre: "Equipo 4", responsable: personas[10].nombre, estructura: estructuras[3].nombre, activo:activo, cantidad:3, ids_personas: [10,11,12]},
+  {id: 5, nombre: "Equipo 5", responsable: personas[13].nombre, estructura: estructuras[4].nombre, activo:activo, cantidad:3, ids_personas: [13,14,15]},
+  {id: 6, nombre: "Equipo 6", responsable: personas[16].nombre, estructura: estructuras[5].nombre, activo:activo, cantidad:3, ids_personas: [16,17,18]},
+  {id: 7, nombre: "Equipo 7", responsable: personas[19].nombre, estructura: estructuras[6].nombre, activo:activo, cantidad:3, ids_personas: [19,20,21]},
+  {id: 8, nombre: "Equipo 8", responsable: personas[22].nombre, estructura: estructuras[7].nombre, activo:activo, cantidad:3, ids_personas: [22,23,24]},
+  {id: 9, nombre: "Equipo 9", responsable: personas[25].nombre, estructura: estructuras[8].nombre, activo:activo, cantidad:3, ids_personas: [25,26,27]},
+  {id: 10, nombre: "Equipo 10", responsable: personas[28].nombre, estructura: estructuras[9].nombre, activo:activo, cantidad:3, ids_personas: [28,29,30]},
 ];
 
 
