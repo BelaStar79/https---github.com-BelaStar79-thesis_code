@@ -4,7 +4,7 @@ import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
 import TableButtons from "./TableButtons.jsx";
-import { guard_area } from "../../components/tableComponent/tablaComponent.js";
+import { guard_area } from "../../components/others/table.js";
 
 export function GuardArea() {
   return (

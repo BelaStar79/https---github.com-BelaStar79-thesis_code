@@ -26,7 +26,10 @@ import {
   BsEnvelope,
   BsTrash3,
 } from "react-icons/bs";
-import { planificaciones } from "../../components/others/table.js";
+import {
+  planificaciones,
+  deletePlanificaciones,
+} from "../../components/others/table.js";
 
 export default function Planning() {
   // editable variables

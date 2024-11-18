@@ -121,9 +121,9 @@ export let guard_area = [
 export let posts = [
   {posta: 'Direccion de extensión universitaria', zona: "Centro cultural", cantidad: 2, activo: "Sí"},
   {posta: 'Choferes de guardia', zona: "Choferes de guardia", cantidad: 2, activo: "Sí"},
-  {posta: 'Complejo 1 - C3', zona: "Complejo Cmedor 1", cantidad: 1, activo: "Sí"},
-  {posta: 'Complejo 1 - CC', zona: "Complejo Cmedor 1", cantidad: 1, activo: "Sí"},
-  {posta: 'Complejo 1 - C1', zona: "Complejo Cmedor 1", cantidad: 1, activo: "Sí"},
+  {posta: 'Complejo 1 - C3', zona: "Complejo Comedor 1", cantidad: 1, activo: "Sí"},
+  {posta: 'Complejo 1 - CC', zona: "Complejo Comedor 1", cantidad: 1, activo: "Sí"},
+  {posta: 'Complejo 1 - C1', zona: "Complejo Comedor 1", cantidad: 1, activo: "Sí"},
 ];
 
 

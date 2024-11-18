@@ -17,7 +17,7 @@ export default function FormComponent({ search, labels }) {
             <div className="formComponent__searchFormContainer">
               <div className="formComponent__searchInputs">{search}</div>
               <button
-                className="formComponent__searchButton"
+                className="formComponent__searchButton not"
                 title="Realizar búsqueda"
               >
                 <BsSearch className="formComponent__searchIcon" />

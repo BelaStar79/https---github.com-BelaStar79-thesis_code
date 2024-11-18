@@ -9,6 +9,11 @@ import Posts from "./pages/planningPages/posts/Posts.jsx";
 import GuardGroups from "./pages/planningPages/guardGroups/GuardGroups.jsx";
 import Potential from "./pages/planningPages/potential/Potential.jsx";
 import AddPlanning from "./pages/planningPages/planning/AddPlanning.jsx";
+import DetailsPlanning from "./pages/planningPages/planning/DetailsPlanning.jsx";
+import EditPlanning from "./pages/planningPages/planning/EditPlanning.jsx";
+// import AddGuardArea from "./pages/planningPages/guardArea/AddGuardArea.jsx";
+import DetailsGuardArea from "./pages/planningPages/guardArea/DetailsGuardArea.jsx";
+// import EditGuardArea from "./pages/planningPages/guardArea/EditGuardArea.jsx";
 // Control
 import Assistance from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
@@ -20,8 +25,6 @@ import PotentialReport from "./pages/reportPages/potential/PotentialReport.jsx";
 import AssistanceReport from "./pages/reportPages/assistance/AssistanceReport.jsx";
 import QuantitativePotential from "./pages/reportPages/quantitativePotential/QuantitativePotential.jsx";
 import Frequency from "./pages/reportPages/frequency/Frequency.jsx";
-import DetailsPlanning from "./pages/planningPages/planning/DetailsPlanning.jsx";
-import EditPlanning from "./pages/planningPages/planning/EditPlanning.jsx";
 
 function App() {
   return (
@@ -40,6 +43,14 @@ function App() {
       <Route path="/planning/planning/add/" element={<AddPlanning />} />
       <Route path="/planning/planning/details/" element={<DetailsPlanning />} />
       <Route path="/planning/planning/edit/" element={<EditPlanning />} />
+
+      {/* Routes for planning/guard-area/ */}
+      {/* <Route path="/planning/guard-area/add/" element={<AddGuardArea />} /> */}
+      <Route
+        path="/planning/guard-area/details/"
+        element={<DetailsGuardArea />}
+      />
+      {/* <Route path="/planning/guard-area/edit/" element={<EditGuardArea />} /> */}
 
       {/* Routes for control */}
       <Route path="/control/assistance" element={<Assistance />} />
