@@ -124,7 +124,6 @@ export let usuarios = [
         password: "admin"
     },
 ];
-
 export function addUsuarios(user, password) {
   if (usuarios.length === 0) {
     usuarios.push({id:0, user:user, password:password});
@@ -447,6 +446,47 @@ export let patrones = [
   {id:1, activo:activo, tipo:"semana", periodicidad: 4, nombre:"Patrón 1"},
   {id:2, activo:activo, tipo:"mes", periodicidad: 2, nombre:"Patrón 2"},
 ];
+export let asistencia = [
+  {id:1,turno:fecha_inicio, posta:posta[0].nombre, nombre:"Asistencia 1", estructura: estructuras[0].nombre, cantidad: '1'},
+  {id:2,turno:fecha_inicio, posta:posta[1].nombre, nombre:"Asistencia 2", estructura: estructuras[0].nombre, cantidad: '1'},
+  {id:3,turno:fecha_inicio, posta:posta[2].nombre, nombre:"Asistencia 3", estructura: estructuras[0].nombre, cantidad: '1'},
+  {id:4,turno:fecha_inicio, posta:posta[3].nombre, nombre:"Asistencia 4", estructura: estructuras[1].nombre, cantidad: '1'},
+  {id:5,turno:fecha_inicio, posta:posta[4].nombre, nombre:"Asistencia 5", estructura: estructuras[1].nombre, cantidad: '1'},
+  {id:6,turno:fecha_inicio, posta:posta[5].nombre, nombre:"Asistencia 6", estructura: estructuras[1].nombre, cantidad: '1'},
+  {id:7,turno:fecha_inicio, posta:posta[6].nombre, nombre:"Asistencia 7", estructura: estructuras[2].nombre, cantidad: '1'},
+  {id:8,turno:fecha_inicio, posta:posta[7].nombre, nombre:"Asistencia 8", estructura: estructuras[2].nombre, cantidad: '1'},
+  {id:9,turno:fecha_inicio, posta:posta[8].nombre, nombre:"Asistencia 9", estructura: estructuras[2].nombre, cantidad: '1'},
+  {id:10,turno:fecha_inicio, posta:posta[9].nomrbe, nombre:"Asistencia 10", estructura: estructuras[3].nombre, cantidad: '1'},
+  {id:11,turno:fecha_inicio, posta:posta[10].nombre, nombre:"Asistencia 11", estructura: estructuras[3].nombre, cantidad: '1'},
+  {id:12,turno:fecha_inicio, posta:posta[11].nombre, nombre:"Asistencia 12", estructura: estructuras[3].nombre, cantidad: '1'},
+  {id:13,turno:fecha_inicio, posta:posta[12].nombre, nombre:"Asistencia 13", estructura: estructuras[4].nombre, cantidad: '1'},
+  {id:14,turno:fecha_inicio, posta:posta[13].nombre, nombre:"Asistencia 14", estructura: estructuras[4].nombre, cantidad: '1'},
+  {id:15,turno:fecha_inicio, posta:posta[14].nombre, nombre:"Asistencia 15", estructura: estructuras[4].nombre, cantidad: '1'},
+  {id:16,turno:fecha_inicio, posta:posta[15].nombre, nombre:"Asistencia 16", estructura: estructuras[5].nombre, cantidad: '1'},
+  {id:17,turno:fecha_inicio, posta:posta[16].nombre, nombre:"Asistencia 17", estructura: estructuras[5].nombre, cantidad: '1'},
+  {id:18,turno:fecha_inicio, posta:posta[17].nombre, nombre:"Asistencia 18", estructura: estructuras[5].nombre, cantidad: '1'},
+  {id:19,turno:fecha_inicio, posta:posta[18].nombre, nombre:"Asistencia 19", estructura: estructuras[6].nombre, cantidad: '1'},
+  {id:20,turno:fecha_inicio, posta:posta[19].nombre, nombre:"Asistencia 20", estructura: estructuras[6].nombre, cantidad: '1'},
+  {id:21,turno:fecha_inicio, posta:posta[20].nombre, nombre:"Asistencia 21", estructura: estructuras[6].nombre, cantidad: '1'},
+  {id:22,turno:fecha_inicio, posta:posta[21].nombre, nombre:"Asistencia 22", estructura: estructuras[7].nombre, cantidad: '1'},
+  {id:23,turno:fecha_inicio, posta:posta[22].nombre, nombre:"Asistencia 23", estructura: estructuras[7].nombre, cantidad: '1'},
+  {id:24,turno:fecha_inicio, posta:posta[23].nombre, nombre:"Asistencia 24", estructura: estructuras[7].nombre, cantidad: '1'},
+  {id:25,turno:fecha_inicio, posta:posta[24].nombre, nombre:"Asistencia 25", estructura: estructuras[8].nombre, cantidad: '1'},
+  {id:26,turno:fecha_inicio, posta:posta[25].nombre, nombre:"Asistencia 26", estructura: estructuras[8].nombre, cantidad: '1'},
+  {id:27,turno:fecha_inicio, posta:posta[26].nombre, nombre:"Asistencia 27", estructura: estructuras[8].nombre, cantidad: '1'},
+  {id:28,turno:fecha_inicio, posta:posta[27].nombre, nombre:"Asistencia 28", estructura: estructuras[9].nombre, cantidad: '1'},
+  {id:29,turno:fecha_inicio, posta:posta[28].nombre, nombre:"Asistencia 29", estructura: estructuras[9].nombre, cantidad: '1'},
+  {id:30,turno:fecha_inicio, posta:posta[29].nombre, nombre:"Asistencia 30", estructura: estructuras[9].nombre, cantidad: '1'}, 
+];
+export let incident = [];
+export let duty_officer = [
+  {id:1, fecha:fecha_inicio, nombre:personas[1].nombre, cantidad:'', cantidadReal:''},
+  {id:2, fecha:fecha_inicio, nombre:personas[19].nombre, cantidad:'', cantidadReal:''},
+  {id:3, fecha:fecha_inicio, nombre:personas[28].nombre, cantidad:'', cantidadReal:''},
+];
+
+
+
 
 
 
@@ -459,20 +499,11 @@ export let guard_groups = [
 ];
 export let potential = [
   {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
-    {nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
-    {nombre: 'John Wesley Shipp', ci: '12345678903', solapin: 'E345612', cargo: 'Estuduante', estructura: 'IDF3'},
-    {nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
-    {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
-    {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
-];
-export let assistance = [
-  {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nombre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
-  {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nomre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
-  {turno:'31/05/2022', posta:'Docente 1 Viejo', nomre:'1er noche Docente 1 Viejo', zona: 'Gastex-DIRCOM-Producción', cantidad: '1'},
-];
-export let incident = [];
-export let duty_officer = [
-  {fecha:'01/12/2021', oficialGuardia:'Alvaro Alejandro Acosta Ruiz', cantidad:'', cantidadReal:''}
+  {nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
+  {nombre: 'John Wesley Shipp', ci: '12345678903', solapin: 'E345612', cargo: 'Estuduante', estructura: 'IDF3'},
+  {nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
+  {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
+  {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
 ];
 export let guard = [
   {zona: "Dirección de Extensión Universitaria", nombre: "Yosvaney Herrera Ricardo", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},

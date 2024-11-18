@@ -27,9 +27,13 @@ import DetailsPotential from "./pages/planningPages/potential/DetailsPotential.j
 import AssociateVariableToPeople from "./pages/planningPages/potential/AssociateVariableToPeople.jsx";
 import AssociatePatronToPeople from "./pages/planningPages/potential/AssociatePatronToPeople.jsx";
 // Control
-import Assistance from "./pages/controlPages/assistance/Assistance.jsx";
+import AssistanceControl from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
 import DutyOfficer from "./pages/controlPages/dutyOfficer/DutyOfficer.jsx";
+import EditAssistance from "./pages/controlPages/assistance/EditAssistance.jsx";
+import AddIncident from "./pages/controlPages/incident/AddIncident.jsx";
+import AddDutyOfficer from "./pages/controlPages/dutyOfficer/AddDutyOfficer.jsx";
+import EditDutyOfficer from "./pages/controlPages/dutyOfficer/EditDutyOficer.jsx";
 // Report
 import Guard from "./pages/reportPages/guard/Guard.jsx";
 import IncidentReport from "./pages/reportPages/incident/IncidentReport.jsx";
@@ -50,8 +54,6 @@ function App() {
       <Route path="/planning/posts" element={<Posts />} />
       <Route path="/planning/guard-groups" element={<GuardGroups />} />
       <Route path="/planning/potential" element={<Potential />} />
-
-      {/* Routes for planning/planning/ */}
       <Route path="/planning/planning/add/" element={<AddPlanning />} />
       <Route path="/planning/planning/details/" element={<DetailsPlanning />} />
       <Route path="/planning/planning/edit/" element={<EditPlanning />} />
@@ -59,8 +61,6 @@ function App() {
         path="/planning/planning/auto-planning/"
         element={<ManualPlanning />}
       />
-
-      {/* Routes for planning/guard-area/ */}
       <Route path="/planning/guard-area/add/" element={<AddGuardArea />} />
       <Route
         path="/planning/guard-area/details/"
@@ -71,13 +71,9 @@ function App() {
         path="/planning/guard-area/shifts-schedules/"
         element={<ShiftsAndSchedules />}
       />
-
-      {/* Routes for planning/posts/ */}
       <Route path="/planning/posts/add/" element={<AddPosts />} />
       <Route path="/planning/posts/details/" element={<DetailsPosts />} />
       <Route path="/planning/posts/edit/" element={<EditPosts />} />
-
-      {/* Routes for planning/guard-groups/ */}
       <Route path="/planning/guard-groups/add/" element={<AddGuardGroup />} />
       <Route
         path="/planning/guard-groups/details/"
@@ -88,8 +84,6 @@ function App() {
         path="/planning/guard-groups/associate/"
         element={<AssociatePeopleToGuardGroup />}
       />
-
-      {/* Rutes for planning/potential/ */}
       <Route
         path="/planning/potential/details/"
         element={<DetailsPotential />}
@@ -104,9 +98,13 @@ function App() {
       />
 
       {/* Routes for control */}
-      <Route path="/control/assistance" element={<Assistance />} />
+      <Route path="/control/assistance" element={<AssistanceControl />} />
       <Route path="/control/incident" element={<Incident />} />
       <Route path="/control/duty-officer" element={<DutyOfficer />} />
+      <Route path="/control/assistance/edit/" element={<EditAssistance />} />
+      <Route path="/control/incident/add/" element={<AddIncident />} />
+      <Route path="/control/duty-officer/add/" element={<AddDutyOfficer />} />
+      <Route path="/control/duty-officer/edit/" element={<EditDutyOfficer />} />
 
       {/* Routes for report */}
       <Route path="/report/guard" element={<Guard />} />
