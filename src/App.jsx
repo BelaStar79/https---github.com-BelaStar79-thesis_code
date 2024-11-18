@@ -21,6 +21,8 @@ import DetailsPosts from "./pages/planningPages/posts/DetailsPosts.jsx";
 import EditPosts from "./pages/planningPages/posts/EditPosts.jsx";
 import AddGuardGroup from "./pages/planningPages/guardGroups/AddGuardGroup.jsx";
 import DetailsGuardGroup from "./pages/planningPages/guardGroups/DetailsGuardGroups.jsx";
+import EditGuardGroup from "./pages/planningPages/guardGroups/EditGuardGroup.jsx";
+import AssociatePeopleToGuardGroup from "./pages/planningPages/guardGroups/AssociatePeopleToGuardGroup.jsx";
 // Control
 import Assistance from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
@@ -67,17 +69,22 @@ function App() {
         element={<ShiftsAndSchedules />}
       />
 
+      {/* Routes for planning/posts/ */}
+      <Route path="/planning/posts/add/" element={<AddPosts />} />
+      <Route path="/planning/posts/details/" element={<DetailsPosts />} />
+      <Route path="/planning/posts/edit/" element={<EditPosts />} />
+
       {/* Routes for planning/guard-groups/ */}
       <Route path="/planning/guard-groups/add/" element={<AddGuardGroup />} />
       <Route
         path="/planning/guard-groups/details/"
         element={<DetailsGuardGroup />}
       />
-
-      {/* Routes for planning/posts/ */}
-      <Route path="/planning/posts/add/" element={<AddPosts />} />
-      <Route path="/planning/posts/details/" element={<DetailsPosts />} />
-      <Route path="/planning/posts/edit/" element={<EditPosts />} />
+      <Route path="/planning/guard-groups/edit/" element={<EditGuardGroup />} />
+      <Route
+        path="/planning/guard-groups/associate/"
+        element={<AssociatePeopleToGuardGroup />}
+      />
 
       {/* Routes for control */}
       <Route path="/control/assistance" element={<Assistance />} />

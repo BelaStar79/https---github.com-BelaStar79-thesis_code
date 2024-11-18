@@ -25,6 +25,7 @@ import {
   BsCalendar4Week,
   BsEnvelope,
   BsTrash3,
+  BsInfoLg,
 } from "react-icons/bs";
 import { setIdRow, planificaciones } from "../../components/others/table.js";
 
@@ -455,11 +456,31 @@ export default function Planning() {
                     </table>
                   </>
                 ) : (
-                  <div className="tableComponent__message">
-                    <p className="tableComponent__messageP">
-                      No existen registros en el sistema
-                    </p>
-                  </div>
+                  <>
+                    <table className="tableComponent__tableContainer">
+                      <thead className="tableComponent__tableContainer__thead">
+                        <tr className="tableComponent__tableContainer__tr tableComponent__tableContainer__trHeader">
+                          <th className="tableComponent__tableContainer__th tableComponent__tableContainer__thNumber">
+                            No.
+                          </th>
+                          {columnNames.map((columnName, index) => (
+                            <th
+                              className="tableComponent__tableContainer__th"
+                              key={index}
+                            >
+                              {columnName}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                    </table>
+                    <div className="tableComponent__message">
+                      <BsInfoLg className="tableComponent__messageIcon" />
+                      <p className="tableComponent__messageP">
+                        No hay datos para mostrar
+                      </p>
+                    </div>
+                  </>
                 )}
               </div>
             </section>
@@ -472,36 +493,3 @@ export default function Planning() {
     </>
   );
 }
-
-// import React from "react";
-// import MainStructure from "../../components/structure/MainStructure.jsx";
-// import TableButtons from "./TableButtons.jsx";
-// import FormFields from "./FormFields.jsx";
-// import TitleBarButtons from "./TitleBarButtons.jsx";
-// import SearchFields from "./SearchFields.jsx";
-// import { planificaciones } from "../../components/tableComponent/tablaComponent.js";
-
-// export function Planning() {
-//   return (
-//     <MainStructure
-//       namePage="Planificación"
-//       user="user"
-//       activeSection="planning"
-//       activeOption="Planificación"
-//       titleBarButtons={<TitleBarButtons />}
-//       search={<SearchFields />}
-//       labels={<FormFields />}
-//       tableName="Planificaciones"
-//       columnNames={["Nombre", "Zona de guardia", "Fecha inicio", "Fecha fin"]}
-//       columns={[
-//         "nombre_planificacion",
-//         "nombre_region_guardia",
-//         "fecha_inicio",
-//         "fecha_fin",
-//       ]}
-//       data={planificaciones}
-//       tableComponentButtons={<TableButtons />}
-//     />
-//   );
-// }
-// export default Planning;

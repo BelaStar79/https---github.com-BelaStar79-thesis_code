@@ -14,40 +14,52 @@ import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
 import {
   id_row,
-  planificaciones,
-  zonas,
-  detallesManualPlaning,
+  personas,
+  equipos,
+  empty_list,
 } from "../../components/others/table.js";
 
-export default function ManualPlanning() {
+export default function AssociatePeopleToGuardGroup() {
   // editable variables
-  const namePage = "Planificación manual";
+  const namePage = "Asociar personas a grupos de guardia";
   const activeSection = "planning";
-  const activeOption = "Planificación";
+  const activeOption = "Grupos de guardia";
 
   // variable of details
-  const planificacion = planificaciones[id_row];
-  const namePlanning = planificacion.nombre_planificacion;
-  const zonaPlanning = planificacion.nombre_region_guardia;
-  const dateStartPlanning = planificacion.fecha_inicio;
-  const dateEndPlanning = planificacion.fecha_fin;
-
-  const zona = zonas[planificacion.id_zona - 1];
-  const responsiblePerson = zona.responsable;
-  const planner = zona.planificador;
-  const active = zona.activo;
-
-  const detalles = detallesManualPlaning[id_row];
+  const equipo = equipos[id_row];
+  const miembros = [
+    {
+      nombre: personas[equipo.ids_personas[0]].nombre,
+      ci: personas[equipo.ids_personas[0]].ci,
+      solapin: personas[equipo.ids_personas[0]].solapin,
+      cargo: personas[equipo.ids_personas[0]].cargo,
+      estructura: equipo.estructura,
+    },
+    {
+      nombre: personas[equipo.ids_personas[1]].nombre,
+      ci: personas[equipo.ids_personas[1]].ci,
+      solapin: personas[equipo.ids_personas[1]].solapin,
+      cargo: personas[equipo.ids_personas[1]].cargo,
+      estructura: equipo.estructura,
+    },
+    {
+      nombre: personas[equipo.ids_personas[2]].nombre,
+      ci: personas[equipo.ids_personas[2]].ci,
+      solapin: personas[equipo.ids_personas[2]].solapin,
+      cargo: personas[equipo.ids_personas[2]].cargo,
+      estructura: equipo.estructura,
+    },
+  ];
 
   // navigate metod
   const navigate = useNavigate();
-  const goToPlanning = () => {
-    navigate("/planning/planning");
+  const goToGuardGroup = () => {
+    navigate("/planning/guard-groups");
   };
 
-  const savePlanning = () => {
+  const saveGuardGroup = () => {
     console.log("Guardando datos...");
-    goToPlanning();
+    goToGuardGroup();
   };
 
   return (
@@ -71,7 +83,7 @@ export default function ManualPlanning() {
                   <button
                     className="titleBar__button"
                     title={`Regresar a ` + activeOption}
-                    onClick={goToPlanning}
+                    onClick={goToGuardGroup}
                   >
                     <BsBackspace className="titleBar__icon" />
                   </button>
@@ -80,82 +92,20 @@ export default function ManualPlanning() {
             />
 
             <div className="detailsContent">
-              <strong>Detalles de la zona</strong>
+              <strong>Datos de grupo de guardia</strong>
 
               <hr className="detailsContent__hr" />
 
               <div className="detailsContent__info">
                 <p className="detailsContent__infoP">
-                  <strong>Nombre:</strong> {zonaPlanning}
+                  <strong>Nombre:</strong> {equipo.nombre}
                 </p>
                 <p className="detailsContent__infoP">
-                  <strong>Responsable:</strong> {responsiblePerson}
+                  <strong>Máximo numero de personas:</strong> 200
                 </p>
                 <p className="detailsContent__infoP">
-                  <strong>Planificador:</strong> {planner}
+                  <strong>Estructura:</strong> {equipo.estructura}
                 </p>
-                <p className="detailsContent__infoP">
-                  <strong>Fecha inicio:</strong> {dateStartPlanning}
-                </p>
-                <p className="detailsContent__infoP">
-                  <strong>Fecha de fin:</strong> {dateEndPlanning}
-                </p>
-                <p className="detailsContent__infoP">
-                  <strong>Activo:</strong> {active}
-                </p>
-                <p className="detailsContent__infoP">
-                  <strong>Planificación:</strong> {namePlanning}
-                </p>
-              </div>
-
-              <strong className="detailsContent__title">{namePage}</strong>
-
-              <hr className="detailsContent__hr" />
-
-              <div className="detailsContent__labelsContainer">
-                <label className="detailsContent__label">
-                  Forma de planificación
-                  <input
-                    type="text"
-                    placeholder="Por persona"
-                    title="Introduzca la forma de planificación"
-                  />
-                </label>
-                <label className="detailsContent__label">
-                  Estructura
-                  <input
-                    type="text"
-                    placeholder={zonaPlanning}
-                    title="Introduzca la posta de la planificación"
-                  />
-                </label>
-                <label className="detailsContent__label">
-                  Fecha
-                  <input
-                    type="text"
-                    placeholder={dateStartPlanning}
-                    title="Introduzca la fecha de la planificación"
-                  />
-                </label>
-                <label className="detailsContent__label">
-                  Turno
-                  <input
-                    type="text"
-                    placeholder="12 horas"
-                    title="Introduzca el turno la planificación"
-                  />
-                </label>
-                <label className="detailsContent__label">
-                  Cantidad de personas por posta
-                  <div className="detailsContent__label__box">
-                    <input
-                      type="text"
-                      placeholder="3"
-                      title="Introduzca la cantidad de personas"
-                    />
-                    <p>asignados</p>
-                  </div>
-                </label>
               </div>
 
               <div className="detailsContent__search">
@@ -170,22 +120,6 @@ export default function ManualPlanning() {
                   }
                   labels={
                     <>
-                      <label htmlFor="" className="formComponent__label">
-                        Sexo
-                        <input
-                          type="text"
-                          className="formComponent__input"
-                          placeholder="Introduzca el sexo"
-                        />
-                      </label>
-                      <label htmlFor="" className="formComponent__label">
-                        Estructura
-                        <input
-                          type="text"
-                          className="formComponent__input"
-                          placeholder="Introduzca la estructura"
-                        />
-                      </label>
                       <label htmlFor="" className="formComponent__label">
                         Provincia
                         <input
@@ -203,11 +137,19 @@ export default function ManualPlanning() {
                         />
                       </label>
                       <label htmlFor="" className="formComponent__label">
-                        Categoría
+                        Sexo
                         <input
                           type="text"
                           className="formComponent__input"
-                          placeholder="Introduzca la caregoría"
+                          placeholder="Introduzca el sexo"
+                        />
+                      </label>
+                      <label htmlFor="" className="formComponent__label">
+                        Estructura
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca la estructura"
                         />
                       </label>
                       <label htmlFor="" className="formComponent__label">
@@ -219,46 +161,115 @@ export default function ManualPlanning() {
                         />
                       </label>
                       <label htmlFor="" className="formComponent__label">
-                        Residente
+                        Categoría
                         <input
                           type="text"
                           className="formComponent__input"
-                          placeholder="Residente"
+                          placeholder="Introduzca la caregoría"
                         />
                       </label>
                     </>
                   }
                 />
-                {/* <input
-                  type="text"
-                  placeholder="Nombre"
-                  title="Introduzca el nombre de la persona que desea buscar"
-                />
-                <button className="detailsContent__searchButton">
-                  <BsSearch className="detailsContent__searchIcon" />
-                  <p className="detailsContent__searchP">Buscar</p>
-                </button> */}
               </div>
 
               <TableComponentTwo
                 tableName="Personas"
                 columnNames={["Nombre", "CI", "Solapin", "Estructura", "Cargo"]}
                 columns={["nombre", "ci", "solapin", "estructura", "cargo"]}
-                data={detalles}
+                data={miembros}
+              />
+
+              <div className="formComponent__buttons btn">
+                <button className="formComponent__button not" title="Asociar">
+                  Asociar
+                </button>
+              </div>
+
+              <div className="detailsContent__search">
+                <FormComponent
+                  search={
+                    <input
+                      className="detailsContent__searchInput"
+                      type="text"
+                      placeholder="Nombre"
+                      title="Introduzca el nombre de la persona que desea buscar"
+                    />
+                  }
+                  labels={
+                    <>
+                      <label htmlFor="" className="formComponent__label">
+                        Provincia
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca la provincia"
+                        />
+                      </label>
+                      <label htmlFor="" className="formComponent__label">
+                        Municipio
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca el municipio"
+                        />
+                      </label>
+                      <label htmlFor="" className="formComponent__label">
+                        Sexo
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca el sexo"
+                        />
+                      </label>
+                      <label htmlFor="" className="formComponent__label">
+                        Estructura
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca la estructura"
+                        />
+                      </label>
+                      <label htmlFor="" className="formComponent__label">
+                        Cargo
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca la cargo"
+                        />
+                      </label>
+                      <label htmlFor="" className="formComponent__label">
+                        Categoría
+                        <input
+                          type="text"
+                          className="formComponent__input"
+                          placeholder="Introduzca la caregoría"
+                        />
+                      </label>
+                    </>
+                  }
+                />
+              </div>
+
+              <TableComponentTwo
+                tableName="Personas asociadas"
+                columnNames={["Nombre", "CI", "Solapin", "Estructura", "Cargo"]}
+                columns={["nombre", "ci", "solapin", "estructura", "cargo"]}
+                data={empty_list}
               />
 
               <div className="formComponent__buttons">
                 <button
                   className="formComponent__button"
                   title={`Guardar y regresar a ` + activeOption}
-                  onClick={() => savePlanning()}
+                  onClick={() => saveGuardGroup()}
                 >
                   Aceptar
                 </button>
                 <button
                   className="formComponent__button"
                   title="Regresar sin guardar"
-                  onClick={goToPlanning}
+                  onClick={goToGuardGroup}
                 >
                   Cancelar
                 </button>

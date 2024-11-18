@@ -24,6 +24,7 @@ import {
   BsPersonPlus,
   BsPersonLock,
   BsFileEarmarkExcel,
+  BsInfoLg,
 } from "react-icons/bs";
 import {
   setIdRow,
@@ -53,8 +54,13 @@ export default function GuardGroups() {
     setIdRow(id - 1);
     navigate(`/planning/guard-groups/details/`);
   };
-  const goToEditGuardGroup = () => {
+  const goToEditGuardGroup = (id) => {
+    setIdRow(id - 1);
     navigate("/planning/guard-groups/edit/");
+  };
+  const goToAssociatePeopleToGuardGroup = (id) => {
+    setIdRow(id - 1);
+    navigate("/planning/guard-groups/associate/");
   };
 
   const deleteGuardGroup = () => {
@@ -374,12 +380,16 @@ export default function GuardGroups() {
                                 <button
                                   className="tdOptions__button"
                                   title="Editar"
+                                  onClick={() => goToEditGuardGroup(row.id)}
                                 >
                                   <BsPencil className="tdOptions__buttonIcon" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Asociar personas a grupos de guardia"
+                                  onClick={() =>
+                                    goToAssociatePeopleToGuardGroup(row.id)
+                                  }
                                 >
                                   <BsPersonPlus className="tdOptions__buttonIcon" />
                                 </button>
@@ -387,13 +397,13 @@ export default function GuardGroups() {
                                   className="tdOptions__button"
                                   title="Exportar a Excel"
                                 >
-                                  <BsFileEarmarkExcel className="tdOptions__buttonIcon" />
+                                  <BsFileEarmarkExcel className="tdOptions__buttonIcon not" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Asociar permisos"
                                 >
-                                  <BsPersonLock className="tdOptions__buttonIcon" />
+                                  <BsPersonLock className="tdOptions__buttonIcon not" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
@@ -410,11 +420,31 @@ export default function GuardGroups() {
                     </table>
                   </>
                 ) : (
-                  <div className="tableComponent__message">
-                    <p className="tableComponent__messageP">
-                      No existen registros en el sistema
-                    </p>
-                  </div>
+                  <>
+                    <table className="tableComponent__tableContainer">
+                      <thead className="tableComponent__tableContainer__thead">
+                        <tr className="tableComponent__tableContainer__tr tableComponent__tableContainer__trHeader">
+                          <th className="tableComponent__tableContainer__th tableComponent__tableContainer__thNumber">
+                            No.
+                          </th>
+                          {columnNames.map((columnName, index) => (
+                            <th
+                              className="tableComponent__tableContainer__th"
+                              key={index}
+                            >
+                              {columnName}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                    </table>
+                    <div className="tableComponent__message">
+                      <BsInfoLg className="tableComponent__messageIcon" />
+                      <p className="tableComponent__messageP">
+                        No hay datos para mostrar
+                      </p>
+                    </div>
+                  </>
                 )}
               </div>
             </section>
@@ -427,36 +457,3 @@ export default function GuardGroups() {
     </>
   );
 }
-
-// import React from "react";
-// import MainStructure from "../../components/structure/MainStructure.jsx";
-// import TitleBarButtons from "./TitleBarButtons.jsx";
-// import SearchFields from "./SearchFields.jsx";
-// import FormFields from "./FormFields.jsx";
-// import TableButtons from "./TableButtons.jsx";
-// import { guard_groups } from "../../components/tableComponent/tablaComponent.js";
-
-// export function GuardGroups() {
-//   return (
-//     <MainStructure
-//       namePage="Grupos de guardia"
-//       user="user"
-//       activeSection="planning"
-//       activeOption="Grupos de guardia"
-//       titleBarButtons={<TitleBarButtons />}
-//       search={<SearchFields />}
-//       labels={<FormFields />}
-//       tableName="Grupos de guardia"
-//       columnNames={[
-//         "Grupo de Guardia",
-//         "Zona de guardia",
-//         "No. de personas asociadas",
-//       ]}
-//       columns={["grupo", "zona", "personasAsociadas"]}
-//       data={guard_groups}
-//       tableComponentButtons={<TableButtons />}
-//     />
-//   );
-// }
-
-// export default GuardGroups;

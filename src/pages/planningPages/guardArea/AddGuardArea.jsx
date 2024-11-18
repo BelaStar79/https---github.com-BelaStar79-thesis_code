@@ -87,7 +87,7 @@ export default function AddGuardArea() {
                       <div className="formComponent__buttons">
                         <button
                           className="formComponent__button"
-                          title="Guardar planificación"
+                          title={`Guardar y regresar a ` + activeOption}
                           onClick={() => saveGuardArea()}
                         >
                           Aceptar

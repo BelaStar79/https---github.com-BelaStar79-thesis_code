@@ -23,6 +23,7 @@ import {
   BsChevronBarLeft,
   BsChevronLeft,
   BsChevronBarRight,
+  BsInfoLg,
 } from "react-icons/bs";
 import {
   setIdRow,
@@ -414,11 +415,31 @@ export default function GuardArea() {
                     </table>
                   </>
                 ) : (
-                  <div className="tableComponent__message">
-                    <p className="tableComponent__messageP">
-                      No existen registros en el sistema
-                    </p>
-                  </div>
+                  <>
+                    <table className="tableComponent__tableContainer">
+                      <thead className="tableComponent__tableContainer__thead">
+                        <tr className="tableComponent__tableContainer__tr tableComponent__tableContainer__trHeader">
+                          <th className="tableComponent__tableContainer__th tableComponent__tableContainer__thNumber">
+                            No.
+                          </th>
+                          {columnNames.map((columnName, index) => (
+                            <th
+                              className="tableComponent__tableContainer__th"
+                              key={index}
+                            >
+                              {columnName}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                    </table>
+                    <div className="tableComponent__message">
+                      <BsInfoLg className="tableComponent__messageIcon" />
+                      <p className="tableComponent__messageP">
+                        No hay datos para mostrar
+                      </p>
+                    </div>
+                  </>
                 )}
               </div>
             </section>
@@ -431,164 +452,3 @@ export default function GuardArea() {
     </>
   );
 }
-
-// import React from "react";
-// import MainStructure from "../../components/structure/MainStructure.jsx";
-// import { useNavigate } from "react-router-dom";
-// import { guard_area, setIdRow } from "../../components/others/table.js";
-// import {
-//   BsPlusCircle,
-//   BsFileEarmarkExcel,
-//   BsFileEarmarkPdf,
-//   BsEye,
-//   BsPencil,
-//   BsCalendar3,
-//   BsTrash3,
-// } from "react-icons/bs";
-
-// export function GuardArea() {
-//   const navigate = useNavigate();
-//   const goToDetailsGuardArea = (id_zona) => {
-//     setIdRow(id_zona);
-//     navigate("/planning/guard-area/details/");
-//   };
-//   const goToEditGuardArea = (id_zona) => {
-//     setIdRow(id_zona);
-//     navigate("/planning/guard-area/edit/");
-//   };
-
-//   return (
-//     <MainStructure
-//       namePage="Zonas de guardia"
-//       user="user"
-//       activeSection="planning"
-//       activeOption="Zonas de guardia"
-//       titleBarButtons={
-//         <>
-//           <button className="titleBar__button" title="Añadir una nueva zona">
-//             <BsPlusCircle className="titleBar__icon not" />
-//           </button>
-//           <button className="titleBar__button not" title="Exportar a Excel">
-//             <BsFileEarmarkExcel className="titleBar__icon" />
-//           </button>
-//           <button className="titleBar__button not" title="Exportar a PDF">
-//             <BsFileEarmarkPdf className="titleBar__icon" />
-//           </button>
-//         </>
-//       }
-//       search={
-//         <>
-//           <input
-//             type="text"
-//             className="formComponent__input formComponent__searchInput"
-//             placeholder="Nombre"
-//             title="Introduzca el nombre de la persona que desea buscar"
-//           />
-//           <input
-//             type="text"
-//             className="formComponent__input formComponent__searchInput"
-//             placeholder="CI"
-//             title="Introduzca el CI de la persona que desea buscar"
-//           />
-//           <input
-//             type="text"
-//             className="formComponent__input formComponent__searchInput"
-//             placeholder="Solapin"
-//             title="Introduzca el solapin de la persona que desea buscar"
-//           />
-//           <input
-//             type="text"
-//             className="formComponent__input formComponent__searchInput"
-//             placeholder="Usuario"
-//             title="Introduzca el usuario de la persona que desea buscar"
-//           />
-//         </>
-//       }
-//       labels={
-//         <>
-//           <label htmlFor="" className="formComponent__label">
-//             Provincia
-//             <input
-//               type="text"
-//               className="formComponent__input"
-//               placeholder="Introduzca la provincia"
-//             />
-//           </label>
-//           <label htmlFor="" className="formComponent__label">
-//             Municipio
-//             <input
-//               type="text"
-//               className="formComponent__input"
-//               placeholder="Introduzca el municipio"
-//             />
-//           </label>
-//           <label htmlFor="" className="formComponent__label">
-//             Sexo
-//             <input
-//               type="text"
-//               className="formComponent__input"
-//               placeholder="Introduzca el sexo"
-//             />
-//           </label>
-//           <label htmlFor="" className="formComponent__label">
-//             Cargo
-//             <input
-//               type="text"
-//               className="formComponent__input"
-//               placeholder="Introduzca el cargo"
-//             />
-//           </label>
-//           <label htmlFor="" className="formComponent__label">
-//             Estructura
-//             <input
-//               type="text"
-//               className="formComponent__input"
-//               placeholder="Introduzca la estructura"
-//             />
-//           </label>
-//           <label htmlFor="" className="formComponent__label">
-//             Categoría
-//             <input
-//               type="text"
-//               className="formComponent__input"
-//               placeholder="Introduzca la categoría"
-//             />
-//           </label>
-//         </>
-//       }
-//       tableName="Responsables por zona"
-//       columnNames={["Nombre", "CI", "Solapin", "Cargo", "Estructura"]}
-//       columns={["nombre", "ci", "solapin", "cargo", "estructura"]}
-//       data={guard_area}
-//       tableComponentButtons={
-//         <div className="tdOptions">
-//           <button
-//             className="tdOptions__button"
-//             title="Ver detalles"
-//             onClick={() => goToDetailsGuardArea(row.id_zona)}
-//           >
-//             <BsEye className="tdOptions__buttonIcon" />
-//           </button>
-//           <button
-//             className="tdOptions__button"
-//             title="Editar"
-//             onClick={() => goToEditGuardArea(row.id_zona)}
-//           >
-//             <BsPencil className="tdOptions__buttonIcon not" />
-//           </button>
-//           <button
-//             className="tdOptions__button"
-//             title="Asociar horarios y turnos de guardia"
-//           >
-//             <BsCalendar3 className="tdOptions__buttonIcon not" />
-//           </button>
-//           <button className="tdOptions__button" title="Borrar">
-//             <BsTrash3 className="tdOptions__buttonIcon not" />
-//           </button>
-//         </div>
-//       }
-//     />
-//   );
-// }
-
-// export default GuardArea;

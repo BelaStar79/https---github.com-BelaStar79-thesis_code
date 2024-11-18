@@ -22,6 +22,7 @@ import {
   BsChevronBarLeft,
   BsChevronLeft,
   BsChevronBarRight,
+  BsInfoLg,
 } from "react-icons/bs";
 import { setIdRow, posta } from "../../components/others/table.js";
 
@@ -383,11 +384,31 @@ export default function Posts() {
                     </table>
                   </>
                 ) : (
-                  <div className="tableComponent__message">
-                    <p className="tableComponent__messageP">
-                      No existen registros en el sistema
-                    </p>
-                  </div>
+                  <>
+                    <table className="tableComponent__tableContainer">
+                      <thead className="tableComponent__tableContainer__thead">
+                        <tr className="tableComponent__tableContainer__tr tableComponent__tableContainer__trHeader">
+                          <th className="tableComponent__tableContainer__th tableComponent__tableContainer__thNumber">
+                            No.
+                          </th>
+                          {columnNames.map((columnName, index) => (
+                            <th
+                              className="tableComponent__tableContainer__th"
+                              key={index}
+                            >
+                              {columnName}
+                            </th>
+                          ))}
+                        </tr>
+                      </thead>
+                    </table>
+                    <div className="tableComponent__message">
+                      <BsInfoLg className="tableComponent__messageIcon" />
+                      <p className="tableComponent__messageP">
+                        No hay datos para mostrar
+                      </p>
+                    </div>
+                  </>
                 )}
               </div>
             </section>
@@ -400,37 +421,3 @@ export default function Posts() {
     </>
   );
 }
-
-// import React from "react";
-// import MainStructure from "../../components/structure/MainStructure.jsx";
-// import TitleBarButtons from "./TitleBarButtons.jsx";
-// import SearchFields from "./SearchFields.jsx";
-// import FormFields from "./FormFields.jsx";
-// import TableButtons from "./TableButtons.jsx";
-// import { posts } from "../../components/tableComponent/tablaComponent.js";
-
-// export function Posts() {
-//   return (
-//     <MainStructure
-//       namePage="Postas"
-//       user="user"
-//       activeSection="planning"
-//       activeOption="Postas"
-//       titleBarButtons={<TitleBarButtons />}
-//       search={<SearchFields />}
-//       labels={<FormFields />}
-//       tableName="Postas"
-//       columnNames={[
-//         "Postas",
-//         "Zonas de guaria",
-//         "Cantidad de personas",
-//         "Activo",
-//       ]}
-//       columns={["posta", "zona", "cantidad", "activo"]}
-//       data={posts}
-//       tableComponentButtons={<TableButtons />}
-//     />
-//   );
-// }
-
-// export default Posts;

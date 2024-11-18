@@ -46,7 +46,7 @@ export default function DetailsGuardGroup() {
 
   // navigate metod
   const navigate = useNavigate();
-  const goToGuardArea = () => {
+  const goToGuardGroup = () => {
     navigate("/planning/guard-groups");
   };
 

@@ -18,6 +18,7 @@ const turno = "12 horas";
 const horario = "07:00 pm";
 const valor = 1;
 const nombreRecurso = "Llave local";
+export const empty_list = [];
 export let personas = {
   0:{nombre: "Nombre Administrador",usuario: "admin",ci: "00000000000",solapin: "A000000",cargo: "Administrador"},
   1:{ci: "00000000001",solapin: "T000001",cargo: "Trabajador",nombre: "Nombre Usuario Uno",usuario: "nuuno"},
@@ -417,9 +418,6 @@ export let guard_groups = [
   {grupo: "Centro de Información de la Gestión Documental", zona: "Casona", personasAsociadas:0},
   {grupo: "Centro de Innovación y Calidad en la Educación", zona: "Casona", personasAsociadas:0},
 ];
-
-
-
 export let potential = [
   {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
     {nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
@@ -428,36 +426,21 @@ export let potential = [
     {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
     {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
 ];
-
-
-
 export let assistance = [
   {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nombre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
   {turno:'31/05/2022', posta:'Dirección de Extensión Universitaria', nomre:'Doce horas noche desde las 19', zona: 'Centro cultural', cantidad: '1'},
   {turno:'31/05/2022', posta:'Docente 1 Viejo', nomre:'1er noche Docente 1 Viejo', zona: 'Gastex-DIRCOM-Producción', cantidad: '1'},
 ];
-
-
-
 export let incident = [];
-
-
-
 export let duty_officer = [
   {fecha:'01/12/2021', oficialGuardia:'Alvaro Alejandro Acosta Ruiz', cantidad:'', cantidadReal:''}
 ];
-
-
-
 export let guard = [
   {zona: "Dirección de Extensión Universitaria", nombre: "Yosvaney Herrera Ricardo", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
   {zona: "Dirección de Extensión Universitaria", nombre: "Evelyn Fonsece Naranjo", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
   {zona: "Dirección de Extensión Universitaria", nombre: "Susel García Cedeño", area: "Rectorado", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
   {zona: "Dirección de Extensión Universitaria", nombre: "Dayannis Garcés Rodríguez", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
 ];
-
-
-
 export let quantitative_potential = [
   {estructura: "Centro de Estudio de Matemática y Computación", recursosHumanos: 12, potencial: 8, pendientes: 4},
   {estructura: "Centro de Gobierno Electrónico", recursosHumanos: 4, potencial: 3, pendientes: 1},
@@ -465,9 +448,6 @@ export let quantitative_potential = [
   {estructura: "Centro de Información de Entidades", recursosHumanos: 3, potencial: 2, pendientes: 1},
   {estructura: "Centro de Informatización de la Gestión Documental", recursosHumanos: 46, potencial: 41, pendientes: 5},
 ];
-
-
-
 export let frequency = [
   {zona: "Casona", cantidad: 122, horas: 0, turnos: 0, frecuencia: 122, personasHoras: 122},
   {zona: "Centro Cultural", cantidad: 125, horas: 0, turnos: 0, frecuencia: 125, personasHoras: 125},
@@ -475,15 +455,9 @@ export let frequency = [
   {zona: "Complejo Cmedor 2", cantidad: 182, horas: 0, turnos: 0, frecuencia: 182, personasHoras: 182},
   {zona: "Complejo Cmedor 3", cantidad: 206, horas: 0, turnos: 0, frecuencia: 206, personasHoras: 206},
 ];
-
-
-
 export let assistance_report = [
   {fecha:"07/12/2018 12:14", nombre: "Yarelys Seoane Alonso", ci: "00000000000", usuario: "yerelys", solapin: "T157931", estructura: "Facultad 4", presente: "Si"}
 ];
-
-
-
 export let details = [];
 
 

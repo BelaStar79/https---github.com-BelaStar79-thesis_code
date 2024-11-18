@@ -116,7 +116,7 @@ export default function ShiftsAndSchedules() {
               <div className="formComponent__buttons btn">
                 <button
                   className="formComponent__button"
-                  title="Guardar planificación"
+                  title={`Guardar y regresar a ` + activeOption}
                   onClick={() => saveGuardArea()}
                 >
                   Asociar

@@ -121,7 +121,7 @@ export default function EditPlanning() {
                       <div className="formComponent__buttons">
                         <button
                           className="formComponent__button"
-                          title="Guardar planificación"
+                          title={`Guardar y regresar a ` + activeOption}
                           onClick={savePlanning}
                         >
                           Aceptar

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import css
 import "../../components/structure/mainStructure.css";
 import "../../components/formComponent/formComponent.css";
@@ -10,23 +10,27 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 // others imports
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
+import { id_row, equipos } from "../../components/others/table.js";
 
-export default function AddPosts() {
+export default function EditGuardGroup() {
   // editable variables
-  const namePage = "Añadir posta";
+  const namePage = "Modificar grupo de guardia";
   const activeSection = "planning";
-  const activeOption = "Postas";
+  const activeOption = "Grupos de guardia";
+
+  // get data of planificaciones
+  const equipo = equipos[id_row];
 
   // navigate metod
   const navigate = useNavigate();
-  const goToPosts = () => {
-    navigate("/planning/posts");
+  const goToPGuardGroup = () => {
+    navigate("/planning/guard-groups");
   };
 
-  // save plannindg
-  const savePosts = () => {
+  // save guard area
+  const saveGuardGroup = () => {
     console.log("Guardando datos...");
-    goToPosts();
+    goToPGuardGroup();
   };
 
   return (
@@ -50,7 +54,7 @@ export default function AddPosts() {
                   <button
                     className="titleBar__button"
                     title={`Regresar a ` + activeOption}
-                    onClick={() => goToPosts()}
+                    onClick={goToPGuardGroup}
                   >
                     <BsBackspace className="titleBar__icon" />
                   </button>
@@ -65,12 +69,12 @@ export default function AddPosts() {
                     <div className="formComponent__addFormContainer">
                       <div className="formComponent__addInput">
                         <label htmlFor="" className="formComponent__addLabel">
-                          Nombre de la posta
+                          Nombre
                           <input
                             type="text"
                             className="formComponent__addInput"
-                            placeholder="Nombre"
-                            title="Introduzca el nombre de la posta"
+                            placeholder={equipo.nombre}
+                            title="Introduzca el nuevo nombre del equipo"
                           />
                         </label>
                         <label htmlFor="" className="formComponent__addLabel">
@@ -78,26 +82,8 @@ export default function AddPosts() {
                           <input
                             type="text"
                             className="formComponent__addInput"
-                            placeholder="Estrructura"
-                            title="Introduzca la estructura"
-                          />
-                        </label>
-                        <label htmlFor="" className="formComponent__addLabel">
-                          Cantidad de personas
-                          <input
-                            type="text"
-                            className="formComponent__addInput"
-                            placeholder="Cantidad"
-                            title="Introduzca la cantidad de personas"
-                          />
-                        </label>
-                        <label htmlFor="" className="formComponent__addLabel">
-                          Activo
-                          <input
-                            type="text"
-                            className="formComponent__addInput"
-                            placeholder="Diga si está activo o no"
-                            title="Introduzca el estado"
+                            placeholder={equipo.estructura}
+                            title="Introduzca la nueva estructura"
                           />
                         </label>
                       </div>
@@ -106,14 +92,14 @@ export default function AddPosts() {
                         <button
                           className="formComponent__button"
                           title={`Guardar y regresar a ` + activeOption}
-                          onClick={() => savePosts()}
+                          onClick={saveGuardGroup}
                         >
                           Aceptar
                         </button>
                         <button
                           className="formComponent__button"
                           title="Regresar sin guardar"
-                          onClick={() => goToPosts()}
+                          onClick={goToPGuardGroup}
                         >
                           Cancelar
                         </button>
