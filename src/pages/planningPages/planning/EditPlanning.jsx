@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext } from "react";
 // import css
 import "../../components/structure/mainStructure.css";
 import "../../components/formComponent/formComponent.css";
@@ -10,12 +10,20 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 // others imports
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
+import {
+  id_row,
+  planificaciones,
+  setPlanificaciones,
+} from "../../components/others/table.js";
 
 export default function EditPlanning() {
   // editable variables
   const namePage = "Editar planificación";
   const activeSection = "planning";
   const activeOption = "Planificación";
+
+  // get data of planificaciones
+  const planification = planificaciones[id_row];
 
   // inputs variables
   const [nombre, setNombre] = useState();
@@ -27,6 +35,12 @@ export default function EditPlanning() {
   const navigate = useNavigate();
   const goToPlanning = () => {
     navigate("/planning/planning");
+  };
+
+  // save plannindg
+  const savePlanning = () => {
+    setPlanificaciones(id_row, nombre, zona, inicio, fin);
+    goToPlanning();
   };
 
   return (
@@ -70,8 +84,9 @@ export default function EditPlanning() {
                             value={nombre}
                             type="text"
                             className="formComponent__addInput"
-                            placeholder="Nombre"
-                            title="Introduzca el nombre de la planificación"
+                            placeholder={planification.nombre_planificacion}
+                            onChange={(e) => setNombre(e.target.value)}
+                            title="Introduzca el nuevo nombre de la planificación"
                           />
                         </label>
                         <label htmlFor="" className="formComponent__addLabel">
@@ -80,26 +95,29 @@ export default function EditPlanning() {
                             value={zona}
                             type="text"
                             className="formComponent__addInput"
-                            placeholder="Zona"
-                            title="Introduzca la zona de la planificación"
+                            placeholder={planification.nombre_region_guardia}
+                            onChange={(e) => setZona(e.target.value)}
+                            title="Introduzca la nueva zona de la planificación"
                           />
                         </label>
                         <label htmlFor="" className="formComponent__addLabel">
                           Fecha de inicio
                           <input
                             value={inicio}
-                            type="date"
                             className="formComponent__addInput"
-                            title="Introduzca el nombre de la planificación que desea buscar"
+                            placeholder={planification.fecha_inicio}
+                            onChange={(e) => setInicio(e.target.value)}
+                            title="Introduzca la nueva fecha de inicio de la planificación"
                           />
                         </label>
                         <label htmlFor="" className="formComponent__addLabel">
                           Fecha de fin
                           <input
                             value={fin}
-                            type="date"
                             className="formComponent__addInput"
-                            title="Introduzca el nombre de la planificación que desea buscar"
+                            placeholder={planification.fecha_fin}
+                            onChange={(e) => setFin(e.target.value)}
+                            title="Introduzca la nueva fecha de fin de la planificación"
                           />
                         </label>
                       </div>
@@ -108,6 +126,7 @@ export default function EditPlanning() {
                         <button
                           className="formComponent__button"
                           title="Guardar planificación"
+                          onClick={savePlanning}
                         >
                           Aceptar
                         </button>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 // import css
 import "../../components/structure/mainStructure.css";
 import "../../components/formComponent/formComponent.css";
@@ -10,6 +10,7 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 // others imports
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
+import { addPlanificaciones } from "../../components/others/table.js";
 
 export default function AddPlanning() {
   // editable variables
@@ -27,6 +28,12 @@ export default function AddPlanning() {
   const navigate = useNavigate();
   const goToPlanning = () => {
     navigate("/planning/planning");
+  };
+
+  // save plannindg
+  const savePlanning = () => {
+    addPlanificaciones(id_row, nombre, zona, inicio, fin);
+    goToPlanning();
   };
 
   return (
@@ -108,6 +115,7 @@ export default function AddPlanning() {
                         <button
                           className="formComponent__button"
                           title="Guardar planificación"
+                          onClick={() => savePlanning()}
                         >
                           Aceptar
                         </button>

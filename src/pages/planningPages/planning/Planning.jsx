@@ -27,6 +27,7 @@ import {
   BsTrash3,
 } from "react-icons/bs";
 import {
+  setIdRow,
   planificaciones,
   deletePlanificaciones,
 } from "../../components/others/table.js";
@@ -55,7 +56,6 @@ export default function Planning() {
   const [inicio, setInicio] = useState();
   const [fin, setFin] = useState();
   const [zona, setZona] = useState();
-  // const [estado, setEstado] = useState();
   const [rowsPerPage, setRowsPerPage] = useState(5);
   const [actualPage, setActualPage] = useState(1);
 
@@ -64,11 +64,21 @@ export default function Planning() {
   const goToAddPlaning = () => {
     navigate("/planning/planning/add/");
   };
-  const goToDetailsPlanning = () => {
-    navigate("/planning/planning/details/");
+  const goToDetailsPlanning = (id_planificacion) => {
+    setIdRow(id_planificacion - 1);
+    navigate(`/planning/planning/details/`);
   };
-  const goToEditPlanning = () => {
+  const goToEditPlanning = (id_planificacion) => {
+    setIdRow(id_planificacion - 1);
     navigate("/planning/planning/edit/");
+  };
+  const goToManualPlanning = (id_planificacion) => {
+    setIdRow(id_planificacion - 1);
+    navigate("/planning/planning/auto-planning/");
+  };
+
+  const deletePlanning = (id_planificacion) => {
+    deletePlanificaciones(id_planificacion);
   };
 
   // title variable
@@ -282,15 +292,6 @@ export default function Planning() {
                           value={zona}
                         />
                       </label>
-                      {/* <label htmlFor="" className="formComponent__label">
-                        Estados de planificación
-                        <input
-                          type="text"
-                          className="formComponent__input"
-                          placeholder="Introduzca los estados"
-                          value={estado}
-                        />
-                      </label> */}
                     </div>
                   </form>
                 </div>
@@ -400,14 +401,19 @@ export default function Planning() {
                                 <button
                                   className="tdOptions__button"
                                   title="Ver detalles"
-                                  onClick={goToDetailsPlanning}
+                                  onClick={() =>
+                                    goToDetailsPlanning(row.id_planificacion)
+                                  }
                                 >
+                                  {/* console.log(id_planificacion); */}
                                   <BsEye className="tdOptions__buttonIcon" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
                                   title="Editar"
-                                  onClick={goToEditPlanning}
+                                  onClick={() =>
+                                    goToEditPlanning(row.id_planificacion)
+                                  }
                                 >
                                   <BsPencil className="tdOptions__buttonIcon" />
                                 </button>
@@ -420,8 +426,11 @@ export default function Planning() {
                                 <button
                                   className="tdOptions__button"
                                   title="Planificación manual"
+                                  onClick={() =>
+                                    goToManualPlanning(row.id_planificacion)
+                                  }
                                 >
-                                  <BsCalendar4 className="tdOptions__buttonIcon not" />
+                                  <BsCalendar4 className="tdOptions__buttonIcon" />
                                 </button>
                                 <button
                                   className="tdOptions__button"
@@ -438,8 +447,11 @@ export default function Planning() {
                                 <button
                                   className="tdOptions__button"
                                   title="Borrar"
+                                  onClick={() =>
+                                    deletePlanning(row.id_planificacion)
+                                  }
                                 >
-                                  <BsTrash3 className="tdOptions__buttonIcon not" />
+                                  <BsTrash3 className="tdOptions__buttonIcon" />
                                 </button>
                               </div>
                             </td>

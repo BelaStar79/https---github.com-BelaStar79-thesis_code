@@ -170,6 +170,27 @@
     color: var(--black);
 }
 
+.detailsContent {
+    .formComponent__buttons {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        gap: 20px;
 
+        .formComponent__button {
+            padding: 5px;
+            border : 1px solid var(--wineRed);
+            color: var(--wineRed);
+            border-radius: 5px;
+            max-height: 30px;
+            width: 100px;
+
+            &:hover {
+                background-color: var(--wineRed);
+                color: var(--white);
+            }
+        }
+    }
+}
 
 

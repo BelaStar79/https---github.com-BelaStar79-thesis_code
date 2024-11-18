@@ -11,6 +11,7 @@ import Potential from "./pages/planningPages/potential/Potential.jsx";
 import AddPlanning from "./pages/planningPages/planning/AddPlanning.jsx";
 import DetailsPlanning from "./pages/planningPages/planning/DetailsPlanning.jsx";
 import EditPlanning from "./pages/planningPages/planning/EditPlanning.jsx";
+import ManualPlanning from "./pages/planningPages/planning/ManualPlanning.jsx";
 // import AddGuardArea from "./pages/planningPages/guardArea/AddGuardArea.jsx";
 import DetailsGuardArea from "./pages/planningPages/guardArea/DetailsGuardArea.jsx";
 // import EditGuardArea from "./pages/planningPages/guardArea/EditGuardArea.jsx";
@@ -43,6 +44,10 @@ function App() {
       <Route path="/planning/planning/add/" element={<AddPlanning />} />
       <Route path="/planning/planning/details/" element={<DetailsPlanning />} />
       <Route path="/planning/planning/edit/" element={<EditPlanning />} />
+      <Route
+        path="/planning/planning/auto-planning/"
+        element={<ManualPlanning />}
+      />
 
       {/* Routes for planning/guard-area/ */}
       {/* <Route path="/planning/guard-area/add/" element={<AddGuardArea />} /> */}

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 // import css
 import "../../components/structure/mainStructure.css";
 // import components
@@ -10,7 +10,11 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 // others imports
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
-import { details } from "../../components/others/table.js";
+import {
+  id_row,
+  planificaciones,
+  detallesPlanificaciones,
+} from "../../components/others/table.js";
 
 export default function DetailsPlanning() {
   // editable variables
@@ -20,11 +24,14 @@ export default function DetailsPlanning() {
   const detailsName = "Datos de la planificación";
 
   // variable of details
-  const namePlanning = "Nombre de la planificación";
-  const zonaPlanning = "Zona de guardia";
-  const statePlanning = "Estado";
-  const dateStarPlanning = "00/00/0000";
-  const dateEndPlanning = "00/00/0000";
+  const planificacion = planificaciones[id_row];
+  const namePlanning = planificacion.nombre_planificacion;
+  const zonaPlanning = planificacion.nombre_region_guardia;
+  const statePlanning = "Creada";
+  const dateStarPlanning = planificacion.fecha_inicio;
+  const dateEndPlanning = planificacion.fecha_fin;
+
+  const detalles = detallesPlanificaciones[id_row];
 
   // navigate metod
   const navigate = useNavigate();
@@ -63,27 +70,34 @@ export default function DetailsPlanning() {
 
             <div className="detailsContent">
               <strong>{detailsName}</strong>
+
               <hr className="detailsContent__hr" />
+
               <div className="detailsContent__info">
-                <p className="detailsContent__infoP">Nombre: {namePlanning}</p>
                 <p className="detailsContent__infoP">
-                  Zona de guardia: {zonaPlanning}
+                  <strong>Nombre:</strong> {namePlanning}
                 </p>
                 <p className="detailsContent__infoP">
-                  Estado de planificación: {statePlanning}
+                  <strong>Zona de guardia:</strong> {zonaPlanning}
                 </p>
                 <p className="detailsContent__infoP">
-                  Fecha de inicio: {dateStarPlanning}
+                  <strong>Estado de planificación:</strong> {statePlanning}
                 </p>
+
                 <p className="detailsContent__infoP">
-                  Fecha de fin: {dateEndPlanning}
+                  <strong>Fecha de inicio:</strong> {dateStarPlanning}
+                </p>
+
+                <p className="detailsContent__infoP">
+                  <strong>Fecha de fin:</strong> {dateEndPlanning}
                 </p>
               </div>
+
               <TableComponentTwo
                 tableName={activeOption}
                 columnNames={["Nombre", "Posta", "Turnos", "Fecha"]}
-                columns={["nombre_posta", "nombre_turnos", "fecha"]}
-                data={details}
+                columns={["nombre", "posta", "turnos", "fecha"]}
+                data={detalles}
               />
             </div>
           </div>
