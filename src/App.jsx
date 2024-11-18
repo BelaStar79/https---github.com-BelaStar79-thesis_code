@@ -23,6 +23,9 @@ import AddGuardGroup from "./pages/planningPages/guardGroups/AddGuardGroup.jsx";
 import DetailsGuardGroup from "./pages/planningPages/guardGroups/DetailsGuardGroups.jsx";
 import EditGuardGroup from "./pages/planningPages/guardGroups/EditGuardGroup.jsx";
 import AssociatePeopleToGuardGroup from "./pages/planningPages/guardGroups/AssociatePeopleToGuardGroup.jsx";
+import DetailsPotential from "./pages/planningPages/potential/DetailsPotential.jsx";
+import AssociateVariableToPeople from "./pages/planningPages/potential/AssociateVariableToPeople.jsx";
+import AssociatePatronToPeople from "./pages/planningPages/potential/AssociatePatronToPeople.jsx";
 // Control
 import Assistance from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
@@ -84,6 +87,20 @@ function App() {
       <Route
         path="/planning/guard-groups/associate/"
         element={<AssociatePeopleToGuardGroup />}
+      />
+
+      {/* Rutes for planning/potential/ */}
+      <Route
+        path="/planning/potential/details/"
+        element={<DetailsPotential />}
+      />
+      <Route
+        path="/planning/guard-groups/associate-variables/"
+        element={<AssociateVariableToPeople />}
+      />
+      <Route
+        path="/planning/guard-groups/associate-patron/"
+        element={<AssociatePatronToPeople />}
       />
 
       {/* Routes for control */}
