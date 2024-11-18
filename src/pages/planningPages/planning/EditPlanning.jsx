@@ -10,11 +10,7 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 // others imports
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
-import {
-  id_row,
-  planificaciones,
-  setPlanificaciones,
-} from "../../components/others/table.js";
+import { id_row, planificaciones } from "../../components/others/table.js";
 
 export default function EditPlanning() {
   // editable variables
@@ -39,7 +35,7 @@ export default function EditPlanning() {
 
   // save plannindg
   const savePlanning = () => {
-    setPlanificaciones(id_row, nombre, zona, inicio, fin);
+    console.log("Guardando datos...");
     goToPlanning();
   };
 

@@ -3,10 +3,19 @@ export let id_row = 0;
 export function setIdRow(id) {
   id_row = id;
 }
+export let id_rowTwo = 0;
+export function setIdRowTwo(id) {
+  id_rowTwo = id;
+}
 
 
 
 // variables random 
+let activo = "Sí";
+let fecha_inicio = "01/01/2024";
+let fecha_fin = "01/02/2024";
+let turno = "12 horas";
+let horario = "07:00 pm";
 export let personas = {
   0:{nombre: "Nombre Administrador",usuario: "admin",ci: "00000000000",solapin: "A000000",cargo: "Administrador"},
   1:{ci: "00000000001",solapin: "T000001",cargo: "Trabajador",nombre: "Nombre Usuario Uno",usuario: "nuuno"},
@@ -41,65 +50,65 @@ export let personas = {
   30:{ci: "00000000030",solapin: "T000030",cargo: "Trabajador",nombre: "Nombre Usuario Treinta",usuario: "nutreinta"},
 };
 export let zonas = [
-  {id: 1, activo: "Sí", planificador: personas[0].nombre, responsable: personas[1].nombre, nombre: "Docentes"},
-  {id: 2, activo: "Sí", planificador: personas[0].nombre, responsable: personas[19].nombre, nombre: "Comedores"},
-  {id: 3, activo: "Sí", planificador: personas[0].nombre, responsable: personas[28].nombre, nombre: "Rectorado"},
+  {id: 1, activo:activo, planificador: personas[0].nombre, responsable: personas[1].nombre, nombre: "Docentes"},
+  {id: 2, activo:activo, planificador: personas[0].nombre, responsable: personas[19].nombre, nombre: "Comedores"},
+  {id: 3, activo:activo, planificador: personas[0].nombre, responsable: personas[28].nombre, nombre: "Rectorado"},
 ];
 export let estructuras = [
-  {id: 1, activo: "Sí", id_zona: zonas[0].id, nombre: "Docente 1"},
-  {id: 2, activo: "Sí", id_zona: zonas[0].id, nombre: "Docente 2"},
-  {id: 3, activo: "Sí", id_zona: zonas[0].id, nombre: "Docente 3"},
-  {id: 4, activo: "Sí", id_zona: zonas[0].id, nombre: "Docente 4"},
-  {id: 5, activo: "Sí", id_zona: zonas[0].id, nombre: "Docente FTE"},
-  {id: 6, activo: "Sí", id_zona: zonas[0].id, nombre: "Docente CITEC"},
-  {id: 7, activo: "Sí", id_zona: zonas[1].id, nombre: "Complejo Comedor 1"},
-  {id: 8, activo: "Sí", id_zona: zonas[1].id, nombre: "Complejo Comedor 2"},
-  {id: 9, activo: "Sí", id_zona: zonas[1].id, nombre: "Complejo Comedor 3"},
-  {id: 10, activo: "Sí", id_zona: zonas[2].id, nombre: "Rectorado"},
+  {id: 1, activo:activo, id_zona: zonas[0].id, nombre: "Docente 1"},
+  {id: 2, activo:activo, id_zona: zonas[0].id, nombre: "Docente 2"},
+  {id: 3, activo:activo, id_zona: zonas[0].id, nombre: "Docente 3"},
+  {id: 4, activo:activo, id_zona: zonas[0].id, nombre: "Docente 4"},
+  {id: 5, activo:activo, id_zona: zonas[0].id, nombre: "Docente FTE"},
+  {id: 6, activo:activo, id_zona: zonas[0].id, nombre: "Docente CITEC"},
+  {id: 7, activo:activo, id_zona: zonas[1].id, nombre: "Complejo Comedor 1"},
+  {id: 8, activo:activo, id_zona: zonas[1].id, nombre: "Complejo Comedor 2"},
+  {id: 9, activo:activo, id_zona: zonas[1].id, nombre: "Complejo Comedor 3"},
+  {id: 10, activo:activo, id_zona: zonas[2].id, nombre: "Rectorado"},
 ];
 export let posta = [
-  {id: 1, activo: "Sí", estructura: estructuras[0].nombre, cantidad: 1, nombre: "1er piso Docente 1"},
-  {id: 2, activo: "Sí", estructura: estructuras[0].nombre, cantidad: 1, nombre: "2do piso Docente 1"},
-  {id: 3, activo: "Sí", estructura: estructuras[0].nombre, cantidad: 1, nombre: "3er piso Docente 1"},
-  {id: 4, activo: "Sí", estructura: estructuras[1].nombre, cantidad: 1, nombre: "1er piso Docente 2"},
-  {id: 5, activo: "Sí", estructura: estructuras[1].nombre, cantidad: 1, nombre: "2do piso Docente 2"},
-  {id: 6, activo: "Sí", estructura: estructuras[1].nombre, cantidad: 1, nombre: "3er piso Docente 2"},
-  {id: 7, activo: "Sí", estructura: estructuras[2].nombre, cantidad: 1, nombre: "1er piso Docente 3"},
-  {id: 8, activo: "Sí", estructura: estructuras[2].nombre, cantidad: 1, nombre: "2do piso Docente 3"},
-  {id: 9, activo: "Sí", estructura: estructuras[2].nombre, cantidad: 1, nombre: "3er piso Docente 3"},
-  {id: 10, activo: "Sí", estructura: estructuras[3].nombre, cantidad: 1, nombre: "1er piso Docente 4"},
-  {id: 11, activo: "Sí", estructura: estructuras[3].nombre, cantidad: 1, nombre: "2do piso Docente 4"},
-  {id: 12, activo: "Sí", estructura: estructuras[3].nombre, cantidad: 1, nombre: "3er piso Docente 4"},
-  {id: 13, activo: "Sí", estructura: estructuras[4].nombre, cantidad: 1, nombre: "1er piso Docente FTE"},
-  {id: 14, activo: "Sí", estructura: estructuras[4].nombre, cantidad: 1, nombre: "2do piso Docente FTE"},
-  {id: 15, activo: "Sí", estructura: estructuras[4].nombre, cantidad: 1, nombre: "3er piso Docente FTE"},
-  {id: 16, activo: "Sí", estructura: estructuras[5].nombre, cantidad: 1, nombre: "1er piso Docente CITEC"},
-  {id: 17, activo: "Sí", estructura: estructuras[5].nombre, cantidad: 1, nombre: "2do piso Docente CITEC"},
-  {id: 18, activo: "Sí", estructura: estructuras[5].nombre, cantidad: 1, nombre: "3er piso Docente CITEC"},
-  {id: 19, activo: "Sí", estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 1"},
-  {id: 20, activo: "Sí", estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 1"},
-  {id: 21, activo: "Sí", estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 1"},
-  {id: 22, activo: "Sí", estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 2"}, 
-  {id: 23, activo: "Sí", estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 2"},
-  {id: 24, activo: "Sí", estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 2"},
-  {id: 25, activo: "Sí", estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 3"},
-  {id: 26, activo: "Sí", estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 3"},
-  {id: 27, activo: "Sí", estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 3"},
-  {id: 28, activo: "Sí", estructura: estructuras[9].nombre, cantidad: 1, nombre: "1er piso Rectorado"},
-  {id: 29, activo: "Sí", estructura: estructuras[9].nombre, cantidad: 1, nombre: "2do piso Rectorado"},
-  {id: 30, activo: "Sí", estructura: estructuras[9].nombre, cantidad: 1, nombre: "Parqueo Rectorado"},
+  {id: 1, activo:activo, estructura: estructuras[0].nombre, cantidad: 1, nombre: "1er piso Docente 1"},
+  {id: 2, activo:activo, estructura: estructuras[0].nombre, cantidad: 1, nombre: "2do piso Docente 1"},
+  {id: 3, activo:activo, estructura: estructuras[0].nombre, cantidad: 1, nombre: "3er piso Docente 1"},
+  {id: 4, activo:activo, estructura: estructuras[1].nombre, cantidad: 1, nombre: "1er piso Docente 2"},
+  {id: 5, activo:activo, estructura: estructuras[1].nombre, cantidad: 1, nombre: "2do piso Docente 2"},
+  {id: 6, activo:activo, estructura: estructuras[1].nombre, cantidad: 1, nombre: "3er piso Docente 2"},
+  {id: 7, activo:activo, estructura: estructuras[2].nombre, cantidad: 1, nombre: "1er piso Docente 3"},
+  {id: 8, activo:activo, estructura: estructuras[2].nombre, cantidad: 1, nombre: "2do piso Docente 3"},
+  {id: 9, activo:activo, estructura: estructuras[2].nombre, cantidad: 1, nombre: "3er piso Docente 3"},
+  {id: 10, activo:activo, estructura: estructuras[3].nombre, cantidad: 1, nombre: "1er piso Docente 4"},
+  {id: 11, activo:activo, estructura: estructuras[3].nombre, cantidad: 1, nombre: "2do piso Docente 4"},
+  {id: 12, activo:activo, estructura: estructuras[3].nombre, cantidad: 1, nombre: "3er piso Docente 4"},
+  {id: 13, activo:activo, estructura: estructuras[4].nombre, cantidad: 1, nombre: "1er piso Docente FTE"},
+  {id: 14, activo:activo, estructura: estructuras[4].nombre, cantidad: 1, nombre: "2do piso Docente FTE"},
+  {id: 15, activo:activo, estructura: estructuras[4].nombre, cantidad: 1, nombre: "3er piso Docente FTE"},
+  {id: 16, activo:activo, estructura: estructuras[5].nombre, cantidad: 1, nombre: "1er piso Docente CITEC"},
+  {id: 17, activo:activo, estructura: estructuras[5].nombre, cantidad: 1, nombre: "2do piso Docente CITEC"},
+  {id: 18, activo:activo, estructura: estructuras[5].nombre, cantidad: 1, nombre: "3er piso Docente CITEC"},
+  {id: 19, activo:activo, estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 1"},
+  {id: 20, activo:activo, estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 1"},
+  {id: 21, activo:activo, estructura: estructuras[6].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 1"},
+  {id: 22, activo:activo, estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 2"}, 
+  {id: 23, activo:activo, estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 2"},
+  {id: 24, activo:activo, estructura: estructuras[7].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 2"},
+  {id: 25, activo:activo, estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 1 Complejo Comedor 3"},
+  {id: 26, activo:activo, estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 2 Complejo Comedor 3"},
+  {id: 27, activo:activo, estructura: estructuras[8].nombre, cantidad: 1, nombre: "Comedor 3 Complejo Comedor 3"},
+  {id: 28, activo:activo, estructura: estructuras[9].nombre, cantidad: 1, nombre: "1er piso Rectorado"},
+  {id: 29, activo:activo, estructura: estructuras[9].nombre, cantidad: 1, nombre: "2do piso Rectorado"},
+  {id: 30, activo:activo, estructura: estructuras[9].nombre, cantidad: 1, nombre: "Parqueo Rectorado"},
 ];
 export let equipos = [
-  {id: 1, nombre: "Equipo 1", responsable: personas[1].nombre, estructura: estructuras[0].nombre, activo: "Sí", ids_personas: [1,2,3]},
-  {id: 2, nombre: "Equipo 2", responsable: personas[4].nombre, estructura: estructuras[1].nombre, activo: "Sí", ids_personas: [4,5,6]},
-  {id: 3, nombre: "Equipo 3", responsable: personas[7].nombre, estructura: estructuras[2].nombre, activo: "Sí", ids_personas: [7,8,9]},
-  {id: 4, nombre: "Equipo 4", responsable: personas[10].nombre, estructura: estructuras[3].nombre, activo: "Sí", ids_personas: [10,11,12]},
-  {id: 5, nombre: "Equipo 5", responsable: personas[13].nombre, estructura: estructuras[4].nombre, activo: "Sí", ids_personas: [13,14,15]},
-  {id: 6, nombre: "Equipo 6", responsable: personas[16].nombre, estructura: estructuras[5].nombre, activo: "Sí", ids_personas: [16,17,18]},
-  {id: 7, nombre: "Equipo 7", responsable: personas[19].nombre, estructura: estructuras[6].nombre, activo: "Sí", ids_personas: [19,20,21]},
-  {id: 8, nombre: "Equipo 8", responsable: personas[22].nombre, estructura: estructuras[7].nombre, activo: "Sí", ids_personas: [22,23,24]},
-  {id: 9, nombre: "Equipo 9", responsable: personas[25].nombre, estructura: estructuras[8].nombre, activo: "Sí", ids_personas: [25,26,27]},
-  {id: 10, nombre: "Equipo 10", responsable: personas[28].nombre, estructura: estructuras[9].nombre, activo: "Sí", ids_personas: [28,29,30]},
+  {id: 1, nombre: "Equipo 1", responsable: personas[1].nombre, estructura: estructuras[0].nombre, activo:activo, ids_personas: [1,2,3]},
+  {id: 2, nombre: "Equipo 2", responsable: personas[4].nombre, estructura: estructuras[1].nombre, activo:activo, ids_personas: [4,5,6]},
+  {id: 3, nombre: "Equipo 3", responsable: personas[7].nombre, estructura: estructuras[2].nombre, activo:activo, ids_personas: [7,8,9]},
+  {id: 4, nombre: "Equipo 4", responsable: personas[10].nombre, estructura: estructuras[3].nombre, activo:activo, ids_personas: [10,11,12]},
+  {id: 5, nombre: "Equipo 5", responsable: personas[13].nombre, estructura: estructuras[4].nombre, activo:activo, ids_personas: [13,14,15]},
+  {id: 6, nombre: "Equipo 6", responsable: personas[16].nombre, estructura: estructuras[5].nombre, activo:activo, ids_personas: [16,17,18]},
+  {id: 7, nombre: "Equipo 7", responsable: personas[19].nombre, estructura: estructuras[6].nombre, activo:activo, ids_personas: [19,20,21]},
+  {id: 8, nombre: "Equipo 8", responsable: personas[22].nombre, estructura: estructuras[7].nombre, activo:activo, ids_personas: [22,23,24]},
+  {id: 9, nombre: "Equipo 9", responsable: personas[25].nombre, estructura: estructuras[8].nombre, activo:activo, ids_personas: [25,26,27]},
+  {id: 10, nombre: "Equipo 10", responsable: personas[28].nombre, estructura: estructuras[9].nombre, activo:activo, ids_personas: [28,29,30]},
 ];
 
 
@@ -145,16 +154,16 @@ export function setPasswordUsuarios(user, password){
 
 // All related to planning
 export let planificaciones = [
-  {id_zona:zonas[0].id, id_planificacion:1,nombre_region_guardia:zonas[0].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Docente 1"},
-  {id_zona:zonas[0].id, id_planificacion:2,nombre_region_guardia:zonas[0].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Docente 2"},
-  {id_zona:zonas[0].id, id_planificacion:3,nombre_region_guardia:zonas[0].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Docente 3"},
-  {id_zona:zonas[0].id, id_planificacion:4,nombre_region_guardia:zonas[0].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Docente 4"},
-  {id_zona:zonas[0].id, id_planificacion:5,nombre_region_guardia:zonas[0].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Docente FTE"},
-  {id_zona:zonas[0].id, id_planificacion:6,nombre_region_guardia:zonas[0].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Docente CITEC"},
-  {id_zona:zonas[1].id, id_planificacion:7,nombre_region_guardia:zonas[1].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Complejo Comedor 1"},
-  {id_zona:zonas[1].id, id_planificacion:8,nombre_region_guardia:zonas[1].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Complejo Comedor 2"},
-  {id_zona:zonas[1].id, id_planificacion:9,nombre_region_guardia:zonas[1].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Complejo Comedor 3"},
-  {id_zona:zonas[2].id, id_planificacion:10,nombre_region_guardia:zonas[2].nombre,fecha_inicio:"01/01/2024",fecha_fin:"01/02/2024",nombre_planificacion:"Guardia en Rectorado"},
+  {id_zona:zonas[0].id, id_planificacion:1,nombre_region_guardia:zonas[0].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Docente 1"},
+  {id_zona:zonas[0].id, id_planificacion:2,nombre_region_guardia:zonas[0].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Docente 2"},
+  {id_zona:zonas[0].id, id_planificacion:3,nombre_region_guardia:zonas[0].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Docente 3"},
+  {id_zona:zonas[0].id, id_planificacion:4,nombre_region_guardia:zonas[0].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Docente 4"},
+  {id_zona:zonas[0].id, id_planificacion:5,nombre_region_guardia:zonas[0].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Docente FTE"},
+  {id_zona:zonas[0].id, id_planificacion:6,nombre_region_guardia:zonas[0].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Docente CITEC"},
+  {id_zona:zonas[1].id, id_planificacion:7,nombre_region_guardia:zonas[1].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Complejo Comedor 1"},
+  {id_zona:zonas[1].id, id_planificacion:8,nombre_region_guardia:zonas[1].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Complejo Comedor 2"},
+  {id_zona:zonas[1].id, id_planificacion:9,nombre_region_guardia:zonas[1].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Complejo Comedor 3"},
+  {id_zona:zonas[2].id, id_planificacion:10,nombre_region_guardia:zonas[2].nombre,fecha_inicio:fecha_inicio,fecha_fin:fecha_fin,nombre_planificacion:"Guardia en Rectorado"},
 ];
 
 export function addPlanificaciones(nombre_planificacion, nombre_region_guardia, fecha_inicio, fecha_fin) {
@@ -221,54 +230,54 @@ export function setPlanificaciones(id_planificacion, nombre_planificacion, nombr
 
 export let detallesPlanificaciones = {
   0: [
-    {nombre:personas[1].nombre, posta:posta[0].nombre, turnos:"12 horas", fecha:planificaciones[0].fecha_inicio},
-    {nombre:personas[2].nombre, posta:posta[1].nombre, turnos:"12 horas", fecha:planificaciones[0].fecha_inicio},
-    {nombre:personas[3].nombre, posta:posta[2].nombre, turnos:"12 horas", fecha:planificaciones[0].fecha_inicio},
+    {nombre:personas[1].nombre, posta:posta[0].nombre, turnos:turno, fecha:planificaciones[0].fecha_inicio},
+    {nombre:personas[2].nombre, posta:posta[1].nombre, turnos:turno, fecha:planificaciones[0].fecha_inicio},
+    {nombre:personas[3].nombre, posta:posta[2].nombre, turnos:turno, fecha:planificaciones[0].fecha_inicio},
   ],
   1: [
-    {nombre:personas[4].nombre, posta:posta[3].nombre, turnos:"12 horas", fecha:planificaciones[1].fecha_inicio},
-    {nombre:personas[5].nombre, posta:posta[4].nombre, turnos:"12 horas", fecha:planificaciones[1].fecha_inicio},
-    {nombre:personas[6].nombre, posta:posta[5].nombre, turnos:"12 horas", fecha:planificaciones[1].fecha_inicio},
+    {nombre:personas[4].nombre, posta:posta[3].nombre, turnos:turno, fecha:planificaciones[1].fecha_inicio},
+    {nombre:personas[5].nombre, posta:posta[4].nombre, turnos:turno, fecha:planificaciones[1].fecha_inicio},
+    {nombre:personas[6].nombre, posta:posta[5].nombre, turnos:turno, fecha:planificaciones[1].fecha_inicio},
   ],
   2: [
-    {nombre:personas[7].nombre, posta:posta[6].nombre, turnos:"12 horas", fecha:planificaciones[2].fecha_inicio},
-    {nombre:personas[8].nombre, posta:posta[7].nombre, turnos:"12 horas", fecha:planificaciones[2].fecha_inicio},
-    {nombre:personas[9].nombre, posta:posta[8].nombre, turnos:"12 horas", fecha:planificaciones[2].fecha_inicio},
+    {nombre:personas[7].nombre, posta:posta[6].nombre, turnos:turno, fecha:planificaciones[2].fecha_inicio},
+    {nombre:personas[8].nombre, posta:posta[7].nombre, turnos:turno, fecha:planificaciones[2].fecha_inicio},
+    {nombre:personas[9].nombre, posta:posta[8].nombre, turnos:turno, fecha:planificaciones[2].fecha_inicio},
   ],
   3: [
-    {nombre:personas[10].nombre, posta:posta[9].nombre, turnos:"12 horas", fecha:planificaciones[3].fecha_inicio},
-    {nombre:personas[11].nombre, posta:posta[10].nombre, turnos:"12 horas", fecha:planificaciones[3].fecha_inicio},
-    {nombre:personas[12].nombre, posta:posta[11].nombre, turnos:"12 horas", fecha:planificaciones[3].fecha_inicio},
+    {nombre:personas[10].nombre, posta:posta[9].nombre, turnos:turno, fecha:planificaciones[3].fecha_inicio},
+    {nombre:personas[11].nombre, posta:posta[10].nombre, turnos:turno, fecha:planificaciones[3].fecha_inicio},
+    {nombre:personas[12].nombre, posta:posta[11].nombre, turnos:turno, fecha:planificaciones[3].fecha_inicio},
   ],
   4: [
-    {nombre:personas[13].nombre, posta:posta[12].nombre, turnos:"12 horas", fecha:planificaciones[4].fecha_inicio},
-    {nombre:personas[14].nombre, posta:posta[13].nombre, turnos:"12 horas", fecha:planificaciones[4].fecha_inicio},
-    {nombre:personas[15].nombre, posta:posta[14].nombre, turnos:"12 horas", fecha:planificaciones[4].fecha_inicio},
+    {nombre:personas[13].nombre, posta:posta[12].nombre, turnos:turno, fecha:planificaciones[4].fecha_inicio},
+    {nombre:personas[14].nombre, posta:posta[13].nombre, turnos:turno, fecha:planificaciones[4].fecha_inicio},
+    {nombre:personas[15].nombre, posta:posta[14].nombre, turnos:turno, fecha:planificaciones[4].fecha_inicio},
   ],
   5: [
-    {nombre:personas[16].nombre, posta:posta[15].nombre, turnos:"12 horas", fecha:planificaciones[5].fecha_inicio},
-    {nombre:personas[17].nombre, posta:posta[16].nombre, turnos:"12 horas", fecha:planificaciones[5].fecha_inicio},
-    {nombre:personas[18].nombre, posta:posta[17].nombre, turnos:"12 horas", fecha:planificaciones[5].fecha_inicio},
+    {nombre:personas[16].nombre, posta:posta[15].nombre, turnos:turno, fecha:planificaciones[5].fecha_inicio},
+    {nombre:personas[17].nombre, posta:posta[16].nombre, turnos:turno, fecha:planificaciones[5].fecha_inicio},
+    {nombre:personas[18].nombre, posta:posta[17].nombre, turnos:turno, fecha:planificaciones[5].fecha_inicio},
   ],
   6: [
-    {nombre:personas[19].nombre, posta:posta[18].nombre, turnos:"12 horas", fecha:planificaciones[6].fecha_inicio},
-    {nombre:personas[20].nombre, posta:posta[19].nombre, turnos:"12 horas", fecha:planificaciones[6].fecha_inicio},
-    {nombre:personas[21].nombre, posta:posta[20].nombre, turnos:"12 horas", fecha:planificaciones[6].fecha_inicio},
+    {nombre:personas[19].nombre, posta:posta[18].nombre, turnos:turno, fecha:planificaciones[6].fecha_inicio},
+    {nombre:personas[20].nombre, posta:posta[19].nombre, turnos:turno, fecha:planificaciones[6].fecha_inicio},
+    {nombre:personas[21].nombre, posta:posta[20].nombre, turnos:turno, fecha:planificaciones[6].fecha_inicio},
   ],
   7: [
-    {nombre:personas[22].nombre, posta:posta[21].nombre, turnos:"12 horas", fecha:planificaciones[7].fecha_inicio},
-    {nombre:personas[23].nombre, posta:posta[22].nombre, turnos:"12 horas", fecha:planificaciones[7].fecha_inicio},
-    {nombre:personas[24].nombre, posta:posta[23].nombre, turnos:"12 horas", fecha:planificaciones[7].fecha_inicio},
+    {nombre:personas[22].nombre, posta:posta[21].nombre, turnos:turno, fecha:planificaciones[7].fecha_inicio},
+    {nombre:personas[23].nombre, posta:posta[22].nombre, turnos:turno, fecha:planificaciones[7].fecha_inicio},
+    {nombre:personas[24].nombre, posta:posta[23].nombre, turnos:turno, fecha:planificaciones[7].fecha_inicio},
   ],
   8: [
-    {nombre:personas[25].nombre, posta:posta[24].nombre, turnos:"12 horas", fecha:planificaciones[8].fecha_inicio},
-    {nombre:personas[26].nombre, posta:posta[25].nombre, turnos:"12 horas", fecha:planificaciones[8].fecha_inicio},
-    {nombre:personas[27].nombre, posta:posta[26].nombre, turnos:"12 horas", fecha:planificaciones[8].fecha_inicio},
+    {nombre:personas[25].nombre, posta:posta[24].nombre, turnos:turno, fecha:planificaciones[8].fecha_inicio},
+    {nombre:personas[26].nombre, posta:posta[25].nombre, turnos:turno, fecha:planificaciones[8].fecha_inicio},
+    {nombre:personas[27].nombre, posta:posta[26].nombre, turnos:turno, fecha:planificaciones[8].fecha_inicio},
   ],
   9: [
-    {nombre:personas[28].nombre, posta:posta[27].nombre, turnos:"12 horas", fecha:planificaciones[9].fecha_inicio},
-    {nombre:personas[29].nombre, posta:posta[28].nombre, turnos:"12 horas", fecha:planificaciones[9].fecha_inicio},
-    {nombre:personas[30].nombre, posta:posta[29].nombre, turnos:"12 horas", fecha:planificaciones[9].fecha_inicio},
+    {nombre:personas[28].nombre, posta:posta[27].nombre, turnos:turno, fecha:planificaciones[9].fecha_inicio},
+    {nombre:personas[29].nombre, posta:posta[28].nombre, turnos:turno, fecha:planificaciones[9].fecha_inicio},
+    {nombre:personas[30].nombre, posta:posta[29].nombre, turnos:turno, fecha:planificaciones[9].fecha_inicio},
   ],
 };
 export let detallesManualPlaning = [
@@ -327,14 +336,69 @@ export let detallesManualPlaning = [
 
 
 export let guard_area = [
-    {id_region_guardia: 1, nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
-    {id_region_guardia: 2, nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
-    {id_region_guardia: 3, nombre: 'John Wesley Shipp', ci: '12345678903', solapin: 'E345612', cargo: 'Estuduante', estructura: 'IDF3'},
-    {id_region_guardia: 4, nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
-    {id_region_guardia: 5, nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
-    {id_region_guardia: 6, nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
+  {id: 1,nombre:personas[1].nombre, ci:personas[1].ci, solapin:personas[1].solapin, estructura:estructuras[0].nombre, cargo:personas[1].cargo, id_zona: estructuras[0].id_zona},
+  {id: 2,nombre:personas[4].nombre, ci:personas[4].ci, solapin:personas[4].solapin, estructura:estructuras[1].nombre, cargo:personas[4].cargo, id_zona: estructuras[1].id_zona},
+  {id: 3,nombre:personas[7].nombre, ci:personas[7].ci, solapin:personas[7].solapin, estructura:estructuras[2].nombre, cargo:personas[7].cargo, id_zona: estructuras[2].id_zona},
+  {id: 4,nombre:personas[10].nombre, ci:personas[10].ci, solapin:personas[10].solapin, estructura:estructuras[3].nombre, cargo:personas[10].cargo, id_zona: estructuras[3].id_zona},
+  {id: 5,nombre:personas[13].nombre, ci:personas[13].ci, solapin:personas[13].solapin, estructura:estructuras[4].nombre, cargo:personas[13].cargo, id_zona: estructuras[4].id_zona},
+  {id: 6,nombre:personas[16].nombre, ci:personas[16].ci, solapin:personas[16].solapin, estructura:estructuras[5].nombre, cargo:personas[16].cargo, id_zona: estructuras[5].id_zona},
+  {id: 7,nombre:personas[19].nombre, ci:personas[19].ci, solapin:personas[19].solapin, estructura:estructuras[6].nombre, cargo:personas[19].cargo, id_zona: estructuras[6].id_zona},
+  {id: 8,nombre:personas[22].nombre, ci:personas[22].ci, solapin:personas[22].solapin, estructura:estructuras[7].nombre, cargo:personas[22].cargo, id_zona: estructuras[7].id_zona},
+  {id: 9,nombre:personas[25].nombre, ci:personas[25].ci, solapin:personas[25].solapin, estructura:estructuras[8].nombre, cargo:personas[25].cargo, id_zona: estructuras[8].id_zona},
+  {id: 10,nombre:personas[28].nombre, ci:personas[28].ci, solapin:personas[28].solapin, estructura:estructuras[9].nombre, cargo:personas[28].cargo, id_zona: estructuras[9].id_zona},
 ];
-
+export let horario_turno = [
+  [
+    {posta:posta[0].nombre, horario:horario, turno:turno},
+    {posta:posta[1].nombre, horario:horario, turno:turno},
+    {posta:posta[2].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[3].nombre, horario:horario, turno:turno},
+    {posta:posta[4].nombre, horario:horario, turno:turno},
+    {posta:posta[5].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[6].nombre, horario:horario, turno:turno},
+    {posta:posta[7].nombre, horario:horario, turno:turno},
+    {posta:posta[8].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[9].nombre, horario:horario, turno:turno},
+    {posta:posta[10].nombre, horario:horario, turno:turno},
+    {posta:posta[11].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[12].nombre, horario:horario, turno:turno},
+    {posta:posta[13].nombre, horario:horario, turno:turno},
+    {posta:posta[14].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[15].nombre, horario:horario, turno:turno},
+    {posta:posta[16].nombre, horario:horario, turno:turno},
+    {posta:posta[17].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[18].nombre, horario:horario, turno:turno},
+    {posta:posta[19].nombre, horario:horario, turno:turno},
+    {posta:posta[20].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[21].nombre, horario:horario, turno:turno},
+    {posta:posta[22].nombre, horario:horario, turno:turno},
+    {posta:posta[23].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[24].nombre, horario:horario, turno:turno},
+    {posta:posta[25].nombre, horario:horario, turno:turno},
+    {posta:posta[26].nombre, horario:horario, turno:turno},
+  ],
+  [
+    {posta:posta[27].nombre, horario:horario, turno:turno},
+    {posta:posta[28].nombre, horario:horario, turno:turno},
+    {posta:posta[29].nombre, horario:horario, turno:turno},
+  ],
+];
 
 
 export let posts = [

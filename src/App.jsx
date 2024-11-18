@@ -12,9 +12,10 @@ import AddPlanning from "./pages/planningPages/planning/AddPlanning.jsx";
 import DetailsPlanning from "./pages/planningPages/planning/DetailsPlanning.jsx";
 import EditPlanning from "./pages/planningPages/planning/EditPlanning.jsx";
 import ManualPlanning from "./pages/planningPages/planning/ManualPlanning.jsx";
-// import AddGuardArea from "./pages/planningPages/guardArea/AddGuardArea.jsx";
+import AddGuardArea from "./pages/planningPages/guardArea/AddGuardArea.jsx";
 import DetailsGuardArea from "./pages/planningPages/guardArea/DetailsGuardArea.jsx";
-// import EditGuardArea from "./pages/planningPages/guardArea/EditGuardArea.jsx";
+import EditGuardArea from "./pages/planningPages/guardArea/EditGuardArea.jsx";
+import ShiftsAndSchedules from "./pages/planningPages/guardArea/ShiftsAndSchedules.jsx";
 // Control
 import Assistance from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
@@ -50,12 +51,16 @@ function App() {
       />
 
       {/* Routes for planning/guard-area/ */}
-      {/* <Route path="/planning/guard-area/add/" element={<AddGuardArea />} /> */}
+      <Route path="/planning/guard-area/add/" element={<AddGuardArea />} />
       <Route
         path="/planning/guard-area/details/"
         element={<DetailsGuardArea />}
       />
-      {/* <Route path="/planning/guard-area/edit/" element={<EditGuardArea />} /> */}
+      <Route path="/planning/guard-area/edit/" element={<EditGuardArea />} />
+      <Route
+        path="/planning/guard-area/shifts-schedules/"
+        element={<ShiftsAndSchedules />}
+      />
 
       {/* Routes for control */}
       <Route path="/control/assistance" element={<Assistance />} />

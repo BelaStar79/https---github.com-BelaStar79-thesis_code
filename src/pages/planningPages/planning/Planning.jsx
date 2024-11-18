@@ -26,11 +26,7 @@ import {
   BsEnvelope,
   BsTrash3,
 } from "react-icons/bs";
-import {
-  setIdRow,
-  planificaciones,
-  deletePlanificaciones,
-} from "../../components/others/table.js";
+import { setIdRow, planificaciones } from "../../components/others/table.js";
 
 export default function Planning() {
   // editable variables
@@ -77,8 +73,8 @@ export default function Planning() {
     navigate("/planning/planning/auto-planning/");
   };
 
-  const deletePlanning = (id_planificacion) => {
-    deletePlanificaciones(id_planificacion);
+  const deletePlanning = () => {
+    console.log("Eliminando datos...");
   };
 
   // title variable
@@ -447,9 +443,7 @@ export default function Planning() {
                                 <button
                                   className="tdOptions__button"
                                   title="Borrar"
-                                  onClick={() =>
-                                    deletePlanning(row.id_planificacion)
-                                  }
+                                  onClick={() => deletePlanning()}
                                 >
                                   <BsTrash3 className="tdOptions__buttonIcon" />
                                 </button>

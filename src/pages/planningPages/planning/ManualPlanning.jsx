@@ -46,7 +46,7 @@ export default function ManualPlanning() {
   };
 
   const savePlanning = () => {
-    console.log("guardando");
+    console.log("Guardando datos...");
     goToPlanning();
   };
 

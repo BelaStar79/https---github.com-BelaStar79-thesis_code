@@ -11,28 +11,22 @@ import FooterComponent from "../../components/footerComponent/FooterComponent.js
 import { useNavigate } from "react-router-dom";
 import { BsBackspace } from "react-icons/bs";
 
-export default function AddPlanning() {
+export default function AddGuardArea() {
   // editable variables
-  const namePage = "Añadir planificación";
+  const namePage = "Añadir zona de guardia";
   const activeSection = "planning";
-  const activeOption = "Planificación";
-
-  // inputs variables
-  const [nombre, setNombre] = useState();
-  const [inicio, setInicio] = useState();
-  const [fin, setFin] = useState();
-  const [zona, setZona] = useState();
+  const activeOption = "Zonas de guardia";
 
   // navigate metod
   const navigate = useNavigate();
-  const goToPlanning = () => {
-    navigate("/planning/planning");
+  const goToGuardArea = () => {
+    navigate("/planning/guard-area");
   };
 
   // save plannindg
-  const savePlanning = () => {
+  const saveGuardArea = () => {
     console.log("Guardando datos...");
-    goToPlanning();
+    goToGuardArea();
   };
 
   return (
@@ -56,7 +50,7 @@ export default function AddPlanning() {
                   <button
                     className="titleBar__button"
                     title="Regresar a Planificación"
-                    onClick={goToPlanning}
+                    onClick={() => goToGuardArea()}
                   >
                     <BsBackspace className="titleBar__icon" />
                   </button>
@@ -71,41 +65,21 @@ export default function AddPlanning() {
                     <div className="formComponent__addFormContainer">
                       <div className="formComponent__addInput">
                         <label htmlFor="" className="formComponent__addLabel">
-                          Nombre de la planificación
+                          Nombre del responsable
                           <input
-                            value={nombre}
                             type="text"
                             className="formComponent__addInput"
                             placeholder="Nombre"
-                            title="Introduzca el nombre de la planificación"
+                            title="Introduzca el nombre del responsable"
                           />
                         </label>
                         <label htmlFor="" className="formComponent__addLabel">
-                          Nombre de la zona
+                          Nombre de la estructura
                           <input
-                            value={zona}
                             type="text"
                             className="formComponent__addInput"
-                            placeholder="Zona"
-                            title="Introduzca la zona de la planificación"
-                          />
-                        </label>
-                        <label htmlFor="" className="formComponent__addLabel">
-                          Fecha de inicio
-                          <input
-                            value={inicio}
-                            type="date"
-                            className="formComponent__addInput"
-                            title="Introduzca el nombre de la planificación que desea buscar"
-                          />
-                        </label>
-                        <label htmlFor="" className="formComponent__addLabel">
-                          Fecha de fin
-                          <input
-                            value={fin}
-                            type="date"
-                            className="formComponent__addInput"
-                            title="Introduzca el nombre de la planificación que desea buscar"
+                            placeholder="Estrructura"
+                            title="Introduzca la estructura"
                           />
                         </label>
                       </div>
@@ -114,14 +88,14 @@ export default function AddPlanning() {
                         <button
                           className="formComponent__button"
                           title="Guardar planificación"
-                          onClick={() => savePlanning()}
+                          onClick={() => saveGuardArea()}
                         >
                           Aceptar
                         </button>
                         <button
                           className="formComponent__button"
                           title="Regresar sin guardar"
-                          onClick={goToPlanning}
+                          onClick={() => goToGuardArea()}
                         >
                           Cancelar
                         </button>
