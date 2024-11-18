@@ -1,14 +1,13 @@
 import React from "react";
-import MainStructure from "../../components/structure/MainStructure.jsx";
+import MainStructureTwo from "../../components/structure/MainStructureTwo.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
-import TableButtons from "./TableButtons.jsx";
-import { potential } from "../../components/tableComponent/tablaComponent.js";
+import { potencial } from "../../components/others/table.js";
 
 export function PotentialReport() {
   return (
-    <MainStructure
+    <MainStructureTwo
       namePage="Potencial"
       user="user"
       activeSection="planning"
@@ -19,8 +18,7 @@ export function PotentialReport() {
       tableName="Potencial"
       columnNames={["Nombre", "CI", "Solapin", "Cargo", "Estructura"]}
       columns={["nombre", "ci", "solapin", "cargo", "estructura"]}
-      data={potential}
-      tableComponentButtons={<TableButtons />}
+      data={potencial}
     />
   );
 }

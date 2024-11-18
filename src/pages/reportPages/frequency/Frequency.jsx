@@ -3,7 +3,7 @@ import MainStructure from "../../components/structure/MainStructureTwo.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
-import { frequency } from "../../components/tableComponent/tablaComponent.js";
+import { frequency } from "../../components/others/table.js";
 
 export function Frequency() {
   return (

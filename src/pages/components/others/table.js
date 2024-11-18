@@ -447,36 +447,36 @@ export let patrones = [
   {id:2, activo:activo, tipo:"mes", periodicidad: 2, nombre:"Patrón 2"},
 ];
 export let asistencia = [
-  {id:1,turno:fecha_inicio, posta:posta[0].nombre, nombre:"Asistencia 1", estructura: estructuras[0].nombre, cantidad: '1'},
-  {id:2,turno:fecha_inicio, posta:posta[1].nombre, nombre:"Asistencia 2", estructura: estructuras[0].nombre, cantidad: '1'},
-  {id:3,turno:fecha_inicio, posta:posta[2].nombre, nombre:"Asistencia 3", estructura: estructuras[0].nombre, cantidad: '1'},
-  {id:4,turno:fecha_inicio, posta:posta[3].nombre, nombre:"Asistencia 4", estructura: estructuras[1].nombre, cantidad: '1'},
-  {id:5,turno:fecha_inicio, posta:posta[4].nombre, nombre:"Asistencia 5", estructura: estructuras[1].nombre, cantidad: '1'},
-  {id:6,turno:fecha_inicio, posta:posta[5].nombre, nombre:"Asistencia 6", estructura: estructuras[1].nombre, cantidad: '1'},
-  {id:7,turno:fecha_inicio, posta:posta[6].nombre, nombre:"Asistencia 7", estructura: estructuras[2].nombre, cantidad: '1'},
-  {id:8,turno:fecha_inicio, posta:posta[7].nombre, nombre:"Asistencia 8", estructura: estructuras[2].nombre, cantidad: '1'},
-  {id:9,turno:fecha_inicio, posta:posta[8].nombre, nombre:"Asistencia 9", estructura: estructuras[2].nombre, cantidad: '1'},
-  {id:10,turno:fecha_inicio, posta:posta[9].nomrbe, nombre:"Asistencia 10", estructura: estructuras[3].nombre, cantidad: '1'},
-  {id:11,turno:fecha_inicio, posta:posta[10].nombre, nombre:"Asistencia 11", estructura: estructuras[3].nombre, cantidad: '1'},
-  {id:12,turno:fecha_inicio, posta:posta[11].nombre, nombre:"Asistencia 12", estructura: estructuras[3].nombre, cantidad: '1'},
-  {id:13,turno:fecha_inicio, posta:posta[12].nombre, nombre:"Asistencia 13", estructura: estructuras[4].nombre, cantidad: '1'},
-  {id:14,turno:fecha_inicio, posta:posta[13].nombre, nombre:"Asistencia 14", estructura: estructuras[4].nombre, cantidad: '1'},
-  {id:15,turno:fecha_inicio, posta:posta[14].nombre, nombre:"Asistencia 15", estructura: estructuras[4].nombre, cantidad: '1'},
-  {id:16,turno:fecha_inicio, posta:posta[15].nombre, nombre:"Asistencia 16", estructura: estructuras[5].nombre, cantidad: '1'},
-  {id:17,turno:fecha_inicio, posta:posta[16].nombre, nombre:"Asistencia 17", estructura: estructuras[5].nombre, cantidad: '1'},
-  {id:18,turno:fecha_inicio, posta:posta[17].nombre, nombre:"Asistencia 18", estructura: estructuras[5].nombre, cantidad: '1'},
-  {id:19,turno:fecha_inicio, posta:posta[18].nombre, nombre:"Asistencia 19", estructura: estructuras[6].nombre, cantidad: '1'},
-  {id:20,turno:fecha_inicio, posta:posta[19].nombre, nombre:"Asistencia 20", estructura: estructuras[6].nombre, cantidad: '1'},
-  {id:21,turno:fecha_inicio, posta:posta[20].nombre, nombre:"Asistencia 21", estructura: estructuras[6].nombre, cantidad: '1'},
-  {id:22,turno:fecha_inicio, posta:posta[21].nombre, nombre:"Asistencia 22", estructura: estructuras[7].nombre, cantidad: '1'},
-  {id:23,turno:fecha_inicio, posta:posta[22].nombre, nombre:"Asistencia 23", estructura: estructuras[7].nombre, cantidad: '1'},
-  {id:24,turno:fecha_inicio, posta:posta[23].nombre, nombre:"Asistencia 24", estructura: estructuras[7].nombre, cantidad: '1'},
-  {id:25,turno:fecha_inicio, posta:posta[24].nombre, nombre:"Asistencia 25", estructura: estructuras[8].nombre, cantidad: '1'},
-  {id:26,turno:fecha_inicio, posta:posta[25].nombre, nombre:"Asistencia 26", estructura: estructuras[8].nombre, cantidad: '1'},
-  {id:27,turno:fecha_inicio, posta:posta[26].nombre, nombre:"Asistencia 27", estructura: estructuras[8].nombre, cantidad: '1'},
-  {id:28,turno:fecha_inicio, posta:posta[27].nombre, nombre:"Asistencia 28", estructura: estructuras[9].nombre, cantidad: '1'},
-  {id:29,turno:fecha_inicio, posta:posta[28].nombre, nombre:"Asistencia 29", estructura: estructuras[9].nombre, cantidad: '1'},
-  {id:30,turno:fecha_inicio, posta:posta[29].nombre, nombre:"Asistencia 30", estructura: estructuras[9].nombre, cantidad: '1'}, 
+  {id:1, name:personas[1].nombre, ci:personas[1].ci, usuario:personas[1].usuario, solapin:personas[1].solapin, presente:"Si", turno:fecha_inicio, posta:posta[0].nombre, nombre:"Asistencia 1", estructura: estructuras[0].nombre, cantidad: '1'},
+  {id:2, name:personas[2].nombre, ci:personas[2].ci, usuario:personas[2].usuario, solapin:personas[2].solapin, presente:"Si", turno:fecha_inicio, posta:posta[1].nombre, nombre:"Asistencia 2", estructura: estructuras[0].nombre, cantidad: '1'},
+  {id:3, name:personas[3].nombre, ci:personas[3].ci, usuario:personas[3].usuario, solapin:personas[3].solapin, presente:"Si", turno:fecha_inicio, posta:posta[2].nombre, nombre:"Asistencia 3", estructura: estructuras[0].nombre, cantidad: '1'},
+  {id:4, name:personas[4].nombre, ci:personas[4].ci, usuario:personas[4].usuario, solapin:personas[4].solapin, presente:"Si", turno:fecha_inicio, posta:posta[3].nombre, nombre:"Asistencia 4", estructura: estructuras[1].nombre, cantidad: '1'},
+  {id:5, name:personas[5].nombre, ci:personas[5].ci, usuario:personas[5].usuario, solapin:personas[5].solapin, presente:"Si", turno:fecha_inicio, posta:posta[4].nombre, nombre:"Asistencia 5", estructura: estructuras[1].nombre, cantidad: '1'},
+  {id:6, name:personas[6].nombre, ci:personas[6].ci, usuario:personas[6].usuario, solapin:personas[6].solapin, presente:"Si", turno:fecha_inicio, posta:posta[5].nombre, nombre:"Asistencia 6", estructura: estructuras[1].nombre, cantidad: '1'},
+  {id:7, name:personas[7].nombre, ci:personas[7].ci, usuario:personas[7].usuario, solapin:personas[7].solapin, presente:"Si", turno:fecha_inicio, posta:posta[6].nombre, nombre:"Asistencia 7", estructura: estructuras[2].nombre, cantidad: '1'},
+  {id:8, name:personas[8].nombre, ci:personas[8].ci, usuario:personas[8].usuario, solapin:personas[8].solapin, presente:"Si", turno:fecha_inicio, posta:posta[7].nombre, nombre:"Asistencia 8", estructura: estructuras[2].nombre, cantidad: '1'},
+  {id:9, name:personas[9].nombre, ci:personas[9].ci, usuario:personas[9].usuario, solapin:personas[9].solapin, presente:"Si", turno:fecha_inicio, posta:posta[8].nombre, nombre:"Asistencia 9", estructura: estructuras[2].nombre, cantidad: '1'},
+  {id:10, name:personas[10].nombre, ci:personas[10].ci, usuario:personas[10].usuario, solapin:personas[10].solapin, presente:"Si", turno:fecha_inicio, posta:posta[9].nomrbe, nombre:"Asistencia 10", estructura: estructuras[3].nombre, cantidad: '1'},
+  {id:11, name:personas[11].nombre, ci:personas[11].ci, usuario:personas[11].usuario, solapin:personas[11].solapin, presente:"Si", turno:fecha_inicio, posta:posta[10].nombre, nombre:"Asistencia 11", estructura: estructuras[3].nombre, cantidad: '1'},
+  {id:12, name:personas[12].nombre, ci:personas[12].ci, usuario:personas[12].usuario, solapin:personas[12].solapin, presente:"Si", turno:fecha_inicio, posta:posta[11].nombre, nombre:"Asistencia 12", estructura: estructuras[3].nombre, cantidad: '1'},
+  {id:13, name:personas[13].nombre, ci:personas[13].ci, usuario:personas[13].usuario, solapin:personas[13].solapin, presente:"Si", turno:fecha_inicio, posta:posta[12].nombre, nombre:"Asistencia 13", estructura: estructuras[4].nombre, cantidad: '1'},
+  {id:14, name:personas[14].nombre, ci:personas[14].ci, usuario:personas[14].usuario, solapin:personas[14].solapin, presente:"Si", turno:fecha_inicio, posta:posta[13].nombre, nombre:"Asistencia 14", estructura: estructuras[4].nombre, cantidad: '1'},
+  {id:15, name:personas[15].nombre, ci:personas[15].ci, usuario:personas[15].usuario, solapin:personas[15].solapin, presente:"Si", turno:fecha_inicio, posta:posta[14].nombre, nombre:"Asistencia 15", estructura: estructuras[4].nombre, cantidad: '1'},
+  {id:16, name:personas[16].nombre, ci:personas[16].ci, usuario:personas[16].usuario, solapin:personas[16].solapin, presente:"Si", turno:fecha_inicio, posta:posta[15].nombre, nombre:"Asistencia 16", estructura: estructuras[5].nombre, cantidad: '1'},
+  {id:17, name:personas[17].nombre, ci:personas[17].ci, usuario:personas[17].usuario, solapin:personas[17].solapin, presente:"Si", turno:fecha_inicio, posta:posta[16].nombre, nombre:"Asistencia 17", estructura: estructuras[5].nombre, cantidad: '1'},
+  {id:18, name:personas[18].nombre, ci:personas[18].ci, usuario:personas[18].usuario, solapin:personas[18].solapin, presente:"Si", turno:fecha_inicio, posta:posta[17].nombre, nombre:"Asistencia 18", estructura: estructuras[5].nombre, cantidad: '1'},
+  {id:19, name:personas[19].nombre, ci:personas[19].ci, usuario:personas[19].usuario, solapin:personas[19].solapin, presente:"Si", turno:fecha_inicio, posta:posta[18].nombre, nombre:"Asistencia 19", estructura: estructuras[6].nombre, cantidad: '1'},
+  {id:20, name:personas[20].nombre, ci:personas[20].ci, usuario:personas[20].usuario, solapin:personas[20].solapin, presente:"Si", turno:fecha_inicio, posta:posta[19].nombre, nombre:"Asistencia 20", estructura: estructuras[6].nombre, cantidad: '1'},
+  {id:21, name:personas[21].nombre, ci:personas[21].ci, usuario:personas[21].usuario, solapin:personas[21].solapin, presente:"Si", turno:fecha_inicio, posta:posta[20].nombre, nombre:"Asistencia 21", estructura: estructuras[6].nombre, cantidad: '1'},
+  {id:22, name:personas[22].nombre, ci:personas[22].ci, usuario:personas[22].usuario, solapin:personas[22].solapin, presente:"Si", turno:fecha_inicio, posta:posta[21].nombre, nombre:"Asistencia 22", estructura: estructuras[7].nombre, cantidad: '1'},
+  {id:23, name:personas[23].nombre, ci:personas[23].ci, usuario:personas[23].usuario, solapin:personas[23].solapin, presente:"Si", turno:fecha_inicio, posta:posta[22].nombre, nombre:"Asistencia 23", estructura: estructuras[7].nombre, cantidad: '1'},
+  {id:24, name:personas[24].nombre, ci:personas[24].ci, usuario:personas[24].usuario, solapin:personas[24].solapin, presente:"Si", turno:fecha_inicio, posta:posta[23].nombre, nombre:"Asistencia 24", estructura: estructuras[7].nombre, cantidad: '1'},
+  {id:25, name:personas[25].nombre, ci:personas[25].ci, usuario:personas[25].usuario, solapin:personas[25].solapin, presente:"Si", turno:fecha_inicio, posta:posta[24].nombre, nombre:"Asistencia 25", estructura: estructuras[8].nombre, cantidad: '1'},
+  {id:26, name:personas[26].nombre, ci:personas[26].ci, usuario:personas[26].usuario, solapin:personas[26].solapin, presente:"Si", turno:fecha_inicio, posta:posta[25].nombre, nombre:"Asistencia 26", estructura: estructuras[8].nombre, cantidad: '1'},
+  {id:27, name:personas[27].nombre, ci:personas[27].ci, usuario:personas[27].usuario, solapin:personas[27].solapin, presente:"Si", turno:fecha_inicio, posta:posta[26].nombre, nombre:"Asistencia 27", estructura: estructuras[8].nombre, cantidad: '1'},
+  {id:28, name:personas[28].nombre, ci:personas[28].ci, usuario:personas[28].usuario, solapin:personas[28].solapin, presente:"Si", turno:fecha_inicio, posta:posta[27].nombre, nombre:"Asistencia 28", estructura: estructuras[9].nombre, cantidad: '1'},
+  {id:29, name:personas[29].nombre, ci:personas[29].ci, usuario:personas[29].usuario, solapin:personas[29].solapin, presente:"Si", turno:fecha_inicio, posta:posta[28].nombre, nombre:"Asistencia 29", estructura: estructuras[9].nombre, cantidad: '1'},
+  {id:30, name:personas[30].nombre, ci:personas[30].ci, usuario:personas[30].usuario, solapin:personas[30].solapin, presente:"Si", turno:fecha_inicio, posta:posta[29].nombre, nombre:"Asistencia 30", estructura: estructuras[9].nombre, cantidad: '1'}, 
 ];
 export let incident = [];
 export let duty_officer = [
@@ -484,7 +484,55 @@ export let duty_officer = [
   {id:2, fecha:fecha_inicio, nombre:personas[19].nombre, cantidad:'', cantidadReal:''},
   {id:3, fecha:fecha_inicio, nombre:personas[28].nombre, cantidad:'', cantidadReal:''},
 ];
-
+export let guard = [
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[0].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[0].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[0].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[1].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[1].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[1].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[2].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[2].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[2].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[3].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[3].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[3].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[4].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[4].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[4].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[5].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[5].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[0].nombre, nombre:zonas[0].responsable, area:estructuras[5].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[6].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[6].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[6].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[7].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[7].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[7].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[8].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[8].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[1].nombre, nombre:zonas[1].responsable, area:estructuras[8].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[2].nombre, nombre:zonas[2].responsable, area:estructuras[9].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[2].nombre, nombre:zonas[2].responsable, area:estructuras[9].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+  {zona:zonas[2].nombre, nombre:zonas[2].responsable, area:estructuras[9].nombre, turno:turno, horaInicio: "07:00 am", horaFin: "07:00 pm"},
+];
+export let quantitative_potential = [
+  {estructura:estructuras[0].nombre, recursosHumanos: 12, potencial: 3, pendientes: 9},
+  {estructura:estructuras[1].nombre, recursosHumanos: 4, potencial: 3, pendientes: 1},
+  {estructura:estructuras[2].nombre, recursosHumanos: 24, potencial: 3, pendientes: 21},
+  {estructura:estructuras[3].nombre, recursosHumanos: 3, potencial: 3, pendientes: 0},
+  {estructura:estructuras[4].nombre, recursosHumanos: 6, potencial: 3, pendientes: 1},
+  {estructura:estructuras[5].nombre, recursosHumanos: 3, potencial: 3, pendientes: 0},
+  {estructura:estructuras[6].nombre, recursosHumanos: 4, potencial: 3, pendientes: 1},
+  {estructura:estructuras[7].nombre, recursosHumanos: 3, potencial: 3, pendientes: 0},
+  {estructura:estructuras[8].nombre, recursosHumanos: 3, potencial: 3, pendientes: 0},
+  {estructura:estructuras[9].nombre, recursosHumanos: 3, potencial: 3, pendientes: 0},
+];
+export let frequency = [
+  {zona:zonas[0].nombre, cantidad: 122, horas: 0, turnos: 0, frecuencia: 122, personasHoras: 122},
+  {zona:zonas[1].nombre, cantidad: 125, horas: 0, turnos: 0, frecuencia: 125, personasHoras: 125},
+  {zona:zonas[2].nombre, cantidad: 182, horas: 0, turnos: 0, frecuencia: 182, personasHoras: 182},
+];
 
 
 
@@ -504,29 +552,6 @@ export let potential = [
   {nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
   {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
   {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
-];
-export let guard = [
-  {zona: "Dirección de Extensión Universitaria", nombre: "Yosvaney Herrera Ricardo", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
-  {zona: "Dirección de Extensión Universitaria", nombre: "Evelyn Fonsece Naranjo", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
-  {zona: "Dirección de Extensión Universitaria", nombre: "Susel García Cedeño", area: "Rectorado", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
-  {zona: "Dirección de Extensión Universitaria", nombre: "Dayannis Garcés Rodríguez", area: "Dirección de Extensión Universitaria", turno: "12 horas", horaInicio: "07:00 am", horaFin: "07:00 pm"},
-];
-export let quantitative_potential = [
-  {estructura: "Centro de Estudio de Matemática y Computación", recursosHumanos: 12, potencial: 8, pendientes: 4},
-  {estructura: "Centro de Gobierno Electrónico", recursosHumanos: 4, potencial: 3, pendientes: 1},
-  {estructura: "Centro de Idiomas", recursosHumanos: 24, potencial: 19, pendientes: 5},
-  {estructura: "Centro de Información de Entidades", recursosHumanos: 3, potencial: 2, pendientes: 1},
-  {estructura: "Centro de Informatización de la Gestión Documental", recursosHumanos: 46, potencial: 41, pendientes: 5},
-];
-export let frequency = [
-  {zona: "Casona", cantidad: 122, horas: 0, turnos: 0, frecuencia: 122, personasHoras: 122},
-  {zona: "Centro Cultural", cantidad: 125, horas: 0, turnos: 0, frecuencia: 125, personasHoras: 125},
-  {zona: "Complejo Cmedor 1", cantidad: 182, horas: 0, turnos: 0, frecuencia: 182, personasHoras: 182},
-  {zona: "Complejo Cmedor 2", cantidad: 182, horas: 0, turnos: 0, frecuencia: 182, personasHoras: 182},
-  {zona: "Complejo Cmedor 3", cantidad: 206, horas: 0, turnos: 0, frecuencia: 206, personasHoras: 206},
-];
-export let assistance_report = [
-  {fecha:"07/12/2018 12:14", nombre: "Yarelys Seoane Alonso", ci: "00000000000", usuario: "yerelys", solapin: "T157931", estructura: "Facultad 4", presente: "Si"}
 ];
 export let details = [];
 

@@ -1,14 +1,13 @@
 import React from "react";
-import MainStructure from "../../components/structure/MainStructure.jsx";
+import MainStructureTwo from "../../components/structure/MainStructureTwo.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
-import TableButtons from "./TableButtons.jsx";
-import { quantitative_potential } from "../../components/tableComponent/tablaComponent.js";
+import { quantitative_potential } from "../../components/others/table.js";
 
 export function QuantitativePotential() {
   return (
-    <MainStructure
+    <MainStructureTwo
       namePage="Potencial cuantitativo"
       user="user"
       activeSection="report"
@@ -25,7 +24,6 @@ export function QuantitativePotential() {
       ]}
       columns={["estructura", "recursosHumanos", "potencial", "pendientes"]}
       data={quantitative_potential}
-      tableComponentButtons={<TableButtons />}
     />
   );
 }

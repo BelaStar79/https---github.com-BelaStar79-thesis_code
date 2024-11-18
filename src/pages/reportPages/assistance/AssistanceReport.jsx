@@ -3,7 +3,7 @@ import MainStructure from "../../components/structure/MainStructureTwo.jsx";
 import TitleBarButtons from "./TitleBarButtons.jsx";
 import SearchFields from "./SearchFields.jsx";
 import FormFields from "./FormFields.jsx";
-import { assistance_report } from "../../components/tableComponent/tablaComponent.js";
+import { asistencia } from "../../components/others/table.js";
 
 export function AssistanceReport() {
   return (
@@ -26,15 +26,15 @@ export function AssistanceReport() {
         "Presente",
       ]}
       columns={[
-        "fecha",
-        "nombre",
+        "turno",
+        "name",
         "ci",
         "usuario",
         "solapin",
         "estructura",
         "presente",
       ]}
-      data={assistance_report}
+      data={asistencia}
     />
   );
 }
