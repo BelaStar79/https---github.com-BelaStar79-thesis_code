@@ -20,37 +20,37 @@ const valor = 1;
 const nombreRecurso = "Llave local";
 export const empty_list = [];
 export let personas = {
-  0:{ci: "00000000000",solapin: "A000000",cargo: "Administrador",expediente:"T00000", sexo:"Femenino", residente:"Si", categoria:"Administrador", provincia:"La Habana", municipio:"Centro Habana", nombre: "Nombre Administrador",usuario: "admin"},
-  1:{ci: "00000000001",solapin: "T000001",cargo: "Trabajador",expediente:"T00001", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Pinar del Río", municipio:"Viñales", nombre: "Nombre Usuario Uno",usuario: "nuuno"},
-  2:{ci: "00000000002",solapin: "E000002",cargo: "Estudiante",expediente:"T00002", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Artemisa", municipio:"Guanajay", nombre: "Nombre Usuario Dos",usuario: "nudos"},
-  3:{ci: "00000000003",solapin: "E000003",cargo: "Estudiante",expediente:"T00003", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Mayabeque", municipio:"San José de la Lajas", nombre: "Nombre Usuario Tres",usuario: "nutres"},
-  4:{ci: "00000000004",solapin: "T000004",cargo: "Trabajador",expediente:"T00004", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Matanzas", municipio:"Varadero", nombre: "Nombre Usuario Cuatro",usuario: "nucuatro"},
-  5:{ci: "00000000005",solapin: "E000005",cargo: "Estudiante",expediente:"T00005", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Cienfuegos", municipio:"Cienfuegos", nombre: "Nombre Usuario Cinco",usuario: "nucinco"},
-  6:{ci: "00000000006",solapin: "E000006",cargo: "Estudiante",expediente:"T00006", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Villa Clara", municipio:"Santa Clara", nombre: "Nombre Usuario Seis",usuario: "nuseis"},
-  7:{ci: "00000000007",solapin: "T000007",cargo: "Trabajador",expediente:"T00007", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Sancti Spíritus", municipio:"Trinidad", nombre: "Nombre Usuario Siete",usuario: "nusiete"},
-  8:{ci: "00000000008",solapin: "E000008",cargo: "Estudiante",expediente:"T00008", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Ciego de Ávila", municipio:"Morón", nombre: "Nombre Usuario Ocho",usuario: "nuocto"},
-  9:{ci: "00000000009",solapin: "E000009",cargo: "Estudiante",expediente:"T00009", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Camagüey", municipio:"Camagüey", nombre: "Nombre Usuario Nueve",usuario: "nunueve"},
-  10:{ci: "00000000010",solapin: "T000010",cargo: "Trabajador",expediente:"T00010", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Las Tunas", municipio:"Puerto Padre", nombre: "Nombre Usuario Diez",usuario: "nudiez"},
-  11:{ci: "00000000011",solapin: "E000011",cargo: "Estudiante",expediente:"T00011", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Las Tunas", municipio:"Las Tunas", nombre: "Nombre Usuario Once",usuario: "nuonce"},
-  12:{ci: "00000000012",solapin: "E000012",cargo: "Estudiante",expediente:"T00012", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"La Habana", municipio:"Diez de Octubre", nombre: "Nombre Usuario Doce",usuario: "nudoce"},
-  13:{ci: "00000000013",solapin: "T000013",cargo: "Trabajador",expediente:"T00013", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Pinar del Río", municipio:"", nombre: "Nombre Usuario Trece",usuario: "nutrece"},
-  14:{ci: "00000000014",solapin: "E000014",cargo: "Estudiante",expediente:"T000014", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Artemisa", municipio:"Bauta", nombre: "Nombre Usuario Catorce",usuario: "nucatorce"},
-  15:{ci: "00000000015",solapin: "E000015",cargo: "Estudiante",expediente:"T00015", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Mayabeque", municipio:"Jaruco", nombre: "Nombre Usuario Quince",usuario: "nuquince"},
-  16:{ci: "00000000016",solapin: "T000016",cargo: "Trabajador",expediente:"T00016", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Matanzas", municipio:"Cárdenas", nombre: "Nombre Usuario Dieciseis",usuario: "nudieciseis"},
-  17:{ci: "00000000017",solapin: "E000017",cargo: "Estudiante",expediente:"T00017", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Cienfuegos", municipio:"Aguada de pasajeros", nombre: "Nombre Usuario Diecisiete",usuario: "nudiecisiete"},
-  18:{ci: "00000000018",solapin: "E000018",cargo: "Estudiante",expediente:"T00018", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Villa Clara", municipio:"Remedios", nombre: "Nombre Usuario Dieciocho",usuario: "nudieciocho"},
-  19:{ci: "00000000019",solapin: "T000019",cargo: "Trabajador",expediente:"T00019", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Sancti Spíritus", municipio:"Cabaiguán", nombre: "Nombre Usuario Diecinueve",usuario: "nudiecinueve"},
-  20:{ci: "00000000020",solapin: "E000020",cargo: "Estudiante",expediente:"T00020", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Ciego de Ávila", municipio:"Morón", nombre: "Nombre Usuario Veinte",usuario: "nuveinte"},
-  21:{ci: "00000000021",solapin: "E000021",cargo: "Estudiante",expediente:"T00021", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Camagüey", municipio:"Florida", nombre: "Nombre Usuario Veintiuno",usuario: "nuveintiuno"},
-  22:{ci: "00000000022",solapin: "T000022",cargo: "Trabajador",expediente:"T00022", sexo:"Femenino", residente:"Si", categoria:"Trabajador", provincia:"Holgín", municipio:"Moa", nombre: "Nombre Usuario Veintidós",usuario: "nuveintidos"},
-  23:{ci: "00000000023",solapin: "E000023",cargo: "Estudiante",expediente:"T00023", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Holgín", municipio:"Gibara", nombre: "Nombre Usuario Veintitrés",usuario: "nuveintitres"},
-  24:{ci: "00000000024",solapin: "E000024",cargo: "Estudiante",expediente:"T00024", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Granma", municipio:"Bayamo", nombre: "Nombre Usuario Veinticuatro",usuario: "nuveinticuatro"},
-  25:{ci: "00000000025",solapin: "T000025",cargo: "Trabajador",expediente:"T00025", sexo:"Femenino", residente:"Si", categoria:"Trabajador", provincia:"Granma", municipio:"Manzanillo", nombre: "Nombre Usuario Veinticinco",usuario: "nuveinticinco"},
-  26:{ci: "00000000026",solapin: "E000026",cargo: "Estudiante",expediente:"T00026", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Santiago de Cuba", municipio:"Palmasoriano", nombre: "Nombre Usuario Veintiséis",usuario: "nuveintiseis"},
-  27:{ci: "00000000027",solapin: "E000027",cargo: "Estudiante",expediente:"T00027", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Santiago de Cuba", municipio:"Segundo Frente", nombre: "Nombre Usuario Veintisiete",usuario: "nuveintisiete"},
-  28:{ci: "00000000028",solapin: "T000028",cargo: "Trabajador",expediente:"T00028", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Guantánamo", municipio:"Maisí", nombre: "Nombre Usuario Veintiocho",usuario: "nuveintiocho"},
-  29:{ci: "00000000029",solapin: "T000029",cargo: "Trabajador",expediente:"T000029", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Guantánamo", municipio:"Baracoa", nombre: "Nombre Usuario Veintinueve",usuario: "nuveintinueve"},
-  30:{ci: "00000000030",solapin: "T000030",cargo: "Trabajador",expediente:"T00030", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Guantánamo", municipio:"Caimanera", nombre: "Nombre Usuario Treinta",usuario: "nutreinta"},
+  0:{ci: "00000000000",activo:activo,solapin: "A000000",cargo: "Administrador",expediente:"T00000", sexo:"Femenino", residente:"Si", categoria:"Administrador", provincia:"La Habana", municipio:"Centro Habana", nombre: "Nombre Administrador",usuario: "admin"},
+  1:{ci: "00000000001",activo:activo,solapin: "T000001",cargo: "Trabajador",expediente:"T00001", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Pinar del Río", municipio:"Viñales", nombre: "Nombre Usuario Uno",usuario: "nuuno"},
+  2:{ci: "00000000002",activo:activo,solapin: "E000002",cargo: "Estudiante",expediente:"T00002", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Artemisa", municipio:"Guanajay", nombre: "Nombre Usuario Dos",usuario: "nudos"},
+  3:{ci: "00000000003",activo:activo,solapin: "E000003",cargo: "Estudiante",expediente:"T00003", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Mayabeque", municipio:"San José de la Lajas", nombre: "Nombre Usuario Tres",usuario: "nutres"},
+  4:{ci: "00000000004",activo:activo,solapin: "T000004",cargo: "Trabajador",expediente:"T00004", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Matanzas", municipio:"Varadero", nombre: "Nombre Usuario Cuatro",usuario: "nucuatro"},
+  5:{ci: "00000000005",activo:activo,solapin: "E000005",cargo: "Estudiante",expediente:"T00005", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Cienfuegos", municipio:"Cienfuegos", nombre: "Nombre Usuario Cinco",usuario: "nucinco"},
+  6:{ci: "00000000006",activo:activo,solapin: "E000006",cargo: "Estudiante",expediente:"T00006", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Villa Clara", municipio:"Santa Clara", nombre: "Nombre Usuario Seis",usuario: "nuseis"},
+  7:{ci: "00000000007",activo:activo,solapin: "T000007",cargo: "Trabajador",expediente:"T00007", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Sancti Spíritus", municipio:"Trinidad", nombre: "Nombre Usuario Siete",usuario: "nusiete"},
+  8:{ci: "00000000008",activo:activo,solapin: "E000008",cargo: "Estudiante",expediente:"T00008", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Ciego de Ávila", municipio:"Morón", nombre: "Nombre Usuario Ocho",usuario: "nuocto"},
+  9:{ci: "00000000009",activo:activo,solapin: "E000009",cargo: "Estudiante",expediente:"T00009", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Camagüey", municipio:"Camagüey", nombre: "Nombre Usuario Nueve",usuario: "nunueve"},
+  10:{ci: "00000000010",activo:activo,solapin: "T000010",cargo: "Trabajador",expediente:"T00010", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Las Tunas", municipio:"Puerto Padre", nombre: "Nombre Usuario Diez",usuario: "nudiez"},
+  11:{ci: "00000000011",activo:activo,solapin: "E000011",cargo: "Estudiante",expediente:"T00011", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Las Tunas", municipio:"Las Tunas", nombre: "Nombre Usuario Once",usuario: "nuonce"},
+  12:{ci: "00000000012",activo:activo,solapin: "E000012",cargo: "Estudiante",expediente:"T00012", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"La Habana", municipio:"Diez de Octubre", nombre: "Nombre Usuario Doce",usuario: "nudoce"},
+  13:{ci: "00000000013",activo:activo,solapin: "T000013",cargo: "Trabajador",expediente:"T00013", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Pinar del Río", municipio:"", nombre: "Nombre Usuario Trece",usuario: "nutrece"},
+  14:{ci: "00000000014",activo:activo,solapin: "E000014",cargo: "Estudiante",expediente:"T000014", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Artemisa", municipio:"Bauta", nombre: "Nombre Usuario Catorce",usuario: "nucatorce"},
+  15:{ci: "00000000015",activo:activo,solapin: "E000015",cargo: "Estudiante",expediente:"T00015", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Mayabeque", municipio:"Jaruco", nombre: "Nombre Usuario Quince",usuario: "nuquince"},
+  16:{ci: "00000000016",activo:activo,solapin: "T000016",cargo: "Trabajador",expediente:"T00016", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Matanzas", municipio:"Cárdenas", nombre: "Nombre Usuario Dieciseis",usuario: "nudieciseis"},
+  17:{ci: "00000000017",activo:activo,solapin: "E000017",cargo: "Estudiante",expediente:"T00017", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Cienfuegos", municipio:"Aguada de pasajeros", nombre: "Nombre Usuario Diecisiete",usuario: "nudiecisiete"},
+  18:{ci: "00000000018",activo:activo,solapin: "E000018",cargo: "Estudiante",expediente:"T00018", sexo:"Femenino", residente:"Si", categoria:"Estudiante", provincia:"Villa Clara", municipio:"Remedios", nombre: "Nombre Usuario Dieciocho",usuario: "nudieciocho"},
+  19:{ci: "00000000019",activo:activo,solapin: "T000019",cargo: "Trabajador",expediente:"T00019", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Sancti Spíritus", municipio:"Cabaiguán", nombre: "Nombre Usuario Diecinueve",usuario: "nudiecinueve"},
+  20:{ci: "00000000020",activo:activo,solapin: "E000020",cargo: "Estudiante",expediente:"T00020", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Ciego de Ávila", municipio:"Morón", nombre: "Nombre Usuario Veinte",usuario: "nuveinte"},
+  21:{ci: "00000000021",activo:activo,solapin: "E000021",cargo: "Estudiante",expediente:"T00021", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Camagüey", municipio:"Florida", nombre: "Nombre Usuario Veintiuno",usuario: "nuveintiuno"},
+  22:{ci: "00000000022",activo:activo,solapin: "T000022",cargo: "Trabajador",expediente:"T00022", sexo:"Femenino", residente:"Si", categoria:"Trabajador", provincia:"Holgín", municipio:"Moa", nombre: "Nombre Usuario Veintidós",usuario: "nuveintidos"},
+  23:{ci: "00000000023",activo:activo,solapin: "E000023",cargo: "Estudiante",expediente:"T00023", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Holgín", municipio:"Gibara", nombre: "Nombre Usuario Veintitrés",usuario: "nuveintitres"},
+  24:{ci: "00000000024",activo:activo,solapin: "E000024",cargo: "Estudiante",expediente:"T00024", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Granma", municipio:"Bayamo", nombre: "Nombre Usuario Veinticuatro",usuario: "nuveinticuatro"},
+  25:{ci: "00000000025",activo:activo,solapin: "T000025",cargo: "Trabajador",expediente:"T00025", sexo:"Femenino", residente:"Si", categoria:"Trabajador", provincia:"Granma", municipio:"Manzanillo", nombre: "Nombre Usuario Veinticinco",usuario: "nuveinticinco"},
+  26:{ci: "00000000026",activo:activo,solapin: "E000026",cargo: "Estudiante",expediente:"T00026", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Santiago de Cuba", municipio:"Palmasoriano", nombre: "Nombre Usuario Veintiséis",usuario: "nuveintiseis"},
+  27:{ci: "00000000027",activo:activo,solapin: "E000027",cargo: "Estudiante",expediente:"T00027", sexo:"Masculino", residente:"Si", categoria:"Estudiante", provincia:"Santiago de Cuba", municipio:"Segundo Frente", nombre: "Nombre Usuario Veintisiete",usuario: "nuveintisiete"},
+  28:{ci: "00000000028",activo:activo,solapin: "T000028",cargo: "Trabajador",expediente:"T00028", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Guantánamo", municipio:"Maisí", nombre: "Nombre Usuario Veintiocho",usuario: "nuveintiocho"},
+  29:{ci: "00000000029",activo:activo,solapin: "T000029",cargo: "Trabajador",expediente:"T000029", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Guantánamo", municipio:"Baracoa", nombre: "Nombre Usuario Veintinueve",usuario: "nuveintinueve"},
+  30:{ci: "00000000030",activo:activo,solapin: "T000030",cargo: "Trabajador",expediente:"T00030", sexo:"Masculino", residente:"Si", categoria:"Trabajador", provincia:"Guantánamo", municipio:"Caimanera", nombre: "Nombre Usuario Treinta",usuario: "nutreinta"},
 };
 export let zonas = [
   {id: 1, activo:activo, planificador: personas[0].nombre, responsable: personas[1].nombre, nombre: "Docentes"},
@@ -121,7 +121,10 @@ export let usuarios = [
     {
         id: 0,
         user: "admin",
-        password: "admin"
+        password: "admin",
+        solapin: personas[0].solapin,
+        activo: activo,
+        nombre: personas[0].nombre,
     },
 ];
 export function addUsuarios(user, password) {
@@ -440,7 +443,7 @@ export let variables = [
   {id:5, nombre:"Discapacitado", activo:activo},
   {id:6, nombre:"Enfermo", activo:activo},
   {id:7, nombre:"3ra edad", activo:activo},
-  {id:8, nombre:"licencia", activo:activo},
+  {id:8, nombre:"Licencia", activo:activo},
 ];
 export let patrones = [
   {id:1, activo:activo, tipo:"semana", periodicidad: 4, nombre:"Patrón 1"},
@@ -533,27 +536,14 @@ export let frequency = [
   {zona:zonas[1].nombre, cantidad: 125, horas: 0, turnos: 0, frecuencia: 125, personasHoras: 125},
   {zona:zonas[2].nombre, cantidad: 182, horas: 0, turnos: 0, frecuencia: 182, personasHoras: 182},
 ];
-
-
-
-
-
-export let guard_groups = [
-  {grupo: "Centro de Gobierno Electrónico", zona: "Casona", personasAsociadas:0},
-  {grupo: "Centro de Indentificación y Seguridad Digital", zona: "Casona", personasAsociadas:0},
-  {grupo: "Centro de Información de Entidades", zona: "Casona", personasAsociadas:0},
-  {grupo: "Centro de Información de la Gestión Documental", zona: "Casona", personasAsociadas:0},
-  {grupo: "Centro de Innovación y Calidad en la Educación", zona: "Casona", personasAsociadas:0},
+export let tipo_incidencia = [
+  {id:1, nombre: "Ausencia", descripcion: "Ausencia de personal", activo:activo},
 ];
-export let potential = [
-  {nombre: 'Elizabeth Gonzalez Prieto', ci: '12345678901', solapin: 'E123456', cargo: 'Estuduante', estructura: 'IDF1'}, 
-  {nombre: 'Ian Nelson Lahey', ci: '12345678902', solapin: 'E234561', cargo: 'Estuduante', estructura: 'IDF2'},
-  {nombre: 'John Wesley Shipp', ci: '12345678903', solapin: 'E345612', cargo: 'Estuduante', estructura: 'IDF3'},
-  {nombre: 'Chris William Martin', ci: '12345678904', solapin: 'E456123', cargo: 'Estuduante', estructura: 'IDF4'},
-  {nombre: 'Carlota Garcia Tornes', ci: '12345678905', solapin: 'E561234', cargo: 'Estuduante', estructura: 'IDF5'},
-  {nombre: 'Raúl Fernández de Pablo', ci: '12345678906', solapin: 'E612345', cargo: 'Estuduante', estructura: 'IDF6'}
+export let tipos_horarios = [
+  {id:1, activo:activo, inicio:"07:00", fin:"07:00", nombre:"Lunes a Viernes"},
+  {id:2, activo:activo, inicio:"07:00", fin:"07:00", nombre:"Fines de semana"}, 
+  {id:3, activo:activo, inicio:"10:00", fin:"02:00", nombre:"1er turno"}, 
+  {id:4, activo:activo, inicio:"02:00", fin:"06:00", nombre:"2do turno"},
 ];
-export let details = [];
-
 
 

@@ -120,17 +120,20 @@ export function SideMenu({ activeSection, activeOption }) {
         {
           name: "Tipos de incidencia",
           titleCursor: "Ir a Tipos de incidencia",
-          link: "",
+          link: "/configuration/type-incidents",
         },
         {
           name: "Configuraciones de variables",
           titleCursor: "Ir a Configuraciones de variables",
-          link: "",
+          link: "/configuration/configuration-variables",
         },
-        { name: "Variables", titleCursor: "Ir a Variables", link: "" },
-        { name: "Horarios", titleCursor: "Ir a Horarios", link: "" },
-        { name: "Turnos", titleCursor: "Ir a Turnos", link: "" },
-        { name: "Patrones", titleCursor: "Ir a Patrones", link: "" },
+        {
+          name: "Horarios",
+          titleCursor: "Ir a Horarios",
+          link: "/configuration/schedules",
+        },
+        // { name: "Turnos", titleCursor: "Ir a Turnos", link: "" },
+        // { name: "Patrones", titleCursor: "Ir a Patrones", link: "" },
       ],
     },
     security: {
@@ -139,25 +142,29 @@ export function SideMenu({ activeSection, activeOption }) {
       title: "Seguridad",
       titleCursor: "Ver opciones de Seguridad",
       suboptions: [
-        { name: "Sistemas", titleCursor: "Ir a Sistemas", link: "" },
-        { name: "Módulos", titleCursor: "Ir a Módulos", link: "" },
+        // { name: "Sistemas", titleCursor: "Ir a Sistemas", link: "" },
+        // { name: "Módulos", titleCursor: "Ir a Módulos", link: "" },
+        // {
+        //   name: "Agrupación funcional",
+        //   titleCursor: "Ir a Agrupación funcional",
+        //   link: "",
+        // },
+        // {
+        //   name: "Funcionalidades",
+        //   titleCursor: "Ir a Funcionalidades",
+        //   link: "",
+        // },
+        // { name: "Roles", titleCursor: "Ir a Roles", link: "" },
+        // {
+        //   name: "Grupos de roles",
+        //   titleCursor: "Ir a Grupos de roles",
+        //   link: "",
+        // },
         {
-          name: "Agrupación funcional",
-          titleCursor: "Ir a Agrupación funcional",
-          link: "",
+          name: "Usuarios",
+          titleCursor: "Ir a Usuarios",
+          link: "/configuration/users",
         },
-        {
-          name: "Funcionalidades",
-          titleCursor: "Ir a Funcionalidades",
-          link: "",
-        },
-        { name: "Roles", titleCursor: "Ir a Roles", link: "" },
-        {
-          name: "Grupos de roles",
-          titleCursor: "Ir a Grupos de roles",
-          link: "",
-        },
-        { name: "Usuarios", titleCursor: "Ir a Usuarios", link: "" },
       ],
     },
   };

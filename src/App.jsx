@@ -41,6 +41,21 @@ import PotentialReport from "./pages/reportPages/potential/PotentialReport.jsx";
 import AssistanceReport from "./pages/reportPages/assistance/AssistanceReport.jsx";
 import QuantitativePotential from "./pages/reportPages/quantitativePotential/QuantitativePotential.jsx";
 import Frequency from "./pages/reportPages/frequency/Frequency.jsx";
+// Configuration
+import TypeIncidents from "./pages/configurationPages/typeIncidents/TypeIncidents.jsx";
+import AddTypeIncidents from "./pages/configurationPages/typeIncidents/AddTypeIncidents.jsx";
+import EditTypeIncidents from "./pages/configurationPages/typeIncidents/EditTypeIncidents.jsx";
+import ConfigurationVariables from "./pages/configurationPages/configurationVariables/ConfigurationVariables.jsx";
+import AddConfigurationVariables from "./pages/configurationPages/configurationVariables/AddConfigurationVariables.jsx";
+import EditConfigurationVariables from "./pages/configurationPages/configurationVariables/EditConfigurationVariables.jsx";
+import Schedules from "./pages/configurationPages/schedule/Schedule.jsx";
+import AddSchedule from "./pages/configurationPages/schedule/AddSchedule.jsx";
+import EditSchedule from "./pages/configurationPages/schedule/EditSchedules.jsx";
+// Security
+import Users from "./pages/securityPages/users/Users.jsx";
+import AddUsers from "./pages/securityPages/users/AddUsers.jsx";
+import DetailsUsers from "./pages/securityPages/users/DetailsUsers.jsx";
+import EditUsers from "./pages/securityPages/users/EditUsers.jsx";
 
 function App() {
   return (
@@ -116,6 +131,38 @@ function App() {
       />
       <Route path="/report/frequency" element={<Frequency />} />
       <Route path="/report/assistance" element={<AssistanceReport />} />
+
+      {/* Routes for configuration */}
+      <Route path="/configuration/type-incidents" element={<TypeIncidents />} />
+      <Route
+        path="/configuration/type-incidents/add/"
+        element={<AddTypeIncidents />}
+      />
+      <Route
+        path="/configuration/type-incidents/edit/"
+        element={<EditTypeIncidents />}
+      />
+      <Route
+        path="/configuration/configuration-variables"
+        element={<ConfigurationVariables />}
+      />
+      <Route
+        path="/configuration/configuration-variables/add/"
+        element={<AddConfigurationVariables />}
+      />
+      <Route
+        path="/configuration/configuration-variables/edit/"
+        element={<EditConfigurationVariables />}
+      />
+      <Route path="/configuration/schedules" element={<Schedules />} />
+      <Route path="/configuration/schedules/add/" element={<AddSchedule />} />
+      <Route path="/configuration/schedules/edit/" element={<EditSchedule />} />
+
+      {/* Routes for security */}
+      <Route path="/configuration/users" element={<Users />} />
+      <Route path="/configuration/users/add/" element={<AddUsers />} />
+      <Route path="/configuration/users/details/" element={<DetailsUsers />} />
+      <Route path="/configuration/users/edit/" element={<EditUsers />} />
     </Routes>
   );
 }
