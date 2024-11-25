@@ -110,3 +110,9 @@ body {
     margin-bottom: 20px;
 }
 
+/* Responsive */
+@media (min-width: 400px) and (max-width: 1079px) {
+    .pageStructure__bigContainer {
+        flex-direction: column;
+    }
+}

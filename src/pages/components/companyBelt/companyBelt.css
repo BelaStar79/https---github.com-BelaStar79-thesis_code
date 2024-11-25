@@ -1,7 +1,7 @@
 @import url('../../../css/variable.css');
 
 .companyBelt {
-    height: 60px;
+    height: 65px;
 
     img {
         max-width: 50px;
@@ -98,4 +98,49 @@
 }
 
 
+/* Responsive */
+@media (min-width: 800px) and (max-width: 1080px) {
+    /* tablet */
+    .companyBelt__leftContainer {
+        max-width: 50%;
+    }
+}
 
+@media (min-width: 400px) and (max-width: 1200px) {
+    /* mobile */
+    .companyBelt {
+        height: 50px;
+
+        img {
+            max-width: 40px;
+        }
+        .companyBelt__leftContainer {
+            max-width: 70%;
+            margin-right: 2px;
+            
+            span {
+                font-size: 0.7rem;
+                margin-bottom: -9px;
+            }
+            strong {
+                margin-top: 0;
+                font-size: 1.5rem;
+                color: var(--wineRed);
+            }
+            p {
+                font-size: 0.6rem;
+            }
+        }
+        .companyBelt__rightContainer {
+            .companyBelt__account {
+                min-width: 80px;
+                max-width: 100px;
+                
+                span {
+                    font-size: 0.8rem;
+                }
+            }
+        }
+    }
+    
+}

@@ -114,3 +114,14 @@
     }
 }
 
+/* Responsive */
+@media (max-width: 1079px) {
+    .tableComponent__tableControls {
+        display: flex;
+        flex-direction: column;
+    }
+    table {
+        width: 100%;
+        overflow-x: auto;
+    }
+}
