@@ -83,6 +83,7 @@
             color: var(--wineRed);
             border-radius: 5px;
             max-height: 30px;
+            align-items: center;
             
             .formComponent__searchIcon {
                 font-size: 15px;
