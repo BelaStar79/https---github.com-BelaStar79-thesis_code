@@ -18,11 +18,11 @@ export function Frequency() {
       tableName="Periodicidad"
       columnNames={[
         "Zonas de guardia",
-        "Cantidad de personas",
-        "Número de horas",
-        "Número de turnos",
+        "Cant. personas",
+        "No. horas",
+        "No. turnos",
         "Frecuencia",
-        "Cantidad de personas-Hora guardia",
+        "Cant. personas-Hora guardia",
       ]}
       columns={[
         "zona",
