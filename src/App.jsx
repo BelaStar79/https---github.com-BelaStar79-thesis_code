@@ -30,6 +30,7 @@ import AssociatePatronToPeople from "./pages/planningPages/potential/AssociatePa
 import AssistanceControl from "./pages/controlPages/assistance/Assistance.jsx";
 import Incident from "./pages/controlPages/incident/Incident.jsx";
 import DutyOfficer from "./pages/controlPages/dutyOfficer/DutyOfficer.jsx";
+import AddAssistance from "./pages/controlPages/assistance/AddAssistance.jsx";
 import EditAssistance from "./pages/controlPages/assistance/EditAssistance.jsx";
 import AddIncident from "./pages/controlPages/incident/AddIncident.jsx";
 import AddDutyOfficer from "./pages/controlPages/dutyOfficer/AddDutyOfficer.jsx";
@@ -115,6 +116,7 @@ function App() {
       {/* Routes for control */}
       <Route path="/control/assistance" element={<AssistanceControl />} />
       <Route path="/control/incident" element={<Incident />} />
+      <Route path="/control/assistance/add/" element={<AddAssistance />} />
       <Route path="/control/duty-officer" element={<DutyOfficer />} />
       <Route path="/control/assistance/edit/" element={<EditAssistance />} />
       <Route path="/control/incident/add/" element={<AddIncident />} />

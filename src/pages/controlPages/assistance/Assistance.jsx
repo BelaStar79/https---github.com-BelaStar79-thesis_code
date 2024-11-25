@@ -18,6 +18,7 @@ import {
   BsChevronBarRight,
   BsPencil,
   BsInfoLg,
+  BsPlusCircle,
 } from "react-icons/bs";
 import { setIdRow, asistencia } from "../../components/others/table.js";
 
@@ -42,6 +43,9 @@ export default function AssistanceControl() {
 
   // navigate metod
   const navigate = useNavigate();
+  const goToAddAssistance = () => {
+    navigate("/control/assistance/add/");
+  };
   const goToEditAssistance = (id) => {
     setIdRow(id - 1);
     navigate("/control/assistance/edit/");
@@ -154,7 +158,20 @@ export default function AssistanceControl() {
             />
           </div>
           <div className="pageStructure__container">
-            <TitleBar title={namePage} titleBarButtons={<></>} />
+            <TitleBar
+              title={namePage}
+              titleBarButtons={
+                <>
+                  <button
+                    className="titleBar__button"
+                    title="Añadir una nueva asistencia"
+                    onClick={goToAddAssistance}
+                  >
+                    <BsPlusCircle className="titleBar__icon" />
+                  </button>
+                </>
+              }
+            />
 
             <section className="formComponent__bigContainer">
               <div className="formComponent__container">
